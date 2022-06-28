@@ -1,0 +1,164 @@
+@import "./style.scss";
+@import "./reset.scss";
+@import "./mixin.scss";
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600;700&display=swap');
+@font-face {
+    font-family: 'BMHANNAAir';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.0/BMHANNAAir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal; 
+}
+
+
+//===== header =====//
+header {
+    width: 100%;
+    .back-ground-color {
+        background-color: $font-color;
+        border-bottom-right-radius: 100px;
+        height: 760px;
+        .mobile-menu {
+            a {
+                float: right;
+                margin: 30px 15px;
+                span {
+                    display: block;
+                    width: 40px;
+                    height: 5px;
+                    background-color: $orange;
+                    &:nth-child(2) {
+                        margin: 5px 0;
+                    }
+                }
+            }
+        }
+        nav {
+            display: none;
+            .orange-stroke {
+                position: relative;
+                margin: 0 auto;
+                border: 8px solid $orange;
+                border-radius: 50%;
+                width: 567px;
+                height: 567px;
+                .green-cir {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    border-radius: 50%;
+                    background-color: $green;
+                    width: 531px;
+                    height: 531px;
+                    .gnb {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        .title {
+                            a {
+                                font-size: 40px;
+                            }
+                        }
+                        .plus {
+                            padding-left: 50px;
+                            line-height: 52px;
+                        }
+                    }
+                } //green-cir
+            } //orange-stroke
+        } //nav
+        .hello {
+            text-align: center;
+            padding: 112px 0 100px;
+        }
+        .illustration {
+            text-align: center;
+            .flower {
+                img {
+                    margin-top: -10px;
+                    width: 542px;
+                    height: 424px;
+                }
+            }
+            .me {
+                margin-top: -405px;
+                img {
+                    width: 319px;
+                    height: 449px;
+                }
+            }
+        }
+    } // back-ground-color
+    .background-green {
+        margin-top: 40px;
+        background-color: $green;
+        height: 580px;
+        img {
+            display: none;
+        }
+        p {
+            text-align: center;
+            padding-top: 82px;
+            color: $font-color2;
+            font-family: 'BMHANNAAir';
+            line-height: 40px;
+        }
+    }
+} //header
+
+//===== main =====//
+main {
+    @include title();
+    .my-skills-flex-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-bottom: 10px;
+        .green {
+            text-align: center;
+            border-radius: 50%;
+            border: 3px solid $green;
+            width: 170px;
+            height: 170px;
+            padding-bottom: 90px;
+            .orange {
+                margin: 2px auto;
+                border-radius: 50%;
+                border: 11px solid 
+                $orange;
+                border-top-color: transparent;
+                width: 159px;
+                height: 159px;
+
+                img {
+                    margin-bottom: -50px;
+                    width: 35px;
+                    height: 40px;
+                }
+                p {
+                    margin: 0 auto;
+                    margin-top: 55px;
+                    padding-top: 5px;
+                    border-top: 2px solid $green;
+                    width: 90px;
+                    font-size: 18px;
+                }
+            } 
+        }
+    } //my-skills-flex-box
+    .portfolio {
+        .group-work {
+            h3 {
+                margin-top: -40px;
+                font-size: 20px;
+                padding: 0 17px 10px;
+            }
+            .background-blue {
+                background-color: $blue;
+                width: 570px;
+                height: 390px;
+            }
+        }
+    }
+} //main

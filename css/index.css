@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.grid {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #f8f5f1;
+  font-size: 25px;
+  font-family: 'Source Code Pro', monospace;
+}
+
+p {
+  font-size: 23px;
+  color: #387c6d;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: light;
+}
+
+h2 {
+  color: #343f56;
+  font-size: 40px;
+  font-family: 'Source Code Pro', monospace;
+}
+
+h3 {
+  color: #343f56;
+  font-size: 30px;
+  font-family: 'Source Code Pro', monospace;
+}
+
+@font-face {
+  font-family: 'BMHANNAAir';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.0/BMHANNAAir.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+header {
+  width: 100%;
+}
+
+header .back-ground-color {
+  background-color: #f8f5f1;
+  border-bottom-right-radius: 100px;
+  height: 760px;
+}
+
+header .back-ground-color .mobile-menu a {
+  float: right;
+  margin: 30px 15px;
+}
+
+header .back-ground-color .mobile-menu a span {
+  display: block;
+  width: 40px;
+  height: 5px;
+  background-color: #e9896a;
+}
+
+header .back-ground-color .mobile-menu a span:nth-child(2) {
+  margin: 5px 0;
+}
+
+header .back-ground-color nav {
+  display: none;
+}
+
+header .back-ground-color nav .orange-stroke {
+  position: relative;
+  margin: 0 auto;
+  border: 8px solid #e9896a;
+  border-radius: 50%;
+  width: 567px;
+  height: 567px;
+}
+
+header .back-ground-color nav .orange-stroke .green-cir {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #387c6d;
+  width: 531px;
+  height: 531px;
+}
+
+header .back-ground-color nav .orange-stroke .green-cir .gnb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+header .back-ground-color nav .orange-stroke .green-cir .gnb .title a {
+  font-size: 40px;
+}
+
+header .back-ground-color nav .orange-stroke .green-cir .gnb .plus {
+  padding-left: 50px;
+  line-height: 52px;
+}
+
+header .back-ground-color .hello {
+  text-align: center;
+  padding: 112px 0 100px;
+}
+
+header .back-ground-color .illustration {
+  text-align: center;
+}
+
+header .back-ground-color .illustration .flower img {
+  margin-top: -10px;
+  width: 542px;
+  height: 424px;
+}
+
+header .back-ground-color .illustration .me {
+  margin-top: -405px;
+}
+
+header .back-ground-color .illustration .me img {
+  width: 319px;
+  height: 449px;
+}
+
+header .background-green {
+  margin-top: 40px;
+  background-color: #387c6d;
+  height: 580px;
+}
+
+header .background-green img {
+  display: none;
+}
+
+header .background-green p {
+  text-align: center;
+  padding-top: 82px;
+  color: #e5bdb3;
+  font-family: 'BMHANNAAir';
+  line-height: 40px;
+}
+
+main .hr-lines::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 50px;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  background: #343f56;
+}
+
+main .hr-lines {
+  position: relative;
+  margin: 55px auto;
+  text-align: center;
+  padding-right: 300px;
+}
+
+main .hr-lines:after {
+  content: " ";
+  height: 2px;
+  width: 350px;
+  background: #343f56;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+}
+
+main h2 {
+  font-size: 25px;
+}
+
+main .my-skills-flex-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-bottom: 10px;
+}
+
+main .my-skills-flex-box .green {
+  text-align: center;
+  border-radius: 50%;
+  border: 3px solid #387c6d;
+  width: 170px;
+  height: 170px;
+  padding-bottom: 90px;
+}
+
+main .my-skills-flex-box .green .orange {
+  margin: 2px auto;
+  border-radius: 50%;
+  border: 11px solid #e9896a;
+  border-top-color: transparent;
+  width: 159px;
+  height: 159px;
+}
+
+main .my-skills-flex-box .green .orange img {
+  margin-bottom: -50px;
+  width: 35px;
+  height: 40px;
+}
+
+main .my-skills-flex-box .green .orange p {
+  margin: 0 auto;
+  margin-top: 55px;
+  padding-top: 5px;
+  border-top: 2px solid #387c6d;
+  width: 90px;
+  font-size: 18px;
+}
+
+main .portfolio .group-work h3 {
+  margin-top: -40px;
+  font-size: 20px;
+  padding: 0 17px 10px;
+}
+
+main .portfolio .group-work .background-blue {
+  background-color: #343f56;
+  width: 570px;
+  height: 390px;
+}
+/*# sourceMappingURL=index.css.map */
