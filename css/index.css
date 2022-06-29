@@ -51,14 +51,26 @@ h3 {
   font-style: normal;
 }
 
+body {
+  width: 100%;
+  background-color: #eae9db;
+}
+
 header {
   width: 100%;
 }
 
 header .back-ground-color {
+  position: relative;
   background-color: #f8f5f1;
   border-bottom-right-radius: 100px;
   height: 760px;
+}
+
+@media screen and (min-width: 1024px) {
+  header .back-ground-color {
+    height: 800px;
+  }
 }
 
 header .back-ground-color .mobile-menu a {
@@ -77,11 +89,14 @@ header .back-ground-color .mobile-menu a span:nth-child(2) {
   margin: 5px 0;
 }
 
-header .back-ground-color nav {
-  display: none;
+@media screen and (min-width: 1024px) {
+  header .back-ground-color .mobile-menu {
+    display: none;
+  }
 }
 
-header .back-ground-color nav .orange-stroke {
+header .back-ground-color .orange-stroke {
+  display: none;
   position: relative;
   margin: 0 auto;
   border: 8px solid #e9896a;
@@ -90,7 +105,16 @@ header .back-ground-color nav .orange-stroke {
   height: 567px;
 }
 
-header .back-ground-color nav .orange-stroke .green-cir {
+@media screen and (min-width: 1024px) {
+  header .back-ground-color .orange-stroke {
+    display: block;
+    position: absolute;
+    left: 110px;
+    top: 45px;
+  }
+}
+
+header .back-ground-color .orange-stroke .green-cir {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -102,7 +126,7 @@ header .back-ground-color nav .orange-stroke .green-cir {
   height: 531px;
 }
 
-header .back-ground-color nav .orange-stroke .green-cir .gnb {
+header .back-ground-color .orange-stroke .green-cir nav .gnb {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -110,11 +134,11 @@ header .back-ground-color nav .orange-stroke .green-cir .gnb {
           transform: translate(-50%, -50%);
 }
 
-header .back-ground-color nav .orange-stroke .green-cir .gnb .title a {
+header .back-ground-color .orange-stroke .green-cir nav .gnb .title a {
   font-size: 40px;
 }
 
-header .back-ground-color nav .orange-stroke .green-cir .gnb .plus {
+header .back-ground-color .orange-stroke .green-cir nav .gnb .plus {
   padding-left: 50px;
   line-height: 52px;
 }
@@ -124,23 +148,60 @@ header .back-ground-color .hello {
   padding: 112px 0 100px;
 }
 
+@media screen and (min-width: 1024px) {
+  header .back-ground-color .hello {
+    display: none;
+  }
+}
+
 header .back-ground-color .illustration {
   text-align: center;
 }
 
+@media screen and (min-width: 1024px) {
+  header .back-ground-color .illustration .flower {
+    position: absolute;
+    bottom: 60px;
+    right: 50%;
+    -webkit-transform: translate(50%);
+            transform: translate(50%);
+    position: absolute;
+    z-index: 1;
+  }
+}
+
 header .back-ground-color .illustration .flower img {
-  margin-top: -10px;
   width: 542px;
   height: 424px;
 }
 
+@media screen and (min-width: 1024px) {
+  header .back-ground-color .illustration .flower img {
+    width: 847px;
+    height: 663px;
+  }
+}
+
 header .back-ground-color .illustration .me {
-  margin-top: -405px;
+  position: absolute;
+  bottom: -4px;
+  right: 50%;
+  -webkit-transform: translate(50%);
+          transform: translate(50%);
+  position: absolute;
+  z-index: 1;
 }
 
 header .back-ground-color .illustration .me img {
   width: 319px;
   height: 449px;
+}
+
+@media screen and (min-width: 1024px) {
+  header .back-ground-color .illustration .me img {
+    width: 499px;
+    height: 702px;
+  }
 }
 
 header .background-green {
@@ -149,8 +210,26 @@ header .background-green {
   height: 580px;
 }
 
+@media screen and (min-width: 1024px) {
+  header .background-green {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    width: 900px;
+    height: 800px;
+    border-radius: 100px;
+  }
+}
+
 header .background-green img {
   display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  header .background-green img {
+    display: block;
+    margin: -5px -3px;
+  }
 }
 
 header .background-green p {
@@ -161,40 +240,47 @@ header .background-green p {
   line-height: 40px;
 }
 
-main .hr-lines::before {
-  content: "";
-  display: block;
-  height: 2px;
-  width: 50px;
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  background: #343f56;
+@media screen and (min-width: 1024px) {
+  header .background-green p {
+    text-align: right;
+    margin-right: 75px;
+    font-size: 25px;
+  }
 }
 
-main .hr-lines {
-  position: relative;
-  margin: 55px auto;
-  text-align: center;
-  padding-right: 300px;
-}
-
-main .hr-lines:after {
-  content: " ";
-  height: 2px;
-  width: 350px;
-  background: #343f56;
-  display: block;
-  position: absolute;
-  top: 50%;
-  right: 10px;
-}
-
-main h2 {
+main .my-skill h2 {
+  text-align: left;
   font-size: 25px;
+  border-bottom: 2px solid #343f56;
+  line-height: 1.6px;
+  margin: 54px 10px 20px 10px;
 }
 
-main .my-skills-flex-box {
+@media screen and (min-width: 1024px) {
+  main .my-skill h2 {
+    font-size: 40px;
+    margin-top: 157px;
+  }
+}
+
+main .my-skill h2 span {
+  background-color: #eae9db;
+  padding: 0 10px;
+  margin: 0 30px;
+}
+
+@media screen and (min-width: 1024px) {
+  main .my-skill .vl {
+    border-left: 2px solid #343f56;
+    height: 350px;
+    position: absolute;
+    top: 610px;
+    left: 385px;
+    z-index: 1;
+  }
+}
+
+main .my-skill .my-skills-flex-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -202,19 +288,60 @@ main .my-skills-flex-box {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding-bottom: 10px;
 }
 
-main .my-skills-flex-box .green {
+@media screen and (min-width: 1024px) {
+  main .my-skill .my-skills-flex-box {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main .my-skill .my-skills-flex-box .web {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+  }
+  main .my-skill .my-skills-flex-box .web .web-box {
+    width: 100%/5;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main .my-skill .my-skills-flex-box .video {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 80%;
+    margin-top: 10px;
+  }
+  main .my-skill .my-skills-flex-box .video .video-box {
+    width: 100%/4;
+  }
+}
+
+main .my-skill .my-skills-flex-box .green {
   text-align: center;
   border-radius: 50%;
   border: 3px solid #387c6d;
   width: 170px;
   height: 170px;
-  padding-bottom: 90px;
+  margin: 10px;
 }
 
-main .my-skills-flex-box .green .orange {
+@media screen and (min-width: 1024px) {
+  main .my-skill .my-skills-flex-box .green {
+    width: 210px;
+    height: 210px;
+  }
+}
+
+main .my-skill .my-skills-flex-box .green .orange {
   margin: 2px auto;
   border-radius: 50%;
   border: 11px solid #e9896a;
@@ -223,30 +350,373 @@ main .my-skills-flex-box .green .orange {
   height: 159px;
 }
 
-main .my-skills-flex-box .green .orange img {
-  margin-bottom: -50px;
+@media screen and (min-width: 1024px) {
+  main .my-skill .my-skills-flex-box .green .orange {
+    width: 191px;
+    height: 191px;
+    margin-top: 7px;
+  }
+}
+
+main .my-skill .my-skills-flex-box .green .orange img {
+  margin-top: 50px;
   width: 35px;
   height: 40px;
 }
 
-main .my-skills-flex-box .green .orange p {
+main .my-skill .my-skills-flex-box .green .orange hr {
+  width: 80%;
+  border: 1px solid #387c6d;
   margin: 0 auto;
-  margin-top: 55px;
-  padding-top: 5px;
-  border-top: 2px solid #387c6d;
-  width: 90px;
+}
+
+main .my-skill .my-skills-flex-box .green .orange p {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 5px;
   font-size: 18px;
+}
+
+main .portfolio {
+  margin-top: 54px;
+}
+
+main .portfolio .title-flexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px 10px;
+}
+
+main .portfolio .title-flexbox .left {
+  width: 50%;
+  display: block;
+  border-bottom: 2px dashed #343f56;
+}
+
+main .portfolio .title-flexbox h2 {
+  font-size: 25px;
+  text-align: center;
+  margin: 10px 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  main .portfolio .title-flexbox h2 {
+    font-size: 40px;
+  }
+}
+
+main .portfolio .title-flexbox .right {
+  width: 50%;
+  display: block;
+  border-bottom: 2px solid #343f56;
+}
+
+main .portfolio .group-work {
+  margin: 50px 0 20px;
 }
 
 main .portfolio .group-work h3 {
   margin-top: -40px;
   font-size: 20px;
-  padding: 0 17px 10px;
+  padding: 0 10px 10px;
 }
 
 main .portfolio .group-work .background-blue {
   background-color: #343f56;
-  width: 570px;
   height: 390px;
+  margin: 10px 10px;
+}
+
+main .portfolio .group-work .background-blue a img {
+  float: right;
+  margin: 185px 10px;
+}
+
+main .portfolio .group-work .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .portfolio .group-work .button a {
+  font-size: 18px;
+}
+
+main .portfolio .group-work .button .guide {
+  border: 1px solid #e9896a;
+  background-color: #e9896a;
+  padding: 20px;
+}
+
+main .portfolio .group-work .button .pc-m {
+  border: 1px solid #343f56;
+  background-color: #343f56;
+  padding: 20px 38px;
+}
+
+main .portfolio .group-work .button .plan {
+  border: 1px solid #387c6d;
+  background-color: #387c6d;
+  padding: 20px 47px;
+}
+
+main .portfolio .group-work .button .plan a {
+  font-family: 'BMHANNAAir';
+}
+
+@media screen and (min-width: 1024px) {
+  main .portfolio .group-work h3 {
+    font-weight: 500px;
+  }
+  main .portfolio .group-work .background-blue {
+    width: 933px;
+    height: 635px;
+  }
+}
+
+main .portfolio .personal-work {
+  margin-top: 100px;
+}
+
+main .portfolio .personal-work h3 {
+  margin-top: -40px;
+  font-size: 20px;
+  padding: 0 10px 10px;
+}
+
+main .portfolio .personal-work .background-blue {
+  background-color: #343f56;
+  height: 390px;
+  margin: 10px 10px;
+}
+
+main .portfolio .personal-work .background-blue a img {
+  float: right;
+  margin: 185px 10px;
+}
+
+main .portfolio .personal-work .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .portfolio .personal-work .button a {
+  font-size: 18px;
+}
+
+main .portfolio .personal-work .button .guide {
+  border: 1px solid #e9896a;
+  background-color: #e9896a;
+  padding: 20px;
+}
+
+main .portfolio .personal-work .button .pc-m {
+  border: 1px solid #343f56;
+  background-color: #343f56;
+  padding: 20px 38px;
+}
+
+main .portfolio .personal-work .button .plan {
+  border: 1px solid #387c6d;
+  background-color: #387c6d;
+  padding: 20px 47px;
+}
+
+main .portfolio .personal-work .button .plan a {
+  font-family: 'BMHANNAAir';
+}
+
+main .portfolio .personal-work h3 {
+  float: right;
+}
+
+main .portfolio .clone-coding {
+  margin-top: 100px;
+}
+
+main .portfolio .clone-coding h3 {
+  margin-top: -40px;
+  font-size: 20px;
+  padding: 0 10px 10px;
+}
+
+main .portfolio .clone-coding .background-blue {
+  background-color: #343f56;
+  height: 390px;
+  margin: 10px 10px;
+}
+
+main .portfolio .clone-coding .background-blue a img {
+  float: right;
+  margin: 185px 10px;
+}
+
+main .portfolio .clone-coding .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .portfolio .clone-coding .button a {
+  font-size: 18px;
+}
+
+main .portfolio .clone-coding .button .guide {
+  border: 1px solid #e9896a;
+  background-color: #e9896a;
+  padding: 20px;
+}
+
+main .portfolio .clone-coding .button .pc-m {
+  border: 1px solid #343f56;
+  background-color: #343f56;
+  padding: 20px 38px;
+}
+
+main .portfolio .clone-coding .button .plan {
+  border: 1px solid #387c6d;
+  background-color: #387c6d;
+  padding: 20px 47px;
+}
+
+main .portfolio .clone-coding .button .plan a {
+  font-family: 'BMHANNAAir';
+}
+
+main .portfolio .video {
+  margin-top: 100px;
+}
+
+main .portfolio .video h3 {
+  margin-top: -40px;
+  font-size: 20px;
+  padding: 0 10px 10px;
+}
+
+main .portfolio .video .background-blue {
+  background-color: #343f56;
+  height: 390px;
+  margin: 10px 10px;
+}
+
+main .portfolio .video .background-blue a img {
+  float: right;
+  margin: 185px 10px;
+}
+
+main .portfolio .video .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .portfolio .video .button a {
+  font-size: 18px;
+}
+
+main .portfolio .video .button .guide {
+  border: 1px solid #e9896a;
+  background-color: #e9896a;
+  padding: 20px;
+}
+
+main .portfolio .video .button .pc-m {
+  border: 1px solid #343f56;
+  background-color: #343f56;
+  padding: 20px 38px;
+}
+
+main .portfolio .video .button .plan {
+  border: 1px solid #387c6d;
+  background-color: #387c6d;
+  padding: 20px 47px;
+}
+
+main .portfolio .video .button .plan a {
+  font-family: 'BMHANNAAir';
+}
+
+main .portfolio .video h3 {
+  text-align: center;
+}
+
+footer h2 {
+  text-align: right;
+  font-size: 25px;
+  border-bottom: 2px solid #343f56;
+  line-height: 1.6px;
+  margin: 60px 10px 40px 10px;
+}
+
+footer h2 span {
+  background-color: #fff;
+  padding: 0 10px;
+  margin: 0 30px;
+}
+
+footer .contact-flexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+footer .contact-flexbox .phone-flexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .contact-flexbox .phone-flexbox img {
+  width: 16px;
+  height: 16px;
+}
+
+footer .contact-flexbox .phone-flexbox p {
+  font-size: 15px;
+}
+
+footer .contact-flexbox .phone-flexbox p span {
+  font-size: 17px;
+}
+
+footer .contact-flexbox .email-flexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .contact-flexbox .email-flexbox img {
+  width: 21px;
+  height: 15px;
+}
+
+footer .contact-flexbox .email-flexbox p {
+  font-size: 15px;
+}
+
+footer .contact-flexbox .email-flexbox p span {
+  font-size: 17px;
 }
 /*# sourceMappingURL=index.css.map */
