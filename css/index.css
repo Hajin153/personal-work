@@ -109,8 +109,8 @@ header .back-ground-color .orange-stroke {
   header .back-ground-color .orange-stroke {
     display: block;
     position: absolute;
-    left: 110px;
-    top: 45px;
+    top: 46px;
+    left: 111px;
   }
 }
 
@@ -158,6 +158,14 @@ header .back-ground-color .illustration {
   text-align: center;
 }
 
+header .back-ground-color .illustration .flower {
+  position: absolute;
+  bottom: 40px;
+  right: 50%;
+  -webkit-transform: translate(50%);
+          transform: translate(50%);
+}
+
 @media screen and (min-width: 1024px) {
   header .back-ground-color .illustration .flower {
     position: absolute;
@@ -188,7 +196,6 @@ header .back-ground-color .illustration .me {
   right: 50%;
   -webkit-transform: translate(50%);
           transform: translate(50%);
-  position: absolute;
   z-index: 1;
 }
 
@@ -248,51 +255,49 @@ header .background-green p {
   }
 }
 
-main .my-skill h2 {
+@media screen and (min-width: 1024px) {
+  main .my-skill .grid {
+    position: absolute;
+    top: 558px;
+    left: 375px;
+  }
+}
+
+main .my-skill .grid h2 {
   text-align: left;
   font-size: 25px;
-  border-bottom: 2px solid #343f56;
   line-height: 1.6px;
+  border-bottom: 2px solid #343f56;
   margin: 54px 10px 20px 10px;
 }
 
 @media screen and (min-width: 1024px) {
-  main .my-skill h2 {
+  main .my-skill .grid h2 {
     font-size: 40px;
-    margin-top: 157px;
-  }
-}
-
-main .my-skill h2 span {
-  background-color: #eae9db;
-  padding: 0 10px;
-  margin: 0 30px;
-}
-
-@media screen and (min-width: 1024px) {
-  main .my-skill .vl {
-    border-left: 2px solid #343f56;
     height: 350px;
-    position: absolute;
-    top: 610px;
-    left: 385px;
-    z-index: 1;
+    padding: 347px 10px 0;
+    border-left: 2px solid #343f56;
   }
+}
+
+main .my-skill .grid h2 span {
+  background-color: #eae9db;
+  padding: 0 15px;
+  margin: 0 30px;
 }
 
 main .my-skill .my-skills-flex-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
 
 @media screen and (min-width: 1024px) {
   main .my-skill .my-skills-flex-box {
-    margin: 0 auto;
+    display: block;
+    margin-top: 285px;
   }
 }
 
@@ -305,27 +310,24 @@ main .my-skill .my-skills-flex-box {
         justify-content: space-around;
     width: 100%;
   }
-  main .my-skill .my-skills-flex-box .web .web-box {
-    width: 100%/5;
-  }
 }
 
 @media screen and (min-width: 1024px) {
   main .my-skill .my-skills-flex-box .video {
+    margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    width: 80%;
-    margin-top: 10px;
-  }
-  main .my-skill .my-skills-flex-box .video .video-box {
-    width: 100%/4;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 75%;
+    margin-top: 5px;
   }
 }
 
 main .my-skill .my-skills-flex-box .green {
+  position: relative;
   text-align: center;
   border-radius: 50%;
   border: 3px solid #387c6d;
@@ -342,10 +344,13 @@ main .my-skill .my-skills-flex-box .green {
 }
 
 main .my-skill .my-skills-flex-box .green .orange {
-  margin: 2px auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   border-radius: 50%;
   border: 11px solid #e9896a;
-  border-top-color: transparent;
   width: 159px;
   height: 159px;
 }
@@ -354,31 +359,37 @@ main .my-skill .my-skills-flex-box .green .orange {
   main .my-skill .my-skills-flex-box .green .orange {
     width: 191px;
     height: 191px;
-    margin-top: 7px;
   }
 }
 
-main .my-skill .my-skills-flex-box .green .orange img {
-  margin-top: 50px;
+main .my-skill .my-skills-flex-box .green img {
+  margin-top: 30px;
   width: 35px;
   height: 40px;
 }
 
-main .my-skill .my-skills-flex-box .green .orange hr {
+main .my-skill .my-skills-flex-box .green hr {
   width: 80%;
   border: 1px solid #387c6d;
-  margin: 0 auto;
+  margin: 8px auto;
 }
 
-main .my-skill .my-skills-flex-box .green .orange p {
+main .my-skill .my-skills-flex-box .green p {
   text-align: center;
-  margin: 0 auto;
-  margin-top: 5px;
+  margin: -5px auto;
   font-size: 18px;
+  line-height: 20px;
 }
 
 main .portfolio {
+  position: relative;
   margin-top: 54px;
+}
+
+@media screen and (min-width: 1024px) {
+  main .portfolio {
+    margin-top: 150px;
+  }
 }
 
 main .portfolio .title-flexbox {
@@ -388,7 +399,13 @@ main .portfolio .title-flexbox {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 10px 10px;
+  margin: 0 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  main .portfolio .title-flexbox {
+    margin: 0;
+  }
 }
 
 main .portfolio .title-flexbox .left {
@@ -400,7 +417,7 @@ main .portfolio .title-flexbox .left {
 main .portfolio .title-flexbox h2 {
   font-size: 25px;
   text-align: center;
-  margin: 10px 10px;
+  margin: 0 10px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -415,85 +432,178 @@ main .portfolio .title-flexbox .right {
   border-bottom: 2px solid #343f56;
 }
 
-main .portfolio .group-work {
-  margin: 50px 0 20px;
+main .portfolio .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-main .portfolio .group-work h3 {
+@media screen and (min-width: 1024px) {
+  main .portfolio .button {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+  }
+}
+
+main .portfolio .button .btn {
+  position: relative;
+  width: 100%;
+  height: 57px;
+  text-align: center;
+  margin: 20px 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  main .portfolio .button .btn {
+    margin-bottom: 5px;
+    border-radius: 0 20px 20px 0;
+    width: 182px;
+    height: 57px;
+  }
+}
+
+main .portfolio .button .btn a {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 18px;
+}
+
+main .portfolio .button .guide {
+  border: 1px solid #e9896a;
+  background-color: #e9896a;
+}
+
+main .portfolio .button .pc-m {
+  border: 1px solid #343f56;
+  background-color: #343f56;
+}
+
+main .portfolio .button .plan {
+  border: 1px solid #387c6d;
+  background-color: #387c6d;
+}
+
+main .portfolio .button .plan a {
+  font-family: 'BMHANNAAir';
+}
+
+main .portfolio .button .pc-m-cl {
+  margin: 20px auto;
+  height: 57px;
+  width: 170px;
+  border: 1px solid #343f56;
+  background-color: #343f56;
+}
+
+@media screen and (min-width: 1024px) {
+  main .portfolio .button .pc-m-cl {
+    margin-top: 30px;
+  }
+}
+
+main .portfolio .button .v-plan {
+  margin: 20px auto;
+  height: 57px;
+  width: 170px;
+  border: 1px solid #e9896a;
+  background-color: #e9896a;
+}
+
+main .portfolio .work {
+  margin-top: 70px;
+}
+
+@media screen and (min-width: 1024px) {
+  main .portfolio .work {
+    margin-top: 33px;
+    position: relative;
+    margin-left: 15px;
+  }
+}
+
+main .portfolio .work h3 {
   margin-top: -40px;
   font-size: 20px;
   padding: 0 10px 10px;
 }
 
-main .portfolio .group-work .background-blue {
+@media screen and (min-width: 1024px) {
+  main .portfolio .work h3 {
+    font-size: 30px;
+  }
+}
+
+main .portfolio .work .background-blue {
   background-color: #343f56;
   height: 390px;
-  margin: 10px 10px;
-}
-
-main .portfolio .group-work .background-blue a img {
-  float: right;
-  margin: 185px 10px;
-}
-
-main .portfolio .group-work .button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-main .portfolio .group-work .button a {
-  font-size: 18px;
-}
-
-main .portfolio .group-work .button .guide {
-  border: 1px solid #e9896a;
-  background-color: #e9896a;
-  padding: 20px;
-}
-
-main .portfolio .group-work .button .pc-m {
-  border: 1px solid #343f56;
-  background-color: #343f56;
-  padding: 20px 38px;
-}
-
-main .portfolio .group-work .button .plan {
-  border: 1px solid #387c6d;
-  background-color: #387c6d;
-  padding: 20px 47px;
-}
-
-main .portfolio .group-work .button .plan a {
-  font-family: 'BMHANNAAir';
+  margin: 0 10px;
 }
 
 @media screen and (min-width: 1024px) {
-  main .portfolio .group-work h3 {
-    font-weight: 500px;
-  }
-  main .portfolio .group-work .background-blue {
+  main .portfolio .work .background-blue {
     width: 933px;
     height: 635px;
   }
 }
 
+main .portfolio .work .background-blue a img {
+  float: right;
+  margin: 185px 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  main .portfolio .work .background-blue a img {
+    margin: 290px 10px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main .portfolio .work .h-l {
+    border-bottom: 2px dashed #343f56;
+    margin-bottom: 18px;
+    margin-left: -15px;
+    width: 1.5%;
+  }
+}
+
 main .portfolio .personal-work {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 main .portfolio .personal-work h3 {
-  margin-top: -40px;
+  text-align: right;
   font-size: 20px;
   padding: 0 10px 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  main .portfolio .personal-work h3 {
+    font-size: 30px;
+    margin: 0 10px;
+  }
 }
 
 main .portfolio .personal-work .background-blue {
   background-color: #343f56;
   height: 390px;
-  margin: 10px 10px;
+  margin: 0 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  main .portfolio .personal-work .background-blue {
+    width: 933px;
+    height: 635px;
+    margin: 0 220px;
+  }
 }
 
 main .portfolio .personal-work .background-blue a img {
@@ -501,113 +611,60 @@ main .portfolio .personal-work .background-blue a img {
   margin: 185px 10px;
 }
 
-main .portfolio .personal-work .button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+@media screen and (min-width: 1024px) {
+  main .portfolio .personal-work .background-blue a img {
+    float: left;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    margin: 290px 10px;
+  }
 }
 
-main .portfolio .personal-work .button a {
-  font-size: 18px;
-}
-
-main .portfolio .personal-work .button .guide {
-  border: 1px solid #e9896a;
-  background-color: #e9896a;
-  padding: 20px;
-}
-
-main .portfolio .personal-work .button .pc-m {
-  border: 1px solid #343f56;
-  background-color: #343f56;
-  padding: 20px 38px;
-}
-
-main .portfolio .personal-work .button .plan {
-  border: 1px solid #387c6d;
-  background-color: #387c6d;
-  padding: 20px 47px;
-}
-
-main .portfolio .personal-work .button .plan a {
-  font-family: 'BMHANNAAir';
-}
-
-main .portfolio .personal-work h3 {
-  float: right;
-}
-
-main .portfolio .clone-coding {
-  margin-top: 100px;
-}
-
-main .portfolio .clone-coding h3 {
-  margin-top: -40px;
-  font-size: 20px;
-  padding: 0 10px 10px;
-}
-
-main .portfolio .clone-coding .background-blue {
-  background-color: #343f56;
-  height: 390px;
-  margin: 10px 10px;
-}
-
-main .portfolio .clone-coding .background-blue a img {
-  float: right;
-  margin: 185px 10px;
-}
-
-main .portfolio .clone-coding .button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-main .portfolio .clone-coding .button a {
-  font-size: 18px;
-}
-
-main .portfolio .clone-coding .button .guide {
-  border: 1px solid #e9896a;
-  background-color: #e9896a;
-  padding: 20px;
-}
-
-main .portfolio .clone-coding .button .pc-m {
-  border: 1px solid #343f56;
-  background-color: #343f56;
-  padding: 20px 38px;
-}
-
-main .portfolio .clone-coding .button .plan {
-  border: 1px solid #387c6d;
-  background-color: #387c6d;
-  padding: 20px 47px;
-}
-
-main .portfolio .clone-coding .button .plan a {
-  font-family: 'BMHANNAAir';
+@media screen and (min-width: 1024px) {
+  main .portfolio .personal-work .h-l {
+    border-bottom: 2px dashed #343f56;
+    margin-bottom: -22px;
+    width: 77%;
+  }
+  main .portfolio .personal-work .button {
+    position: absolute;
+    top: 870px;
+    left: 15px;
+  }
+  main .portfolio .personal-work .button .btn {
+    border-radius: 20px 0 0 20px;
+  }
 }
 
 main .portfolio .video {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 main .portfolio .video h3 {
-  margin-top: -40px;
+  text-align: center;
   font-size: 20px;
   padding: 0 10px 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  main .portfolio .video h3 {
+    font-size: 30px;
+    margin: 0 10px;
+  }
 }
 
 main .portfolio .video .background-blue {
   background-color: #343f56;
   height: 390px;
-  margin: 10px 10px;
+  margin: 0 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  main .portfolio .video .background-blue {
+    width: 1134px;
+    height: 360px;
+    margin: 0 15px;
+  }
 }
 
 main .portfolio .video .background-blue a img {
@@ -615,42 +672,27 @@ main .portfolio .video .background-blue a img {
   margin: 185px 10px;
 }
 
-main .portfolio .video .button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+@media screen and (min-width: 1024px) {
+  main .portfolio .video .h-l {
+    border-bottom: 2px dashed #343f56;
+    margin-bottom: 18px;
+    margin-left: -15px;
+    width: 46.5%;
+  }
 }
 
-main .portfolio .video .button a {
-  font-size: 18px;
+@media screen and (min-width: 1024px) {
+  main .portfolio .v-l {
+    position: absolute;
+    top: 0;
+    border-left: 2px dashed #343f56;
+    height: 2930px;
+    margin-top: 24px;
+  }
 }
 
-main .portfolio .video .button .guide {
-  border: 1px solid #e9896a;
-  background-color: #e9896a;
-  padding: 20px;
-}
-
-main .portfolio .video .button .pc-m {
-  border: 1px solid #343f56;
-  background-color: #343f56;
-  padding: 20px 38px;
-}
-
-main .portfolio .video .button .plan {
-  border: 1px solid #387c6d;
-  background-color: #387c6d;
-  padding: 20px 47px;
-}
-
-main .portfolio .video .button .plan a {
-  font-family: 'BMHANNAAir';
-}
-
-main .portfolio .video h3 {
-  text-align: center;
+footer {
+  position: relative;
 }
 
 footer h2 {
@@ -661,8 +703,16 @@ footer h2 {
   margin: 60px 10px 40px 10px;
 }
 
+@media screen and (min-width: 1024px) {
+  footer h2 {
+    margin: 0;
+    padding-top: 330px;
+    font-size: 40px;
+  }
+}
+
 footer h2 span {
-  background-color: #fff;
+  background-color: #eae9db;
   padding: 0 10px;
   margin: 0 30px;
 }
@@ -671,52 +721,57 @@ footer .contact-flexbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  margin-bottom: 50px;
 }
 
-footer .contact-flexbox .phone-flexbox {
+footer .contact-flexbox .phone-email-flexbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0 auto 20px;
 }
 
-footer .contact-flexbox .phone-flexbox img {
+footer .contact-flexbox .phone-email-flexbox img {
+  margin-left: 10px;
   width: 16px;
   height: 16px;
 }
 
-footer .contact-flexbox .phone-flexbox p {
-  font-size: 15px;
-}
-
-footer .contact-flexbox .phone-flexbox p span {
-  font-size: 17px;
-}
-
-footer .contact-flexbox .email-flexbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-footer .contact-flexbox .email-flexbox img {
+footer .contact-flexbox .phone-email-flexbox .email {
   width: 21px;
   height: 15px;
 }
 
-footer .contact-flexbox .email-flexbox p {
+footer .contact-flexbox .phone-email-flexbox p {
+  padding-left: 5px;
   font-size: 15px;
 }
 
-footer .contact-flexbox .email-flexbox p span {
-  font-size: 17px;
+footer .contact-flexbox .phone-email-flexbox p span {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 1024px) {
+  footer .contact-flexbox .phone-email-flexbox p span {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  footer .contact-flexbox .phone-email-flexbox p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  footer .v-l {
+    float: right;
+    margin-top: -175px;
+    height: 100px;
+    border-left: 2px solid #343f56;
+  }
 }
 /*# sourceMappingURL=index.css.map */

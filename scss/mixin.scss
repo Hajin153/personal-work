@@ -19,46 +19,9 @@
 }
 
 @mixin work() {
-    h3 {
-        margin-top: -40px;
-        font-size: 20px;
-        padding: 0 10px 10px;
-    }
-    .background-blue {
-        background-color: $blue;
-        height: 390px;
-        margin: 10px 10px;
-        a {
-            img {
-                float: right;
-                margin: 185px 10px;
-            }
-        }
-    }
-    .button {
-        display: flex;
-        justify-content: space-around;
-        a {
-            font-size: 18px;
-        }
-        .guide {
-            border: 1px solid $orange;
-            background-color: $orange;
-            padding: 20px;
-            
-        }
-        .pc-m {
-            border: 1px solid $blue;
-            background-color: $blue;
-            padding: 20px 38px;
-        }
-        .plan {
-            border: 1px solid $green;
-            background-color: $green;
-            padding: 20px 47px;
-            a {
-                font-family: 'BMHANNAAir';
-            }
-        }
-    }
+    
+}
+
+@mixin pc-work() {
+    
 }

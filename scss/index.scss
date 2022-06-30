@@ -55,8 +55,8 @@ header {
             @include responsive(pc-screens) {
                 display: block;
                 position: absolute;
-                left: 110px;
-                top: 45px;
+                top: 46px;
+                left: 111px;
             }
             
             .green-cir {
@@ -99,6 +99,10 @@ header {
         .illustration {
             text-align: center;
             .flower {
+                position: absolute;
+                bottom: 40px;
+                right: 50%;
+                transform: translate(50%);
                 @include responsive(pc-screens) {
                     position: absolute;
                     bottom: 60px;
@@ -122,7 +126,6 @@ header {
                 bottom: -4px;
                 right: 50%;
                 transform: translate(50%);
-                position: absolute;
                 z-index: 1;
                 img {
                     width: 319px;
@@ -173,40 +176,39 @@ header {
 //===== main =====//
 main {
     .my-skill {
-        h2 {
-            text-align: left;
-            font-size: 25px;
-            border-bottom: 2px solid $blue;
-            line-height: 1.6px;
-            margin: 54px 10px 20px 10px;
+        .grid {
             @include responsive(pc-screens) {
-                font-size: 40px;
-                margin-top: 157px;
-            }
-            
-            span {
-                background-color: $body-bg;
-                padding: 0 10px;
-                margin: 0 30px;
-            }
-        }
-        @include responsive(pc-screens) {
-            .vl {
-                border-left: 2px solid $blue;
-                height: 350px;
                 position: absolute;
-                top: 610px;
-                left: 385px;
-                z-index: 1;
+                top: 558px;
+                left: 375px;
+            }
+
+            h2 {
+                text-align: left;
+                font-size: 25px;
+                line-height: 1.6px;
+                border-bottom: 2px solid $blue;
+                margin: 54px 10px 20px 10px;
+                @include responsive(pc-screens) {
+                    font-size: 40px;
+                    height: 350px;
+                    padding: 347px 10px 0;
+                    border-left: 2px solid $blue;
+                }
+                span {
+                    background-color: $body-bg;
+                    padding: 0 15px;
+                    margin: 0 30px;
+                }
             }
         }
 
         .my-skills-flex-box {
             display: flex;
-            flex-wrap: wrap;
             justify-content: space-around;
             @include responsive(pc-screens) {
-                margin: 0 auto;
+                display: block;
+                margin-top: 285px;
             }
 
             .web {
@@ -214,25 +216,22 @@ main {
                     display: flex;
                     justify-content: space-around;
                     width: 100%;
-
-                    .web-box {
-                        width: 100%/5;
-                    }
+                    
                 }
             }
 
             .video {
                 @include responsive(pc-screens) {
+                    margin: 0 auto;
                     display: flex;
-                    justify-content: space-around;
-                    width: 80%;
-                    margin-top: 10px;
-                    .video-box {
-                        width: 100%/4;
-                    }
+                    justify-content: space-between;
+                    width: 75%;
+                    margin-top: 5px;
+                    
                 }
             }
             .green {
+                position: relative;
                 text-align: center;
                 border-radius: 50%;
                 border: 3px solid $green;
@@ -245,49 +244,55 @@ main {
                 }
 
                 .orange {
-                    margin: 2px auto;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
                     border-radius: 50%;
                     border: 11px solid 
                     $orange;
-                    border-top-color: transparent;
                     width: 159px;
                     height: 159px;
                     @include responsive(pc-screens) {
                         width: 191px;
                         height: 191px;
-                        margin-top: 7px;
-                    }
-                    
-                    img {
-                        margin-top: 50px;
-                        width: 35px;
-                        height: 40px;
-                    }
-
-                    hr {
-                        width: 80%;
-                        border: 1px solid $green;
-                        margin: 0 auto;
-                    }
-
-                    p {
-                        text-align: center;
-                        margin: 0 auto;
-                        margin-top: 5px;
-                        font-size: 18px;
-                        
                     }
                 } 
+                img {
+                    margin-top: 30px;
+                    width: 35px;
+                    height: 40px;
+                }
+                hr {
+                    width: 80%;
+                    border: 1px solid $green;
+                    margin: 8px auto;
+                }
+                p {
+                    text-align: center;
+                    margin: -5px auto;
+                    font-size: 18px;
+                    line-height: 20px;
+                }
             }
         } //my-skills-flex-box
     } //my-skill
 
+    // portfolio //
     .portfolio {
+        position: relative;
         margin-top: 54px;
+        @include responsive(pc-screens) {
+            margin-top: 150px;
+        }
+        
         .title-flexbox {
             display: flex;
             align-items: center;
-            margin: 10px 10px;
+            margin: 0 10px;
+            @include responsive(pc-screens) {
+                margin: 0;
+            }
             .left {
                 width: 50%;
                 display: block;
@@ -296,52 +301,225 @@ main {
             h2 {
                 font-size: 25px;
                 text-align: center; 
-                margin: 10px 10px;
+                margin: 0 10px;
                 @include responsive(pc-screens) {
                     font-size: 40px;
                 }
-
+                
             } 
             .right {
                 width: 50%;
                 display: block;
                 border-bottom: 2px solid $blue;
-           }
+            }
         }
-        
-        .group-work {
-            @include work();
-            margin: 50px 0 20px;
+
+        .button {
+            display: flex;
             @include responsive(pc-screens) {
-                h3 {
-                    font-weight: 500px;
+                flex-direction: column;
+                position: absolute;
+                top: 50px;
+                right: 10px;
+            }
+
+            .btn {
+                position: relative;
+                width: 100%;
+                height: 57px;
+                text-align: center;
+                margin: 20px 10px;
+                @include responsive(pc-screens) {
+                    margin-bottom: 5px;
+                    border-radius: 0 20px 20px 0;
+                    width: 182px;
+                    height: 57px;
                 }
-                .background-blue {
+
+                a {
+                    width: 100%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: 18px;
+                }
+            }
+            .guide {
+                border: 1px solid $orange;
+                background-color: $orange;
+            }
+            .pc-m {
+                border: 1px solid $blue;
+                background-color: $blue;
+            }
+            .plan {
+                border: 1px solid $green;
+                background-color: $green;
+                a {
+                    font-family: 'BMHANNAAir';
+                }
+            }
+            .pc-m-cl {
+                margin: 20px auto;
+                height: 57px;
+                width: 170px;
+                border: 1px solid $blue;
+                background-color: $blue;
+                @include responsive(pc-screens) {
+                    margin-top: 30px;
+                }
+
+            }
+            .v-plan {
+                margin: 20px auto;
+                height: 57px;
+                width: 170px;
+                border: 1px solid $orange;
+                background-color: $orange;
+            }
+        } //button
+        
+        .work {
+            margin-top: 70px;
+            @include responsive(pc-screens) {
+                margin-top: 33px;
+                position: relative;
+                margin-left: 15px;
+            }
+
+            h3 {
+                margin-top: -40px;
+                font-size: 20px;
+                padding: 0 10px 10px;
+                @include responsive(pc-screens) {
+                    font-size: 30px;
+                }
+            }
+            .background-blue {
+                background-color: $blue;
+                height: 390px;
+                margin: 0 10px;
+                @include responsive(pc-screens) {
                     width: 933px;
                     height: 635px;
                 }
-                .button {
-                    
+                a {
+                    img {
+                        float: right;
+                        margin: 185px 10px;
+                        @include responsive(pc-screens) {
+                            margin: 290px 10px;
+                        }
+                    }
                 }
             }
-
-        }
-        .personal-work {
-            @include work();
-            margin-top: 100px;
-            h3 {
-                float: right;
+            @include responsive(pc-screens) {
+                .h-l {
+                    border-bottom: 2px dashed $blue;
+                    margin-bottom: 18px;
+                    margin-left: -15px;
+                    width: 1.5%;
+                }
             }
         }
-        .clone-coding {
-            @include work();
-            margin-top: 100px;
+        
+        .personal-work {
+            margin-top: 50px;
+            h3 {
+                text-align: right;
+                font-size: 20px;
+                padding: 0 10px 10px;
+                @include responsive(pc-screens) {
+                    font-size: 30px;
+                    margin: 0 10px;
+                }
+            }
+            .background-blue {
+                background-color: $blue;
+                height: 390px;
+                margin: 0 10px;
+                @include responsive(pc-screens) {
+                    width: 933px;
+                    height: 635px;
+                    margin: 0 220px;
+                }
+                a {
+                    img {
+                        float: right;
+                        margin: 185px 10px;
+                        @include responsive(pc-screens) {
+                            float: left;
+                            transform: rotate(180deg);
+                            margin: 290px 10px;
+                        }
+                        
+                    }
+                }
+            }
+            @include responsive(pc-screens) {
+                .h-l {
+                    border-bottom: 2px dashed $blue;
+                    margin-bottom: -22px;
+                    width: 77%;
+                }
+                
+                .button {
+                    position: absolute;
+                    top: 870px;
+                    left: 15px;
+                    .btn {
+                        border-radius: 20px 0 0 20px;
+                    }
+                }
+            }
         }
+        
         .video {
-            @include work();
-            margin-top: 100px;
+            margin-top: 50px;
             h3 {
                 text-align: center;
+                font-size: 20px;
+                padding: 0 10px 10px;
+                @include responsive(pc-screens) {
+                    font-size: 30px;
+                    margin: 0 10px;
+                }
+            }
+            .background-blue {
+                background-color: $blue;
+                height: 390px;
+                margin: 0 10px;
+                @include responsive(pc-screens) {
+                    width: 1134px;
+                    height: 360px;
+                    margin: 0 15px;
+                }
+
+                a {
+                    img {
+                        float: right;
+                        margin: 185px 10px;
+                    }
+                }
+            }
+            
+            @include responsive(pc-screens) {
+                .h-l {
+                    border-bottom: 2px dashed $blue;
+                    margin-bottom: 18px;
+                    margin-left: -15px;
+                    width: 46.5%;
+                }
+            }
+        }
+        .v-l {
+            @include responsive(pc-screens) {
+                position: absolute;
+                top: 0;
+                border-left: 2px dashed $blue;
+                height: 2930px;
+                margin-top: 24px;
             }
         }
     } //portfolio
@@ -349,49 +527,61 @@ main {
 
 //===== footer =====//
 footer {
+    position: relative;
     h2 {
         text-align: right;
         font-size: 25px;
         border-bottom: 2px solid $blue;
         line-height: 1.6px;
         margin: 60px 10px 40px 10px;
+        @include responsive(pc-screens) {
+            margin: 0;
+            padding-top: 330px;
+            font-size: 40px;
+        }
         span {
-            background-color: #fff;
+            background-color: $body-bg;
             padding: 0 10px;
             margin: 0 30px;
         }
     }
     .contact-flexbox {
         display: flex;
-        justify-content: space-around;
-        margin-bottom: 50px;
-        .phone-flexbox {
+        .phone-email-flexbox {
             display: flex;
             align-items: center;
+            margin: 0 auto 20px;
             img {
+                margin-left: 10px;
                 width: 16px;
                 height: 16px;
             }
-            p {
-                font-size: 15px;
-                span {
-                    font-size: 17px;
-                }
-            }
-        }
-        .email-flexbox {
-            display: flex;
-            align-items: center;
-            img {
+            .email {
                 width: 21px;
                 height: 15px;
             }
             p {
+                padding-left: 5px;
                 font-size: 15px;
                 span {
-                    font-size: 17px;
+                    font-size: 16px;
+                    font-weight: 600;
+                    @include responsive(pc-screens) {
+                        font-size: 20px;
+                    }
+                }
+                @include responsive(pc-screens) {
+                    font-size: 18px;
                 }
             }
         }
     } //contact-flexbox
+    .v-l {
+        @include responsive(pc-screens) {
+            float: right;
+            margin-top: -175px;
+            height: 100px;
+            border-left: 2px solid $blue;
+        }
+    }
 }//footer
