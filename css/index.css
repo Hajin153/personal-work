@@ -445,7 +445,7 @@ main .portfolio .button {
         -ms-flex-direction: column;
             flex-direction: column;
     position: absolute;
-    top: 50px;
+    top: 30px;
     right: 10px;
   }
 }
@@ -496,28 +496,6 @@ main .portfolio .button .plan a {
   font-family: 'BMHANNAAir';
 }
 
-main .portfolio .button .pc-m-cl {
-  margin: 20px auto;
-  height: 57px;
-  width: 170px;
-  border: 1px solid #343f56;
-  background-color: #343f56;
-}
-
-@media screen and (min-width: 1024px) {
-  main .portfolio .button .pc-m-cl {
-    margin-top: 30px;
-  }
-}
-
-main .portfolio .button .v-plan {
-  margin: 20px auto;
-  height: 57px;
-  width: 170px;
-  border: 1px solid #e9896a;
-  background-color: #e9896a;
-}
-
 main .portfolio .work {
   margin-top: 70px;
 }
@@ -552,6 +530,7 @@ main .portfolio .work .background-blue {
   main .portfolio .work .background-blue {
     width: 933px;
     height: 635px;
+    margin-bottom: 54px;
   }
 }
 
@@ -563,6 +542,20 @@ main .portfolio .work .background-blue a img {
 @media screen and (min-width: 1024px) {
   main .portfolio .work .background-blue a img {
     margin: 290px 10px;
+  }
+}
+
+main .portfolio .work .pc-m-cl {
+  margin: 20px auto;
+  height: 57px;
+  width: 170px;
+  border: 1px solid #343f56;
+  background-color: #343f56;
+}
+
+@media screen and (min-width: 1024px) {
+  main .portfolio .work .pc-m-cl {
+    margin: 30px 20px;
   }
 }
 
@@ -603,6 +596,7 @@ main .portfolio .personal-work .background-blue {
     width: 933px;
     height: 635px;
     margin: 0 220px;
+    margin-bottom: 52px;
   }
 }
 
@@ -628,8 +622,8 @@ main .portfolio .personal-work .background-blue a img {
   }
   main .portfolio .personal-work .button {
     position: absolute;
-    top: 870px;
-    left: 15px;
+    top: 840px;
+    left: 18px;
   }
   main .portfolio .personal-work .button .btn {
     border-radius: 20px 0 0 20px;
@@ -638,6 +632,7 @@ main .portfolio .personal-work .background-blue a img {
 
 main .portfolio .video {
   margin-top: 50px;
+  position: relative;
 }
 
 main .portfolio .video h3 {
@@ -661,9 +656,9 @@ main .portfolio .video .background-blue {
 
 @media screen and (min-width: 1024px) {
   main .portfolio .video .background-blue {
-    width: 1134px;
+    width: 567px;
     height: 360px;
-    margin: 0 15px;
+    margin: 0 auto;
   }
 }
 
@@ -672,12 +667,27 @@ main .portfolio .video .background-blue a img {
   margin: 185px 10px;
 }
 
+main .portfolio .video .v-plan {
+  margin: 20px auto;
+  height: 57px;
+  width: 170px;
+  border: 1px solid #e9896a;
+  background-color: #e9896a;
+}
+
+@media screen and (min-width: 1024px) {
+  main .portfolio .video .v-plan {
+    position: absolute;
+    bottom: -105px;
+    right: 110px;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   main .portfolio .video .h-l {
     border-bottom: 2px dashed #343f56;
-    margin-bottom: 18px;
-    margin-left: -15px;
-    width: 46.5%;
+    margin-bottom: -22px;
+    width: 45%;
   }
 }
 
@@ -733,10 +743,22 @@ footer .contact-flexbox .phone-email-flexbox {
   margin: 0 auto 20px;
 }
 
+@media screen and (min-width: 1024px) {
+  footer .contact-flexbox .phone-email-flexbox {
+    margin-top: 50px;
+  }
+}
+
 footer .contact-flexbox .phone-email-flexbox img {
   margin-left: 10px;
   width: 16px;
   height: 16px;
+}
+
+@media screen and (min-width: 1024px) {
+  footer .contact-flexbox .phone-email-flexbox img {
+    margin-left: 30px;
+  }
 }
 
 footer .contact-flexbox .phone-email-flexbox .email {
@@ -747,6 +769,7 @@ footer .contact-flexbox .phone-email-flexbox .email {
 footer .contact-flexbox .phone-email-flexbox p {
   padding-left: 5px;
   font-size: 15px;
+  color: #343f56;
 }
 
 footer .contact-flexbox .phone-email-flexbox p span {
@@ -763,13 +786,14 @@ footer .contact-flexbox .phone-email-flexbox p span {
 @media screen and (min-width: 1024px) {
   footer .contact-flexbox .phone-email-flexbox p {
     font-size: 18px;
+    padding-left: 10px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   footer .v-l {
     float: right;
-    margin-top: -175px;
+    margin-top: -95px;
     height: 100px;
     border-left: 2px solid #343f56;
   }

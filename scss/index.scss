@@ -319,7 +319,7 @@ main {
             @include responsive(pc-screens) {
                 flex-direction: column;
                 position: absolute;
-                top: 50px;
+                top: 30px;
                 right: 10px;
             }
 
@@ -360,26 +360,7 @@ main {
                     font-family: 'BMHANNAAir';
                 }
             }
-            .pc-m-cl {
-                margin: 20px auto;
-                height: 57px;
-                width: 170px;
-                border: 1px solid $blue;
-                background-color: $blue;
-                @include responsive(pc-screens) {
-                    margin-top: 30px;
-                }
-
-            }
-            .v-plan {
-                margin: 20px auto;
-                height: 57px;
-                width: 170px;
-                border: 1px solid $orange;
-                background-color: $orange;
-            }
         } //button
-        
         .work {
             margin-top: 70px;
             @include responsive(pc-screens) {
@@ -403,6 +384,7 @@ main {
                 @include responsive(pc-screens) {
                     width: 933px;
                     height: 635px;
+                    margin-bottom: 54px;
                 }
                 a {
                     img {
@@ -412,6 +394,16 @@ main {
                             margin: 290px 10px;
                         }
                     }
+                }
+            }
+            .pc-m-cl {
+                margin: 20px auto;
+                height: 57px;
+                width: 170px;
+                border: 1px solid $blue;
+                background-color: $blue;
+                @include responsive(pc-screens) {
+                    margin: 30px 20px;
                 }
             }
             @include responsive(pc-screens) {
@@ -443,6 +435,7 @@ main {
                     width: 933px;
                     height: 635px;
                     margin: 0 220px;
+                    margin-bottom: 52px;
                 }
                 a {
                     img {
@@ -463,11 +456,10 @@ main {
                     margin-bottom: -22px;
                     width: 77%;
                 }
-                
                 .button {
                     position: absolute;
-                    top: 870px;
-                    left: 15px;
+                    top: 840px;
+                    left: 18px;
                     .btn {
                         border-radius: 20px 0 0 20px;
                     }
@@ -477,6 +469,7 @@ main {
         
         .video {
             margin-top: 50px;
+            position: relative;
             h3 {
                 text-align: center;
                 font-size: 20px;
@@ -491,11 +484,10 @@ main {
                 height: 390px;
                 margin: 0 10px;
                 @include responsive(pc-screens) {
-                    width: 1134px;
+                    width: 567px;
                     height: 360px;
-                    margin: 0 15px;
+                    margin: 0 auto;
                 }
-
                 a {
                     img {
                         float: right;
@@ -503,13 +495,23 @@ main {
                     }
                 }
             }
-            
+            .v-plan {
+                margin: 20px auto;
+                height: 57px;
+                width: 170px;
+                border: 1px solid $orange;
+                background-color: $orange;
+                @include responsive(pc-screens) {
+                    position: absolute;
+                    bottom: -105px;
+                    right: 110px;
+                }
+            }
             @include responsive(pc-screens) {
                 .h-l {
                     border-bottom: 2px dashed $blue;
-                    margin-bottom: 18px;
-                    margin-left: -15px;
-                    width: 46.5%;
+                    margin-bottom: -22px;
+                    width: 45%;
                 }
             }
         }
@@ -551,10 +553,17 @@ footer {
             display: flex;
             align-items: center;
             margin: 0 auto 20px;
+            @include responsive(pc-screens) {
+                margin-top: 50px;
+            }
+
             img {
                 margin-left: 10px;
                 width: 16px;
                 height: 16px;
+                @include responsive(pc-screens) {
+                    margin-left: 30px;
+                }
             }
             .email {
                 width: 21px;
@@ -563,6 +572,7 @@ footer {
             p {
                 padding-left: 5px;
                 font-size: 15px;
+                color: $blue;
                 span {
                     font-size: 16px;
                     font-weight: 600;
@@ -572,6 +582,7 @@ footer {
                 }
                 @include responsive(pc-screens) {
                     font-size: 18px;
+                    padding-left: 10px;
                 }
             }
         }
@@ -579,7 +590,7 @@ footer {
     .v-l {
         @include responsive(pc-screens) {
             float: right;
-            margin-top: -175px;
+            margin-top: -95px;
             height: 100px;
             border-left: 2px solid $blue;
         }
