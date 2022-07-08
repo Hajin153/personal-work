@@ -56,10 +56,6 @@ body {
   background-color: #eae9db;
 }
 
-header {
-  width: 100%;
-}
-
 header .back-ground-color {
   position: relative;
   background-color: #f8f5f1;
@@ -255,10 +251,14 @@ header .background-green p {
   }
 }
 
+main .my-skill {
+  position: relative;
+}
+
 @media screen and (min-width: 1024px) {
   main .my-skill .grid {
     position: absolute;
-    top: 558px;
+    bottom: 568px;
     left: 375px;
   }
 }
@@ -284,6 +284,19 @@ main .my-skill .grid h2 span {
   background-color: #eae9db;
   padding: 0 15px;
   margin: 0 30px;
+}
+
+@media screen and (min-width: 1024px) {
+  main .my-skill .grid .green-ball {
+    position: absolute;
+    top: 336px;
+    left: 310px;
+    display: block;
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    background-color: #387c6d;
+  }
 }
 
 main .my-skill .my-skills-flex-box {
@@ -406,6 +419,15 @@ main .portfolio .title-flexbox {
   main .portfolio .title-flexbox {
     margin: 0;
   }
+  main .portfolio .title-flexbox .orange-ball {
+    position: absolute;
+    top: -42px;
+    left: 400px;
+    border: 5px solid #e9896a;
+    border-radius: 50%;
+    width: 66px;
+    height: 66px;
+  }
 }
 
 main .portfolio .title-flexbox .left {
@@ -474,7 +496,7 @@ main .portfolio .button .btn a {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  font-size: 18px;
+  font-size: 19px;
 }
 
 main .portfolio .button .guide {
@@ -521,9 +543,10 @@ main .portfolio .work h3 {
 }
 
 main .portfolio .work .background-blue {
-  background-color: #343f56;
+  position: relative;
   height: 390px;
   margin: 0 10px;
+  background-color: #343f56;
 }
 
 @media screen and (min-width: 1024px) {
@@ -535,13 +558,16 @@ main .portfolio .work .background-blue {
 }
 
 main .portfolio .work .background-blue a img {
-  float: right;
-  margin: 185px 10px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
 }
 
 @media screen and (min-width: 1024px) {
   main .portfolio .work .background-blue a img {
-    margin: 290px 10px;
+    height: 20px;
   }
 }
 
@@ -586,6 +612,7 @@ main .portfolio .personal-work h3 {
 }
 
 main .portfolio .personal-work .background-blue {
+  position: relative;
   background-color: #343f56;
   height: 390px;
   margin: 0 10px;
@@ -593,6 +620,7 @@ main .portfolio .personal-work .background-blue {
 
 @media screen and (min-width: 1024px) {
   main .portfolio .personal-work .background-blue {
+    position: relative;
     width: 933px;
     height: 635px;
     margin: 0 220px;
@@ -601,16 +629,17 @@ main .portfolio .personal-work .background-blue {
 }
 
 main .portfolio .personal-work .background-blue a img {
-  float: right;
-  margin: 185px 10px;
+  position: absolute;
+  top: 50%;
+  right: 5px;
 }
 
 @media screen and (min-width: 1024px) {
   main .portfolio .personal-work .background-blue a img {
-    float: left;
+    left: 5px;
+    height: 20px;
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
-    margin: 290px 10px;
   }
 }
 
@@ -725,6 +754,19 @@ footer h2 span {
   background-color: #eae9db;
   padding: 0 10px;
   margin: 0 30px;
+}
+
+@media screen and (min-width: 1024px) {
+  footer .green-ball {
+    position: absolute;
+    bottom: 96px;
+    left: 400px;
+    display: block;
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    background-color: #387c6d;
+  }
 }
 
 footer .contact-flexbox {
