@@ -134,9 +134,20 @@ header .back-ground-color .orange-stroke .green-cir nav .gnb .title a {
   font-size: 40px;
 }
 
+header .back-ground-color .orange-stroke .green-cir nav .gnb .title a:hover {
+  color: #e5bdb3;
+  font-size: 39px;
+}
+
 header .back-ground-color .orange-stroke .green-cir nav .gnb .plus {
   padding-left: 50px;
   line-height: 52px;
+}
+
+header .back-ground-color .orange-stroke .green-cir nav .gnb .plus a:hover {
+  text-decoration: underline;
+  color: #e5bdb3;
+  font-size: 24px;
 }
 
 header .back-ground-color .hello {
@@ -150,43 +161,31 @@ header .back-ground-color .hello {
   }
 }
 
-header .back-ground-color .illustration {
+header .back-ground-color .illustration .flower {
   text-align: center;
 }
 
-header .back-ground-color .illustration .flower {
-  position: absolute;
-  bottom: 40px;
-  right: 50%;
-  -webkit-transform: translate(50%);
-          transform: translate(50%);
-}
-
-@media screen and (min-width: 1024px) {
-  header .back-ground-color .illustration .flower {
-    position: absolute;
-    bottom: 60px;
-    right: 50%;
-    -webkit-transform: translate(50%);
-            transform: translate(50%);
-    position: absolute;
-    z-index: 1;
-  }
-}
-
 header .back-ground-color .illustration .flower img {
-  width: 542px;
-  height: 424px;
+  position: absolute;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  width: 650px;
+  margin-top: -20px;
 }
 
 @media screen and (min-width: 1024px) {
   header .back-ground-color .illustration .flower img {
-    width: 847px;
-    height: 663px;
+    position: absolute;
+    top: 80px;
+    right: 50%;
+    -webkit-transform: translate(50%);
+            transform: translate(50%);
+    z-index: 1;
+    width: 1000px;
   }
 }
 
-header .back-ground-color .illustration .me {
+header .back-ground-color .illustration .illustration-me .me {
   position: absolute;
   bottom: -4px;
   right: 50%;
@@ -195,13 +194,34 @@ header .back-ground-color .illustration .me {
   z-index: 1;
 }
 
-header .back-ground-color .illustration .me img {
+header .back-ground-color .illustration .illustration-me .me img {
   width: 319px;
   height: 449px;
 }
 
 @media screen and (min-width: 1024px) {
-  header .back-ground-color .illustration .me img {
+  header .back-ground-color .illustration .illustration-me .me img {
+    width: 499px;
+    height: 702px;
+  }
+}
+
+header .back-ground-color .illustration .illustration-me .me-hover {
+  position: absolute;
+  bottom: -4px;
+  right: 50%;
+  -webkit-transform: translate(50%);
+          transform: translate(50%);
+  z-index: 1;
+}
+
+header .back-ground-color .illustration .illustration-me .me-hover img {
+  width: 319px;
+  height: 449px;
+}
+
+@media screen and (min-width: 1024px) {
+  header .back-ground-color .illustration .illustration-me .me-hover img {
     width: 499px;
     height: 702px;
   }
@@ -224,14 +244,14 @@ header .background-green {
   }
 }
 
-header .background-green img {
+header .background-green .hello-1 img {
   display: none;
 }
 
 @media screen and (min-width: 1024px) {
-  header .background-green img {
+  header .background-green .hello-1 img {
     display: block;
-    margin: -5px -3px;
+    margin-top: -10px;
   }
 }
 
@@ -251,19 +271,20 @@ header .background-green p {
   }
 }
 
-main .my-skill {
+main #my-skill {
   position: relative;
 }
 
 @media screen and (min-width: 1024px) {
-  main .my-skill .grid {
+  main #my-skill .grid {
     position: absolute;
     bottom: 568px;
     left: 375px;
+    overflow: hidden;
   }
 }
 
-main .my-skill .grid h2 {
+main #my-skill .grid h2 {
   text-align: left;
   font-size: 25px;
   line-height: 1.6px;
@@ -272,7 +293,7 @@ main .my-skill .grid h2 {
 }
 
 @media screen and (min-width: 1024px) {
-  main .my-skill .grid h2 {
+  main #my-skill .grid h2 {
     font-size: 40px;
     height: 350px;
     padding: 347px 10px 0;
@@ -280,14 +301,14 @@ main .my-skill .grid h2 {
   }
 }
 
-main .my-skill .grid h2 span {
+main #my-skill .grid h2 span {
   background-color: #eae9db;
   padding: 0 15px;
   margin: 0 30px;
 }
 
 @media screen and (min-width: 1024px) {
-  main .my-skill .grid .green-ball {
+  main #my-skill .grid .green-ball {
     position: absolute;
     top: 336px;
     left: 310px;
@@ -296,10 +317,11 @@ main .my-skill .grid h2 span {
     height: 66px;
     border-radius: 50%;
     background-color: #387c6d;
+    z-index: -1;
   }
 }
 
-main .my-skill .my-skills-flex-box {
+main #my-skill .my-skills-flex-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -308,14 +330,14 @@ main .my-skill .my-skills-flex-box {
 }
 
 @media screen and (min-width: 1024px) {
-  main .my-skill .my-skills-flex-box {
+  main #my-skill .my-skills-flex-box {
     display: block;
     margin-top: 285px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  main .my-skill .my-skills-flex-box .web {
+  main #my-skill .my-skills-flex-box .web {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -326,7 +348,7 @@ main .my-skill .my-skills-flex-box {
 }
 
 @media screen and (min-width: 1024px) {
-  main .my-skill .my-skills-flex-box .video {
+  main #my-skill .my-skills-flex-box .video {
     margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -339,7 +361,7 @@ main .my-skill .my-skills-flex-box {
   }
 }
 
-main .my-skill .my-skills-flex-box .green {
+main #my-skill .my-skills-flex-box .green {
   position: relative;
   text-align: center;
   border-radius: 50%;
@@ -350,62 +372,71 @@ main .my-skill .my-skills-flex-box .green {
 }
 
 @media screen and (min-width: 1024px) {
-  main .my-skill .my-skills-flex-box .green {
+  main #my-skill .my-skills-flex-box .green {
     width: 210px;
     height: 210px;
   }
 }
 
-main .my-skill .my-skills-flex-box .green .orange {
+main #my-skill .my-skills-flex-box .green .orange {
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  border-radius: 50%;
-  border: 11px solid #e9896a;
   width: 159px;
   height: 159px;
 }
 
 @media screen and (min-width: 1024px) {
-  main .my-skill .my-skills-flex-box .green .orange {
+  main #my-skill .my-skills-flex-box .green .orange {
     width: 191px;
     height: 191px;
   }
 }
 
-main .my-skill .my-skills-flex-box .green img {
+main #my-skill .my-skills-flex-box .green img {
   margin-top: 30px;
   width: 35px;
   height: 40px;
 }
 
-main .my-skill .my-skills-flex-box .green hr {
+main #my-skill .my-skills-flex-box .green hr {
   width: 80%;
   border: 1px solid #387c6d;
   margin: 8px auto;
 }
 
-main .my-skill .my-skills-flex-box .green p {
+main #my-skill .my-skills-flex-box .green p {
   text-align: center;
   margin: -5px auto;
   font-size: 18px;
   line-height: 20px;
 }
 
-main .portfolio {
+main #my-skill .my-skills-flex-box .green strong {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  line-height: 45px;
+  font-size: 43px;
+  background-color: pink;
+}
+
+main #portfolio {
   position: relative;
   margin-top: 54px;
 }
 
 @media screen and (min-width: 1024px) {
-  main .portfolio {
+  main #portfolio {
     margin-top: 150px;
   }
 }
 
-main .portfolio .title-flexbox {
+main #portfolio .title-flexbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -416,10 +447,10 @@ main .portfolio .title-flexbox {
 }
 
 @media screen and (min-width: 1024px) {
-  main .portfolio .title-flexbox {
+  main #portfolio .title-flexbox {
     margin: 0;
   }
-  main .portfolio .title-flexbox .orange-ball {
+  main #portfolio .title-flexbox .orange-ball {
     position: absolute;
     top: -42px;
     left: 400px;
@@ -430,38 +461,38 @@ main .portfolio .title-flexbox {
   }
 }
 
-main .portfolio .title-flexbox .left {
+main #portfolio .title-flexbox .left {
   width: 50%;
   display: block;
   border-bottom: 2px dashed #343f56;
 }
 
-main .portfolio .title-flexbox h2 {
+main #portfolio .title-flexbox h2 {
   font-size: 25px;
   text-align: center;
   margin: 0 10px;
 }
 
 @media screen and (min-width: 1024px) {
-  main .portfolio .title-flexbox h2 {
+  main #portfolio .title-flexbox h2 {
     font-size: 40px;
   }
 }
 
-main .portfolio .title-flexbox .right {
+main #portfolio .title-flexbox .right {
   width: 50%;
   display: block;
   border-bottom: 2px solid #343f56;
 }
 
-main .portfolio .button {
+main #portfolio .button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 @media screen and (min-width: 1024px) {
-  main .portfolio .button {
+  main #portfolio .button {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -472,7 +503,7 @@ main .portfolio .button {
   }
 }
 
-main .portfolio .button .btn {
+main #portfolio .button .btn {
   position: relative;
   width: 100%;
   height: 57px;
@@ -481,7 +512,7 @@ main .portfolio .button .btn {
 }
 
 @media screen and (min-width: 1024px) {
-  main .portfolio .button .btn {
+  main #portfolio .button .btn {
     margin-bottom: 5px;
     border-radius: 0 20px 20px 0;
     width: 182px;
@@ -489,7 +520,7 @@ main .portfolio .button .btn {
   }
 }
 
-main .portfolio .button .btn a {
+main #portfolio .button .btn a {
   width: 100%;
   position: absolute;
   top: 50%;
@@ -499,50 +530,50 @@ main .portfolio .button .btn a {
   font-size: 19px;
 }
 
-main .portfolio .button .guide {
+main #portfolio .button .guide {
   border: 1px solid #e9896a;
   background-color: #e9896a;
 }
 
-main .portfolio .button .pc-m {
+main #portfolio .button .pc-m {
   border: 1px solid #343f56;
   background-color: #343f56;
 }
 
-main .portfolio .button .plan {
+main #portfolio .button .plan {
   border: 1px solid #387c6d;
   background-color: #387c6d;
 }
 
-main .portfolio .button .plan a {
+main #portfolio .button .plan a {
   font-family: 'BMHANNAAir';
 }
 
-main .portfolio .work {
+main #portfolio .work {
   margin-top: 70px;
 }
 
 @media screen and (min-width: 1024px) {
-  main .portfolio .work {
+  main #portfolio .work {
     margin-top: 33px;
     position: relative;
     margin-left: 15px;
   }
 }
 
-main .portfolio .work h3 {
+main #portfolio .work h3 {
   margin-top: -40px;
   font-size: 20px;
   padding: 0 10px 10px;
 }
 
 @media screen and (min-width: 1024px) {
-  main .portfolio .work h3 {
+  main #portfolio .work h3 {
     font-size: 30px;
   }
 }
 
-main .portfolio .work .background-blue {
+main #portfolio .work .background-blue {
   position: relative;
   height: 390px;
   margin: 0 10px;
@@ -550,14 +581,14 @@ main .portfolio .work .background-blue {
 }
 
 @media screen and (min-width: 1024px) {
-  main .portfolio .work .background-blue {
+  main #portfolio .work .background-blue {
     width: 933px;
     height: 635px;
     margin-bottom: 54px;
   }
 }
 
-main .portfolio .work .background-blue a img {
+main #portfolio .work .background-blue a img {
   position: absolute;
   top: 50%;
   right: 0;
@@ -566,12 +597,48 @@ main .portfolio .work .background-blue a img {
 }
 
 @media screen and (min-width: 1024px) {
-  main .portfolio .work .background-blue a img {
+  main #portfolio .work .background-blue a img {
     height: 20px;
   }
 }
 
-main .portfolio .work .pc-m-cl {
+main #portfolio .work .background-blue .membership {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (min-width: 1024px) {
+  main #portfolio .work .background-blue .membership .membership-pc {
+    width: 385px;
+    padding: 10px;
+  }
+  main #portfolio .work .background-blue .membership .membership-m {
+    height: 630px;
+    padding: 10px;
+  }
+  main #portfolio .work .background-blue .membership .white-bg {
+    text-align: left;
+  }
+  main #portfolio .work .background-blue .membership .white-bg h4 {
+    padding-top: 20px;
+    color: #f8f5f1;
+    font-size: 20px;
+  }
+  main #portfolio .work .background-blue .membership .white-bg p {
+    padding-top: 10px;
+    font-family: 'BMHANNAAir';
+    color: #f8f5f1;
+    font-size: 18px;
+    width: 340px;
+  }
+  main #portfolio .work .background-blue .membership .white-bg img {
+    padding-top: 20px;
+    width: 340px;
+  }
+}
+
+main #portfolio .work .pc-m-cl {
   margin: 20px auto;
   height: 57px;
   width: 170px;
@@ -580,13 +647,13 @@ main .portfolio .work .pc-m-cl {
 }
 
 @media screen and (min-width: 1024px) {
-  main .portfolio .work .pc-m-cl {
+  main #portfolio .work .pc-m-cl {
     margin: 30px 20px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  main .portfolio .work .h-l {
+  main #portfolio .work .h-l {
     border-bottom: 2px dashed #343f56;
     margin-bottom: 18px;
     margin-left: -15px;
@@ -594,24 +661,24 @@ main .portfolio .work .pc-m-cl {
   }
 }
 
-main .portfolio .personal-work {
+main #portfolio .personal-work {
   margin-top: 50px;
 }
 
-main .portfolio .personal-work h3 {
+main #portfolio .personal-work h3 {
   text-align: right;
   font-size: 20px;
   padding: 0 10px 10px;
 }
 
 @media screen and (min-width: 1024px) {
-  main .portfolio .personal-work h3 {
+  main #portfolio .personal-work h3 {
     font-size: 30px;
     margin: 0 10px;
   }
 }
 
-main .portfolio .personal-work .background-blue {
+main #portfolio .personal-work .background-blue {
   position: relative;
   background-color: #343f56;
   height: 390px;
@@ -619,7 +686,7 @@ main .portfolio .personal-work .background-blue {
 }
 
 @media screen and (min-width: 1024px) {
-  main .portfolio .personal-work .background-blue {
+  main #portfolio .personal-work .background-blue {
     position: relative;
     width: 933px;
     height: 635px;
@@ -628,14 +695,14 @@ main .portfolio .personal-work .background-blue {
   }
 }
 
-main .portfolio .personal-work .background-blue a img {
+main #portfolio .personal-work .background-blue a img {
   position: absolute;
   top: 50%;
   right: 5px;
 }
 
 @media screen and (min-width: 1024px) {
-  main .portfolio .personal-work .background-blue a img {
+  main #portfolio .personal-work .background-blue a img {
     left: 5px;
     height: 20px;
     -webkit-transform: rotate(180deg);
@@ -644,59 +711,59 @@ main .portfolio .personal-work .background-blue a img {
 }
 
 @media screen and (min-width: 1024px) {
-  main .portfolio .personal-work .h-l {
+  main #portfolio .personal-work .h-l {
     border-bottom: 2px dashed #343f56;
     margin-bottom: -22px;
     width: 77%;
   }
-  main .portfolio .personal-work .button {
+  main #portfolio .personal-work .button {
     position: absolute;
     top: 840px;
     left: 18px;
   }
-  main .portfolio .personal-work .button .btn {
+  main #portfolio .personal-work .button .btn {
     border-radius: 20px 0 0 20px;
   }
 }
 
-main .portfolio .video {
+main #portfolio .video {
   margin-top: 50px;
   position: relative;
 }
 
-main .portfolio .video h3 {
+main #portfolio .video h3 {
   text-align: center;
   font-size: 20px;
   padding: 0 10px 10px;
 }
 
 @media screen and (min-width: 1024px) {
-  main .portfolio .video h3 {
+  main #portfolio .video h3 {
     font-size: 30px;
     margin: 0 10px;
   }
 }
 
-main .portfolio .video .background-blue {
+main #portfolio .video .background-blue {
   background-color: #343f56;
   height: 390px;
   margin: 0 10px;
 }
 
 @media screen and (min-width: 1024px) {
-  main .portfolio .video .background-blue {
+  main #portfolio .video .background-blue {
     width: 567px;
     height: 360px;
     margin: 0 auto;
   }
 }
 
-main .portfolio .video .background-blue a img {
+main #portfolio .video .background-blue a img {
   float: right;
   margin: 185px 10px;
 }
 
-main .portfolio .video .v-plan {
+main #portfolio .video .v-plan {
   margin: 20px auto;
   height: 57px;
   width: 170px;
@@ -705,7 +772,7 @@ main .portfolio .video .v-plan {
 }
 
 @media screen and (min-width: 1024px) {
-  main .portfolio .video .v-plan {
+  main #portfolio .video .v-plan {
     position: absolute;
     bottom: -105px;
     right: 110px;
@@ -713,7 +780,7 @@ main .portfolio .video .v-plan {
 }
 
 @media screen and (min-width: 1024px) {
-  main .portfolio .video .h-l {
+  main #portfolio .video .h-l {
     border-bottom: 2px dashed #343f56;
     margin-bottom: -22px;
     width: 45%;
@@ -721,7 +788,7 @@ main .portfolio .video .v-plan {
 }
 
 @media screen and (min-width: 1024px) {
-  main .portfolio .v-l {
+  main #portfolio .v-l {
     position: absolute;
     top: 0;
     border-left: 2px dashed #343f56;
@@ -757,7 +824,7 @@ footer h2 span {
 }
 
 @media screen and (min-width: 1024px) {
-  footer .green-ball {
+  footer .green-ballf {
     position: absolute;
     bottom: 96px;
     left: 400px;
@@ -766,6 +833,7 @@ footer h2 span {
     height: 66px;
     border-radius: 50%;
     background-color: #387c6d;
+    overflow: hidden;
   }
 }
 

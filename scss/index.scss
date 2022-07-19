@@ -51,6 +51,7 @@ header {
             border-radius: 50%;
             width: 567px;
             height: 567px;
+            
             @include responsive(pc-screens) {
                 display: block;
                 position: absolute;
@@ -77,11 +78,22 @@ header {
                         .title {
                             a {
                                 font-size: 40px;
+                                &:hover {
+                                    color: $font-color2;
+                                    font-size: 39px;
+                                }
                             }
                         }
                         .plus {
                             padding-left: 50px;
                             line-height: 52px;
+                            a {
+                                &:hover {
+                                    text-decoration: underline;
+                                    color: $font-color2;
+                                    font-size: 24px;
+                                }
+                            }
                         }
                     }
                 } //nav
@@ -96,42 +108,52 @@ header {
         }
 
         .illustration {
-            text-align: center;
             .flower {
-                position: absolute;
-                bottom: 40px;
-                right: 50%;
-                transform: translate(50%);
-                @include responsive(pc-screens) {
-                    position: absolute;
-                    bottom: 60px;
-                    right: 50%;
-                    transform: translate(50%);
-                    position: absolute;
-                    z-index: 1;
-                }
+                text-align: center;
                 img {
-                    width: 542px;
-                    height: 424px;
+                    position: absolute;
+                    transform: translate(-50%);
+                    width: 650px;
+                    margin-top: -20px;
                     @include responsive(pc-screens) {
-                        width: 847px;
-                        height: 663px;
-                        
+                        position: absolute;
+                        top: 80px;
+                        right: 50%;
+                        transform: translate(50%);
+                        z-index: 1;
+                        width: 1000px;
                     }
                 }
             }
-            .me {
-                position: absolute;
-                bottom: -4px;
-                right: 50%;
-                transform: translate(50%);
-                z-index: 1;
-                img {
-                    width: 319px;
-                    height: 449px;
-                    @include responsive(pc-screens) {
-                        width: 499px;
-                        height: 702px;
+            .illustration-me {
+                .me {
+                    position: absolute;
+                    bottom: -4px;
+                    right: 50%;
+                    transform: translate(50%);
+                    z-index: 1;
+                    img {
+                        width: 319px;
+                        height: 449px;
+                        @include responsive(pc-screens) {
+                            width: 499px;
+                            height: 702px;
+                        }
+                    }
+                }
+                .me-hover {
+                    position: absolute;
+                    bottom: -4px;
+                    right: 50%;
+                    transform: translate(50%);
+                    z-index: 1;
+                    img {
+                        width: 319px;
+                        height: 449px;
+                        @include responsive(pc-screens) {
+                            width: 499px;
+                            height: 702px;
+                        }
                     }
                 }
             }
@@ -149,11 +171,13 @@ header {
             height: 800px;
             border-radius: 100px; 
         }
-        img {
-            display: none;
-            @include responsive(pc-screens) {
-                display: block;
-                margin: -5px -3px;
+        .hello-1 {
+            img {
+                display: none;
+                @include responsive(pc-screens) {
+                    display: block;
+                    margin-top: -10px;
+                }
             }
         }
         p {
@@ -162,6 +186,10 @@ header {
             color: $font-color2;
             font-family: 'BMHANNAAir';
             line-height: 40px;
+            // &:hover {
+            //     font-size: 28px;
+            //     color: $body-bg;
+            // }
             @include responsive(pc-screens) {
                 text-align: right;
                 margin-right: 75px;
@@ -173,15 +201,15 @@ header {
 
 //===== main =====//
 main {
-    .my-skill {
+    #my-skill {
         position: relative;
         .grid {
             @include responsive(pc-screens) {
                 position: absolute;
                 bottom: 568px;
                 left: 375px;
+                overflow: hidden;
             }
-
             h2 {
                 text-align: left;
                 font-size: 25px;
@@ -200,7 +228,7 @@ main {
                     margin: 0 30px;
                 }
             }
-
+            
             @include responsive(pc-screens) {
                 .green-ball{
                     position: absolute;
@@ -211,6 +239,7 @@ main {
                     height: 66px;
                     border-radius: 50%;
                     background-color: $green;
+                    z-index: -1;
                 }
             }
         } //grid
@@ -228,7 +257,6 @@ main {
                     display: flex;
                     justify-content: space-around;
                     width: 100%;
-                    
                 }
             }
 
@@ -260,9 +288,9 @@ main {
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    border-radius: 50%;
-                    border: 11px solid 
-                    $orange;
+                    // border-radius: 50%;
+                    // border: 11px solid 
+                    // $orange;
                     width: 159px;
                     height: 159px;
                     @include responsive(pc-screens) {
@@ -286,18 +314,27 @@ main {
                     font-size: 18px;
                     line-height: 20px;
                 }
+                strong {
+                    position: absolute;
+                    top: 70px;
+                    left: 0;
+                    width: 100%;
+                    text-align: center;
+                    line-height: 45px;
+                    font-size: 43px;
+                    background-color: pink;
+                }
             }
         } //my-skills-flex-box
     } //my-skill
 
     // portfolio //
-    .portfolio {
+    #portfolio {
         position: relative;
         margin-top: 54px;
         @include responsive(pc-screens) {
             margin-top: 150px;
         }
-        
         .title-flexbox {
             display: flex;
             align-items: center;
@@ -314,7 +351,6 @@ main {
                     height: 66px;
                 }
             }
-
             .left {
                 width: 50%;
                 display: block;
@@ -327,7 +363,6 @@ main {
                 @include responsive(pc-screens) {
                     font-size: 40px;
                 }
-                
             } 
             .right {
                 width: 50%;
@@ -335,7 +370,6 @@ main {
                 border-bottom: 2px solid $blue;
             }
         }
-
         .button {
             display: flex;
             @include responsive(pc-screens) {
@@ -344,7 +378,6 @@ main {
                 top: 30px;
                 right: 10px;
             }
-
             .btn {
                 position: relative;
                 width: 100%;
@@ -357,7 +390,6 @@ main {
                     width: 182px;
                     height: 57px;
                 }
-
                 a {
                     width: 100%;
                     position: absolute;
@@ -417,6 +449,38 @@ main {
                         transform: translate(-50%);
                         @include responsive(pc-screens) {
                             height: 20px;
+                        }
+                    }
+                }
+                .membership {
+                    display: flex;
+                    @include responsive(pc-screens) {
+                        .membership-pc{
+                            width: 385px;
+                            padding: 10px;
+                        }
+                        .membership-m {
+                            height: 630px;
+                            padding: 10px;
+                        }
+                        .white-bg {
+                            text-align: left;
+                            h4 {
+                                padding-top: 20px;
+                                color: $font-color;
+                                font-size: 20px;
+                            }
+                            p {
+                                padding-top: 10px;
+                                font-family: 'BMHANNAAir';
+                                color: $font-color;
+                                font-size: 18px;
+                                width: 340px;
+                            }
+                            img {
+                                padding-top: 20px;
+                                width: 340px;
+                            }
                         }
                     }
                 }
@@ -576,7 +640,7 @@ footer {
         }
     }
     @include responsive(pc-screens) {
-        .green-ball{
+        .green-ballf{
             position: absolute;
             bottom: 96px;
             left: 400px;
@@ -585,6 +649,8 @@ footer {
             height: 66px;
             border-radius: 50%;
             background-color: $green;
+            overflow: hidden;
+            
         }
     }
     .contact-flexbox {

@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/jquery.js"></script>
+    <script src="./js/index.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -21,12 +23,12 @@
                 <div class="green-cir">
                     <nav>
                         <ul class="gnb">
-                            <li class="title"><a href="#">- MY SKILLS</a></li>
-                            <li class="title"><a href="#">- PORTFOLIO</a></li>
-                            <li class="plus"><a href="#">+ GROUP</a></li>
-                            <li class="plus"><a href="#">+ PERSONAL</a></li>
-                            <li class="plus"><a href="#">+ CLONE CODING</a></li>
-                            <li class="plus"><a href="#">+ VIDEO</a></li>
+                            <li class="title"><a href="#my-skill">- MY SKILLS</a></li>
+                            <li class="title"><a href="#portfolio">- PORTFOLIO</a></li>
+                            <li class="plus"><a href="#portfolio">+ GROUP</a></li>
+                            <li class="plus"><a href="#personal">+ PERSONAL</a></li>
+                            <li class="plus"><a href="#clone-coding">+ CLONE CODING</a></li>
+                            <li class="plus"><a href="#video1">+ VIDEO</a></li>
                             <li class="plus"><a href="#">+ JAVASCRIPT</a></li>
                         </ul> <!-- gnb -->
                     </nav>
@@ -36,20 +38,29 @@
             <div class="hello">
                 <img src="./image/m_HELLO.png" alt="m hello">
             </div>
+           
             
             <div class="illustration"> 
                 <div class="flower">
-                    <img src="./image/header_flower.png" alt="flower animation">
+                    <img src="./image/leaf.gif" alt="leaf">
                 </div> <!-- flower -->
-                <div class="me">
-                    <img src="./image/header_illustration.png" alt="me">
+                <div class="illustration-me">
+                    <div class="me">
+                        <img src="./image/header_illustration.png" alt="me">
+                    </div>
+                    <div class="me-hover">
+                        <img src="./image/header_illustration-hover.png" alt="me-hover">
+                    </div>
                 </div>
             </div> <!-- illustration -->
         </div> <!-- back-ground-color -->
 
         <div class="background-green">
-            <img src="./image/pc_HELLO.png" alt="pc hello">
-            <p> 
+            <div class="hello-1">
+                <img src="./image/pc_HELLO.png" alt="pc hello">
+            </div>
+                
+            <p class="hello-txt"> 
                 안녕하세요, <br>
                 웹 퍼블리셔를 꿈꾸고 있는 이하진입니다. <br>
                 어렸을때 부터 다양한 환경에서 <br>
@@ -65,23 +76,24 @@
     </header>
     
     <main>
-        <section class="my-skill">
+        <section id="my-skill">
             <div class="grid">
                 <h2><span>MY SKILLS</span></h2>
                 <span class="green-ball"></span>
             </div>
             <div class="my-skills-flex-box">
                 <div class="web">
-                    <div class="web-box">
+                    <div class="web-box" >
                         <div class="green">
-                            <div class="orange">
+                            <div class="orange" id="c-a">
                                 <img src="./image/logo_html.png" alt="html">
                                 <hr>
-                                 <p>HTML</p>
+                                <p>HTML</p>
+                                <strong></strong>
                             </div>
                         </div>
                     </div>
-                    <div class="web-box">
+                    <div class="web-box" id="c-b">
                         <div class="green">
                             <div class="orange">
                                 <img src="./image/logo_css.png" alt="css">
@@ -90,7 +102,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="web-box">
+                    <div class="web-box" id="c-c">
                         <div class="green">
                             <div class="orange">
                                 <img src="./image/logo_sass.png" alt="sass">
@@ -99,7 +111,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="web-box">
+                    <div class="web-box" id="c-d">
                         <div class="green">
                             <div class="orange">
                                 <img src="./image/logo_jquery.png" alt="jquery">
@@ -108,7 +120,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="web-box">
+                    <div class="web-box" id="c-e">
                         <div class="green">
                             <div class="orange">
                                 <img src="./image/logo_javascript.png" alt="javascript">
@@ -119,7 +131,7 @@
                     </div>
                 </div> <!-- web -->
                 <div class="video">
-                    <div class="video-box">
+                    <div class="video-box" id="c-f">
                         <div class="green">
                             <div class="orange">
                                 <img src="./image/logo_ai.png" alt="illustration">
@@ -128,7 +140,7 @@
                             </div>    
                         </div>
                     </div>
-                    <div class="video-box">
+                    <div class="video-box" id="c-g">
                         <div class="green">
                             <div class="orange">
                                 <img src="./image/logo_ps.png" alt="photoshop">
@@ -137,7 +149,7 @@
                             </div>           
                         </div>
                     </div>
-                    <div class="video-box">
+                    <div class="video-box" id="c-h">
                         <div class="green">
                             <div class="orange">
                                 <img src="./image/logo_ae.png" alt="aftereffects">
@@ -146,7 +158,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="video-box">
+                    <div class="video-box" id="c-i">
                         <div class="green">
                             <div class="orange">
                                 <img src="./image/logo_pr.png" alt="premiere">
@@ -160,18 +172,40 @@
         </section> <!-- my-skill -->
 
         <div class="grid">
-            <section class="portfolio">
+            <section id="portfolio">
                 <div class="title-flexbox">
                     <span class="orange-ball"></span>
                     <span class="left"></span>
                     <h2><span>PORTFOLIO</span></h2>
                     <span class="right"></span>
                 </div>
-                <div class="work">
+                <div class="work" id="group">
                     <div class="h-l"></div>
                     <h3>Group work</h3>
                     <div class="background-blue">
                         <a href="#" class="arrow"><img src="./image/next_button.png" alt="next button"></a>
+                        <div class="membership">
+                            <img src="./image/membership-pc.png" alt="멤버십가입" class="membership-pc">
+                            <img src="./image/membership_m.png" alt="멤버십가입"class="membership-m">
+                            <div class="white-bg">
+                                <h4>SPREAD(멤버십 구독)</h4>
+                                <p>
+                                    이 페이지는 디자인과 jquery를 맡은 페이지입니다.     
+                                </p>
+                                <img src="./image/js_membership.jpg" alt="js">
+                            </div>
+                        </div>
+                        <div class="membership">
+                            <img src="./image/membership-pc.png" alt="멤버십가입" class="membership-pc">
+                            <img src="./image/membership_m.png" alt="멤버십가입"class="membership-m">
+                            <div class="white-bg">
+                                <h4>SPREAD(멤버십 구독)</h4>
+                                <p>
+                                    이 페이지는 디자인과 jquery를 맡은 페이지입니다.     
+                                </p>
+                                <img src="./image/js_membership.jpg" alt="js">
+                            </div>
+                        </div>
                     </div> <!-- background-blue -->
                     <div class="button">
                         <div class="btn guide">
@@ -186,7 +220,7 @@
                     </div>
                 </div> <!-- group-work -->
                 
-                <div class="personal-work">
+                <div class="personal-work" id="personal">
                     <div class="h-l"></div>
                     <h3>Personal work</h3>
                     <div class="background-blue">
@@ -205,7 +239,7 @@
                     </div>
                 </div> <!-- personal-work -->
                 
-                <div class="work">
+                <div class="work" id="clone-coding">
                     <div class="h-l"></div>
                     <h3>Clone-coding</h3>
                     <div class="background-blue">
@@ -218,7 +252,7 @@
                     </div>
                 </div> <!-- clone-coding -->
                 
-                <div class="video">
+                <div class="video" id="video1">
                     <div class="h-l"></div>
                     <h3>Video</h3>
                     <div class="background-blue"></div>
@@ -236,7 +270,7 @@
     <footer>
         <div class="grid">
             <h2><span>CONTACT</span></h2>
-            <span class="green-ball"></span>
+            <span class="green-ballf"></span>
             <div class="contact-flexbox">
                 <div class="phone-email-flexbox">
                     <img src="./image/phone_logo.png" alt="phone logo">
