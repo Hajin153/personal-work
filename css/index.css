@@ -130,6 +130,10 @@ header .back-ground-color .orange-stroke .green-cir nav .gnb {
           transform: translate(-50%, -50%);
 }
 
+header .back-ground-color .orange-stroke .green-cir nav .gnb .title {
+  line-height: 60px;
+}
+
 header .back-ground-color .orange-stroke .green-cir nav .gnb .title a {
   font-size: 40px;
 }
@@ -140,8 +144,7 @@ header .back-ground-color .orange-stroke .green-cir nav .gnb .title a:hover {
 }
 
 header .back-ground-color .orange-stroke .green-cir nav .gnb .plus {
-  padding-left: 50px;
-  line-height: 52px;
+  line-height: 40px;
 }
 
 header .back-ground-color .orange-stroke .green-cir nav .gnb .plus a:hover {
@@ -169,14 +172,14 @@ header .back-ground-color .illustration .flower img {
   position: absolute;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
-  width: 650px;
-  margin-top: -20px;
+  width: 660px;
+  margin-top: -10px;
 }
 
 @media screen and (min-width: 1024px) {
   header .back-ground-color .illustration .flower img {
     position: absolute;
-    top: 80px;
+    top: -70px;
     right: 50%;
     -webkit-transform: translate(50%);
             transform: translate(50%);
@@ -252,6 +255,7 @@ header .background-green .hello-1 img {
   header .background-green .hello-1 img {
     display: block;
     margin-top: -10px;
+    margin-left: -2px;
   }
 }
 
@@ -278,8 +282,8 @@ main #my-skill {
 @media screen and (min-width: 1024px) {
   main #my-skill .grid {
     position: absolute;
-    bottom: 568px;
-    left: 375px;
+    top: -242px;
+    left: 370px;
     overflow: hidden;
   }
 }
@@ -327,13 +331,244 @@ main #my-skill .my-skills-flex-box {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  margin-top: 60px;
 }
 
 @media screen and (min-width: 1024px) {
   main #my-skill .my-skills-flex-box {
+    margin: 0;
     display: block;
-    margin-top: 285px;
+    padding-top: 555px;
   }
+}
+
+main #my-skill .my-skills-flex-box .web {
+  /* Modal Content */
+  /* The Close Button */
+}
+
+main #my-skill .my-skills-flex-box .web svg {
+  width: 114px;
+  height: 114px;
+}
+
+main #my-skill .my-skills-flex-box .web svg .green {
+  fill: none;
+  stroke-width: 10px;
+  stroke: #387c6d;
+}
+
+main #my-skill .my-skills-flex-box .web svg [class^="orange-"] {
+  fill: none;
+  stroke-width: 10px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+main #my-skill .my-skills-flex-box .web svg .orange-1 {
+  stroke-dasharray: 360;
+  stroke-dashoffset: 80;
+  stroke: #e9896a;
+  -webkit-animation: progress-1 7s ease-out;
+          animation: progress-1 7s ease-out;
+}
+
+main #my-skill .my-skills-flex-box .web svg .orange-2 {
+  stroke: #e9896a;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 90;
+  -webkit-animation: progress-2 7s ease-out;
+          animation: progress-2 7s ease-out;
+}
+
+main #my-skill .my-skills-flex-box .web svg .orange-3 {
+  stroke: #e9896a;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 90;
+  -webkit-animation: progress-3 7s ease-out;
+          animation: progress-3 7s ease-out;
+}
+
+main #my-skill .my-skills-flex-box .web svg .orange-4 {
+  stroke: #e9896a;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 170;
+  -webkit-animation: progress-4 7s ease-out;
+          animation: progress-4 7s ease-out;
+}
+
+main #my-skill .my-skills-flex-box .web svg .orange-5 {
+  stroke: #e9896a;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 170;
+  -webkit-animation: progress-5 7s ease-out;
+          animation: progress-5 7s ease-out;
+}
+
+@-webkit-keyframes progress-1 {
+  from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 80;
+  }
+}
+
+@keyframes progress-1 {
+  from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 80;
+  }
+}
+
+@-webkit-keyframes progress-2 {
+  from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 90;
+  }
+}
+
+@keyframes progress-2 {
+  from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 90;
+  }
+}
+
+@-webkit-keyframes progress-3 {
+  from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 90;
+  }
+}
+
+@keyframes progress-3 {
+  from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 90;
+  }
+}
+
+@-webkit-keyframes progress-4 {
+  from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 170;
+  }
+}
+
+@keyframes progress-4 {
+  from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 170;
+  }
+}
+
+@-webkit-keyframes progress-5 {
+  from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 170;
+  }
+}
+
+@keyframes progress-5 {
+  from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 170;
+  }
+}
+
+main #my-skill .my-skills-flex-box .web #web-box {
+  border: none;
+  padding: 0;
+  background: none;
+}
+
+main #my-skill .my-skills-flex-box .web .modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+main #my-skill .my-skills-flex-box .web .modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+main #my-skill .my-skills-flex-box .web .close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+main #my-skill .my-skills-flex-box .web .close:hover,
+main #my-skill .my-skills-flex-box .web .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+main #my-skill .my-skills-flex-box .web .modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+main #my-skill .my-skills-flex-box .web .modal-body {
+  padding: 2px 16px;
+}
+
+main #my-skill .my-skills-flex-box .web .modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
 }
 
 @media screen and (min-width: 1024px) {
@@ -341,9 +576,274 @@ main #my-skill .my-skills-flex-box {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-top: -300px;
+    width: 100%;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    width: 100%;
+  }
+  main #my-skill .my-skills-flex-box .web svg {
+    width: 114px;
+    height: 114px;
+  }
+  main #my-skill .my-skills-flex-box .web svg .green {
+    fill: none;
+    stroke-width: 10px;
+    stroke: #387c6d;
+  }
+  main #my-skill .my-skills-flex-box .web svg [class^="orange-"] {
+    fill: none;
+    stroke-width: 10px;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+  }
+  main #my-skill .my-skills-flex-box .web svg .orange-1 {
+    stroke-dasharray: 360;
+    stroke-dashoffset: 80;
+    stroke: #e9896a;
+    -webkit-animation: progress-1 7s ease-out;
+            animation: progress-1 7s ease-out;
+  }
+  main #my-skill .my-skills-flex-box .web svg .orange-2 {
+    stroke: #e9896a;
+    stroke-dasharray: 360;
+    stroke-dashoffset: 90;
+    -webkit-animation: progress-2 7s ease-out;
+            animation: progress-2 7s ease-out;
+  }
+  main #my-skill .my-skills-flex-box .web svg .orange-3 {
+    stroke: #e9896a;
+    stroke-dasharray: 360;
+    stroke-dashoffset: 90;
+    -webkit-animation: progress-3 7s ease-out;
+            animation: progress-3 7s ease-out;
+  }
+  main #my-skill .my-skills-flex-box .web svg .orange-4 {
+    stroke: #e9896a;
+    stroke-dasharray: 360;
+    stroke-dashoffset: 170;
+    -webkit-animation: progress-4 7s ease-out;
+            animation: progress-4 7s ease-out;
+  }
+  main #my-skill .my-skills-flex-box .web svg .orange-5 {
+    stroke: #e9896a;
+    stroke-dasharray: 360;
+    stroke-dashoffset: 170;
+    -webkit-animation: progress-5 7s ease-out;
+            animation: progress-5 7s ease-out;
+  }
+  @-webkit-keyframes progress-1 {
+    from {
+      stroke-dashoffset: 360;
+    }
+    to {
+      stroke-dashoffset: 80;
+    }
+  }
+  @keyframes progress-1 {
+    from {
+      stroke-dashoffset: 360;
+    }
+    to {
+      stroke-dashoffset: 80;
+    }
+  }
+  @-webkit-keyframes progress-2 {
+    from {
+      stroke-dashoffset: 360;
+    }
+    to {
+      stroke-dashoffset: 90;
+    }
+  }
+  @keyframes progress-2 {
+    from {
+      stroke-dashoffset: 360;
+    }
+    to {
+      stroke-dashoffset: 90;
+    }
+  }
+  @-webkit-keyframes progress-3 {
+    from {
+      stroke-dashoffset: 360;
+    }
+    to {
+      stroke-dashoffset: 90;
+    }
+  }
+  @keyframes progress-3 {
+    from {
+      stroke-dashoffset: 360;
+    }
+    to {
+      stroke-dashoffset: 90;
+    }
+  }
+  @-webkit-keyframes progress-4 {
+    from {
+      stroke-dashoffset: 360;
+    }
+    to {
+      stroke-dashoffset: 170;
+    }
+  }
+  @keyframes progress-4 {
+    from {
+      stroke-dashoffset: 360;
+    }
+    to {
+      stroke-dashoffset: 170;
+    }
+  }
+  @-webkit-keyframes progress-5 {
+    from {
+      stroke-dashoffset: 360;
+    }
+    to {
+      stroke-dashoffset: 170;
+    }
+  }
+  @keyframes progress-5 {
+    from {
+      stroke-dashoffset: 360;
+    }
+    to {
+      stroke-dashoffset: 170;
+    }
+  }
+  main #my-skill .my-skills-flex-box .web .name-flexbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main #my-skill .my-skills-flex-box .web .name-flexbox p {
+    padding-right: 10px;
+  }
+}
+
+main #my-skill .my-skills-flex-box .video svg {
+  width: 114px;
+  height: 114px;
+}
+
+main #my-skill .my-skills-flex-box .video svg .green {
+  fill: none;
+  stroke-width: 10px;
+  stroke: #387c6d;
+}
+
+main #my-skill .my-skills-flex-box .video svg [class^="orange-"] {
+  fill: none;
+  stroke-width: 10px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+main #my-skill .my-skills-flex-box .video svg .orange-6 {
+  stroke: #e9896a;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 80;
+  -webkit-animation: progress-6 7s ease-out;
+          animation: progress-6 7s ease-out;
+}
+
+main #my-skill .my-skills-flex-box .video svg .orange-7 {
+  stroke: #e9896a;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 80;
+  -webkit-animation: progress-7 7s ease-out;
+          animation: progress-7 7s ease-out;
+}
+
+main #my-skill .my-skills-flex-box .video svg .orange-8 {
+  stroke: #e9896a;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 100;
+  -webkit-animation: progress-8 7s ease-out;
+          animation: progress-8 7s ease-out;
+}
+
+main #my-skill .my-skills-flex-box .video svg .orange-9 {
+  stroke: #e9896a;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 100;
+  -webkit-animation: progress-9 7s ease-out;
+          animation: progress-9 7s ease-out;
+}
+
+@-webkit-keyframes progress-6 {
+  from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 80;
+  }
+}
+
+@keyframes progress-6 {
+  from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 80;
+  }
+}
+
+@-webkit-keyframes progress-7 {
+  from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 80;
+  }
+}
+
+@keyframes progress-7 {
+  from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 80;
+  }
+}
+
+@-webkit-keyframes progress-8 {
+  from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 100;
+  }
+}
+
+@keyframes progress-8 {
+  from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 100;
+  }
+}
+
+@-webkit-keyframes progress-9 {
+  from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 100;
+  }
+}
+
+@keyframes progress-9 {
+  from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 100;
   }
 }
 
@@ -357,86 +857,146 @@ main #my-skill .my-skills-flex-box {
         -ms-flex-pack: justify;
             justify-content: space-between;
     width: 75%;
-    margin-top: 5px;
+    margin-top: 50px;
   }
-}
-
-main #my-skill .my-skills-flex-box .green {
-  position: relative;
-  text-align: center;
-  border-radius: 50%;
-  border: 3px solid #387c6d;
-  width: 170px;
-  height: 170px;
-  margin: 10px;
+  main #my-skill .my-skills-flex-box .video svg {
+    width: 114px;
+    height: 114px;
+  }
+  main #my-skill .my-skills-flex-box .video svg .green {
+    fill: none;
+    stroke-width: 10px;
+    stroke: #387c6d;
+  }
+  main #my-skill .my-skills-flex-box .video svg [class^="orange-"] {
+    fill: none;
+    stroke-width: 10px;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+  }
+  main #my-skill .my-skills-flex-box .video svg .orange-6 {
+    stroke: #e9896a;
+    stroke-dasharray: 360;
+    stroke-dashoffset: 80;
+    -webkit-animation: progress-6 7s ease-out;
+            animation: progress-6 7s ease-out;
+  }
+  main #my-skill .my-skills-flex-box .video svg .orange-7 {
+    stroke: #e9896a;
+    stroke-dasharray: 360;
+    stroke-dashoffset: 80;
+    -webkit-animation: progress-7 7s ease-out;
+            animation: progress-7 7s ease-out;
+  }
+  main #my-skill .my-skills-flex-box .video svg .orange-8 {
+    stroke: #e9896a;
+    stroke-dasharray: 360;
+    stroke-dashoffset: 100;
+    -webkit-animation: progress-8 7s ease-out;
+            animation: progress-8 7s ease-out;
+  }
+  main #my-skill .my-skills-flex-box .video svg .orange-9 {
+    stroke: #e9896a;
+    stroke-dasharray: 360;
+    stroke-dashoffset: 100;
+    -webkit-animation: progress-9 7s ease-out;
+            animation: progress-9 7s ease-out;
+  }
+  @-webkit-keyframes progress-6 {
+    from {
+      stroke-dashoffset: 360;
+    }
+    to {
+      stroke-dashoffset: 80;
+    }
+  }
+  @keyframes progress-6 {
+    from {
+      stroke-dashoffset: 360;
+    }
+    to {
+      stroke-dashoffset: 80;
+    }
+  }
+  @-webkit-keyframes progress-7 {
+    from {
+      stroke-dashoffset: 360;
+    }
+    to {
+      stroke-dashoffset: 80;
+    }
+  }
+  @keyframes progress-7 {
+    from {
+      stroke-dashoffset: 360;
+    }
+    to {
+      stroke-dashoffset: 80;
+    }
+  }
+  @-webkit-keyframes progress-8 {
+    from {
+      stroke-dashoffset: 360;
+    }
+    to {
+      stroke-dashoffset: 100;
+    }
+  }
+  @keyframes progress-8 {
+    from {
+      stroke-dashoffset: 360;
+    }
+    to {
+      stroke-dashoffset: 100;
+    }
+  }
+  @-webkit-keyframes progress-9 {
+    from {
+      stroke-dashoffset: 360;
+    }
+    to {
+      stroke-dashoffset: 100;
+    }
+  }
+  @keyframes progress-9 {
+    from {
+      stroke-dashoffset: 360;
+    }
+    to {
+      stroke-dashoffset: 100;
+    }
+  }
+  main #my-skill .my-skills-flex-box .video .name-flexbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main #my-skill .my-skills-flex-box .video .name-flexbox p {
+    padding-right: 10px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-  main #my-skill .my-skills-flex-box .green {
-    width: 210px;
-    height: 210px;
+  main .grid {
+    width: 1170px;
+    overflow: hidden;
   }
 }
 
-main #my-skill .my-skills-flex-box .green .orange {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 159px;
-  height: 159px;
-}
-
-@media screen and (min-width: 1024px) {
-  main #my-skill .my-skills-flex-box .green .orange {
-    width: 191px;
-    height: 191px;
-  }
-}
-
-main #my-skill .my-skills-flex-box .green img {
-  margin-top: 30px;
-  width: 35px;
-  height: 40px;
-}
-
-main #my-skill .my-skills-flex-box .green hr {
-  width: 80%;
-  border: 1px solid #387c6d;
-  margin: 8px auto;
-}
-
-main #my-skill .my-skills-flex-box .green p {
-  text-align: center;
-  margin: -5px auto;
-  font-size: 18px;
-  line-height: 20px;
-}
-
-main #my-skill .my-skills-flex-box .green strong {
-  position: absolute;
-  top: 70px;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  line-height: 45px;
-  font-size: 43px;
-  background-color: pink;
-}
-
-main #portfolio {
+main .grid #portfolio {
   position: relative;
   margin-top: 54px;
 }
 
 @media screen and (min-width: 1024px) {
-  main #portfolio {
+  main .grid #portfolio {
     margin-top: 150px;
   }
 }
 
-main #portfolio .title-flexbox {
+main .grid #portfolio .title-flexbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -447,10 +1007,10 @@ main #portfolio .title-flexbox {
 }
 
 @media screen and (min-width: 1024px) {
-  main #portfolio .title-flexbox {
+  main .grid #portfolio .title-flexbox {
     margin: 0;
   }
-  main #portfolio .title-flexbox .orange-ball {
+  main .grid #portfolio .title-flexbox .orange-ball {
     position: absolute;
     top: -42px;
     left: 400px;
@@ -461,38 +1021,38 @@ main #portfolio .title-flexbox {
   }
 }
 
-main #portfolio .title-flexbox .left {
+main .grid #portfolio .title-flexbox .left {
   width: 50%;
   display: block;
   border-bottom: 2px dashed #343f56;
 }
 
-main #portfolio .title-flexbox h2 {
+main .grid #portfolio .title-flexbox h2 {
   font-size: 25px;
   text-align: center;
   margin: 0 10px;
 }
 
 @media screen and (min-width: 1024px) {
-  main #portfolio .title-flexbox h2 {
+  main .grid #portfolio .title-flexbox h2 {
     font-size: 40px;
   }
 }
 
-main #portfolio .title-flexbox .right {
+main .grid #portfolio .title-flexbox .right {
   width: 50%;
   display: block;
   border-bottom: 2px solid #343f56;
 }
 
-main #portfolio .button {
+main .grid #portfolio .button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 @media screen and (min-width: 1024px) {
-  main #portfolio .button {
+  main .grid #portfolio .button {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -503,7 +1063,7 @@ main #portfolio .button {
   }
 }
 
-main #portfolio .button .btn {
+main .grid #portfolio .button .btn {
   position: relative;
   width: 100%;
   height: 57px;
@@ -512,15 +1072,14 @@ main #portfolio .button .btn {
 }
 
 @media screen and (min-width: 1024px) {
-  main #portfolio .button .btn {
+  main .grid #portfolio .button .btn {
     margin-bottom: 5px;
-    border-radius: 0 20px 20px 0;
     width: 182px;
     height: 57px;
   }
 }
 
-main #portfolio .button .btn a {
+main .grid #portfolio .button .btn a {
   width: 100%;
   position: absolute;
   top: 50%;
@@ -530,115 +1089,196 @@ main #portfolio .button .btn a {
   font-size: 19px;
 }
 
-main #portfolio .button .guide {
+main .grid #portfolio .button .guide {
   border: 1px solid #e9896a;
   background-color: #e9896a;
 }
 
-main #portfolio .button .pc-m {
+main .grid #portfolio .button .pc-m {
   border: 1px solid #343f56;
   background-color: #343f56;
 }
 
-main #portfolio .button .plan {
+main .grid #portfolio .button .plan {
   border: 1px solid #387c6d;
   background-color: #387c6d;
 }
 
-main #portfolio .button .plan a {
+main .grid #portfolio .button .plan a {
   font-family: 'BMHANNAAir';
 }
 
-main #portfolio .work {
+main .grid #portfolio .work {
   margin-top: 70px;
 }
 
 @media screen and (min-width: 1024px) {
-  main #portfolio .work {
+  main .grid #portfolio .work {
     margin-top: 33px;
     position: relative;
     margin-left: 15px;
   }
 }
 
-main #portfolio .work h3 {
+main .grid #portfolio .work h3 {
   margin-top: -40px;
   font-size: 20px;
-  padding: 0 10px 10px;
+  text-align: center;
 }
 
 @media screen and (min-width: 1024px) {
-  main #portfolio .work h3 {
+  main .grid #portfolio .work h3 {
+    text-align: left;
+    padding: 0 10px 10px;
     font-size: 30px;
   }
 }
 
-main #portfolio .work .background-blue {
-  position: relative;
-  height: 390px;
-  margin: 0 10px;
-  background-color: #343f56;
-}
-
 @media screen and (min-width: 1024px) {
-  main #portfolio .work .background-blue {
+  main .grid #portfolio .work .background-blue {
+    background-color: #343f56;
+    margin: 0 10px;
     width: 933px;
     height: 635px;
     margin-bottom: 54px;
   }
 }
 
-main #portfolio .work .background-blue a img {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
+@media screen and (min-width: 1024px) {
+  main .grid #portfolio .work .background-blue #gallery {
+    overflow: hidden;
+    width: 936px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-  main #portfolio .work .background-blue a img {
+  main .grid #portfolio .work .background-blue #gallery #slider {
+    width: 2808px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+main .grid #portfolio .work .background-blue #gallery #slider .mem-1 {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  main .grid #portfolio .work .background-blue #gallery #slider .mem-1 {
+    display: block;
+    width: 936px;
+    padding: 20px;
+  }
+  main .grid #portfolio .work .background-blue #gallery #slider .mem-1 p {
+    padding-top: 20px;
+    padding-bottom: 5px;
+    font-family: 'BMHANNAAir';
+    color: #f8f5f1;
+    font-size: 18px;
+  }
+  main .grid #portfolio .work .background-blue #gallery #slider .mem-1 .white-bg h4 {
+    color: #f8f5f1;
+    font-size: 18px;
+  }
+  main .grid #portfolio .work .background-blue #gallery #slider .mem-1 .membership-pc {
+    height: 200px;
+  }
+  main .grid #portfolio .work .background-blue #gallery #slider .mem-1 .membership-pc2 {
+    height: 200px;
+  }
+  main .grid #portfolio .work .background-blue #gallery #slider .mem-1 .m-flexbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main .grid #portfolio .work .background-blue #gallery #slider .mem-1 .m-flexbox .m-version {
+    padding-right: 20px;
+  }
+  main .grid #portfolio .work .background-blue #gallery #slider .mem-1 .m-flexbox .m-version .membership-m {
+    height: 200px;
+  }
+  main .grid #portfolio .work .background-blue #gallery #slider .mem-1 .m-flexbox .source {
+    height: 200px;
+  }
+}
+
+main .grid #portfolio .work .background-blue #gallery #slider .mem-2 {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  main .grid #portfolio .work .background-blue #gallery #slider .mem-2 {
+    display: block;
+    width: 936px;
+    padding: 20px;
+  }
+  main .grid #portfolio .work .background-blue #gallery #slider .mem-2 p {
+    padding-bottom: 5px;
+    padding-top: 20px;
+    font-family: 'BMHANNAAir';
+    color: #f8f5f1;
+    font-size: 18px;
+  }
+  main .grid #portfolio .work .background-blue #gallery #slider .mem-2 .white-bg h4 {
+    color: #f8f5f1;
+    font-size: 18px;
+  }
+  main .grid #portfolio .work .background-blue #gallery #slider .mem-2 .source {
+    width: 200px;
+  }
+  main .grid #portfolio .work .background-blue #gallery #slider .mem-2 .intro-1 {
+    height: 200px;
+  }
+}
+
+main .grid #portfolio .work .background-blue #gallery #slider .mem-3 {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  main .grid #portfolio .work .background-blue #gallery #slider .mem-3 {
+    display: block;
+    width: 936px;
+    padding: 20px;
+  }
+  main .grid #portfolio .work .background-blue #gallery #slider .mem-3 p {
+    padding-bottom: 5px;
+    padding-top: 20px;
+    font-family: 'BMHANNAAir';
+    color: #f8f5f1;
+    font-size: 18px;
+  }
+  main .grid #portfolio .work .background-blue #gallery #slider .mem-3 .white-bg h4 {
+    color: #f8f5f1;
+    font-size: 18px;
+  }
+  main .grid #portfolio .work .background-blue #gallery #slider .mem-3 .source {
+    width: 200px;
+  }
+  main .grid #portfolio .work .background-blue #gallery #slider .mem-3 .audio-1 {
+    height: 200px;
+  }
+}
+
+main .grid #portfolio .work .background-blue #arrow img {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  main .grid #portfolio .work .background-blue #arrow img {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 210px;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    cursor: pointer;
     height: 20px;
   }
 }
 
-main #portfolio .work .background-blue .membership {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-@media screen and (min-width: 1024px) {
-  main #portfolio .work .background-blue .membership .membership-pc {
-    width: 385px;
-    padding: 10px;
-  }
-  main #portfolio .work .background-blue .membership .membership-m {
-    height: 630px;
-    padding: 10px;
-  }
-  main #portfolio .work .background-blue .membership .white-bg {
-    text-align: left;
-  }
-  main #portfolio .work .background-blue .membership .white-bg h4 {
-    padding-top: 20px;
-    color: #f8f5f1;
-    font-size: 20px;
-  }
-  main #portfolio .work .background-blue .membership .white-bg p {
-    padding-top: 10px;
-    font-family: 'BMHANNAAir';
-    color: #f8f5f1;
-    font-size: 18px;
-    width: 340px;
-  }
-  main #portfolio .work .background-blue .membership .white-bg img {
-    padding-top: 20px;
-    width: 340px;
-  }
-}
-
-main #portfolio .work .pc-m-cl {
+main .grid #portfolio .work .pc-m-cl {
   margin: 20px auto;
   height: 57px;
   width: 170px;
@@ -647,13 +1287,13 @@ main #portfolio .work .pc-m-cl {
 }
 
 @media screen and (min-width: 1024px) {
-  main #portfolio .work .pc-m-cl {
+  main .grid #portfolio .work .pc-m-cl {
     margin: 30px 20px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  main #portfolio .work .h-l {
+  main .grid #portfolio .work .h-l {
     border-bottom: 2px dashed #343f56;
     margin-bottom: 18px;
     margin-left: -15px;
@@ -661,32 +1301,28 @@ main #portfolio .work .pc-m-cl {
   }
 }
 
-main #portfolio .personal-work {
+main .grid #portfolio .personal-work {
   margin-top: 50px;
 }
 
-main #portfolio .personal-work h3 {
-  text-align: right;
+main .grid #portfolio .personal-work h3 {
+  text-align: center;
   font-size: 20px;
-  padding: 0 10px 10px;
 }
 
 @media screen and (min-width: 1024px) {
-  main #portfolio .personal-work h3 {
+  main .grid #portfolio .personal-work h3 {
+    padding: 0 10px 10px;
     font-size: 30px;
     margin: 0 10px;
+    text-align: right;
   }
 }
 
-main #portfolio .personal-work .background-blue {
-  position: relative;
-  background-color: #343f56;
-  height: 390px;
-  margin: 0 10px;
-}
-
 @media screen and (min-width: 1024px) {
-  main #portfolio .personal-work .background-blue {
+  main .grid #portfolio .personal-work .background-blue {
+    margin: 0 10px;
+    background-color: #343f56;
     position: relative;
     width: 933px;
     height: 635px;
@@ -695,14 +1331,65 @@ main #portfolio .personal-work .background-blue {
   }
 }
 
-main #portfolio .personal-work .background-blue a img {
-  position: absolute;
-  top: 50%;
-  right: 5px;
+@media screen and (min-width: 1024px) {
+  main .grid #portfolio .personal-work .background-blue #gallery-1 {
+    overflow: hidden;
+    width: 936px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-  main #portfolio .personal-work .background-blue a img {
+  main .grid #portfolio .personal-work .background-blue #gallery-1 #slider-1 {
+    position: relative;
+    width: 1872px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 20px;
+  }
+}
+
+main .grid #portfolio .personal-work .background-blue #gallery-1 #slider-1 #personal-slide {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  main .grid #portfolio .personal-work .background-blue #gallery-1 #slider-1 #personal-slide {
+    display: block;
+    width: 936px;
+    padding: 30px;
+  }
+  main .grid #portfolio .personal-work .background-blue #gallery-1 #slider-1 #personal-slide p {
+    font-size: 25px;
+    color: #f8f5f1;
+    padding: 10px;
+  }
+  main .grid #portfolio .personal-work .background-blue #gallery-1 #slider-1 #personal-slide .personal-img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main .grid #portfolio .personal-work .background-blue #gallery-1 #slider-1 #personal-slide .personal-img .personal {
+    padding-right: 10px;
+    height: 480px;
+  }
+  main .grid #portfolio .personal-work .background-blue #gallery-1 #slider-1 #personal-slide .personal-img-2 .personal {
+    padding-right: 10px;
+    height: 500px;
+  }
+}
+
+main .grid #portfolio .personal-work .background-blue #arrow-1 img {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  main .grid #portfolio .personal-work .background-blue #arrow-1 img {
+    display: block;
+    cursor: pointer;
+    float: right;
+    position: absolute;
+    top: 50%;
     left: 5px;
     height: 20px;
     -webkit-transform: rotate(180deg);
@@ -711,97 +1398,144 @@ main #portfolio .personal-work .background-blue a img {
 }
 
 @media screen and (min-width: 1024px) {
-  main #portfolio .personal-work .h-l {
+  main .grid #portfolio .personal-work .h-l {
     border-bottom: 2px dashed #343f56;
     margin-bottom: -22px;
     width: 77%;
   }
-  main #portfolio .personal-work .button {
+  main .grid #portfolio .personal-work .button {
     position: absolute;
     top: 840px;
     left: 18px;
   }
-  main #portfolio .personal-work .button .btn {
-    border-radius: 20px 0 0 20px;
+}
+
+@media screen and (min-width: 1024px) {
+  main .grid #portfolio #clone-coding .background-blue {
+    width: 933px;
+    height: 635px;
+    padding: 20px;
+    padding-top: 30px;
   }
 }
 
-main #portfolio .video {
-  margin-top: 50px;
-  position: relative;
+@media screen and (min-width: 1024px) {
+  main .grid #portfolio #clone-coding .background-blue #gallery-2 {
+    overflow: hidden;
+    width: 936px;
+  }
 }
 
-main #portfolio .video h3 {
+@media screen and (min-width: 1024px) {
+  main .grid #portfolio #clone-coding .background-blue #gallery-2 #slider-2 {
+    position: relative;
+    width: 1872px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+main .grid #portfolio #clone-coding .background-blue #gallery-2 #slider-2 .clone-slide {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  main .grid #portfolio #clone-coding .background-blue #gallery-2 #slider-2 .clone-slide {
+    display: block;
+    width: 936px;
+  }
+  main .grid #portfolio #clone-coding .background-blue #gallery-2 #slider-2 .clone-slide .txt {
+    font-family: 'BMHANNAAir';
+  }
+  main .grid #portfolio #clone-coding .background-blue #gallery-2 #slider-2 .clone-slide p {
+    padding-top: 20px;
+    font-size: 21px;
+    color: #f8f5f1;
+  }
+  main .grid #portfolio #clone-coding .background-blue #gallery-2 #slider-2 .clone-slide .clone-flexbox .clone-pc {
+    padding-bottom: 20px;
+    padding-right: 20px;
+    height: 230px;
+  }
+  main .grid #portfolio #clone-coding .background-blue #gallery-2 #slider-2 .clone-slide .clone-flexbox .clone-m {
+    padding-top: 5px;
+    padding-right: 15px;
+    height: 400px;
+  }
+}
+
+main .grid #portfolio #clone-coding .background-blue #arrow-2 img {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  main .grid #portfolio #clone-coding .background-blue #arrow-2 img {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 210px;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    cursor: pointer;
+    height: 20px;
+  }
+}
+
+main .grid #portfolio #video1 {
+  margin-top: 50px;
+  position: relative;
+  text-align: center;
+}
+
+main .grid #portfolio #video1 h3 {
   text-align: center;
   font-size: 20px;
   padding: 0 10px 10px;
 }
 
 @media screen and (min-width: 1024px) {
-  main #portfolio .video h3 {
+  main .grid #portfolio #video1 h3 {
     font-size: 30px;
     margin: 0 10px;
   }
 }
 
-main #portfolio .video .background-blue {
-  background-color: #343f56;
-  height: 390px;
-  margin: 0 10px;
+main .grid #portfolio #video1 video {
+  width: 460px;
 }
 
 @media screen and (min-width: 1024px) {
-  main #portfolio .video .background-blue {
-    width: 567px;
-    height: 360px;
-    margin: 0 auto;
-  }
-}
-
-main #portfolio .video .background-blue a img {
-  float: right;
-  margin: 185px 10px;
-}
-
-main #portfolio .video .v-plan {
-  margin: 20px auto;
-  height: 57px;
-  width: 170px;
-  border: 1px solid #e9896a;
-  background-color: #e9896a;
-}
-
-@media screen and (min-width: 1024px) {
-  main #portfolio .video .v-plan {
-    position: absolute;
-    bottom: -105px;
-    right: 110px;
+  main .grid #portfolio #video1 video {
+    width: 700px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  main #portfolio .video .h-l {
+  main .grid #portfolio #video1 .h-l {
     border-bottom: 2px dashed #343f56;
     margin-bottom: -22px;
-    width: 45%;
+    width: 40%;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  main #portfolio .v-l {
+  main .grid #portfolio .v-l {
     position: absolute;
     top: 0;
     border-left: 2px dashed #343f56;
-    height: 2930px;
+    height: 5000px;
     margin-top: 24px;
+    padding-bottom: 1000px;
   }
 }
 
 footer {
   position: relative;
+  margin-top: 50px;
 }
 
-footer h2 {
+footer .grid h2 {
   text-align: right;
   font-size: 25px;
   border-bottom: 2px solid #343f56;
@@ -810,23 +1544,22 @@ footer h2 {
 }
 
 @media screen and (min-width: 1024px) {
-  footer h2 {
+  footer .grid h2 {
     margin: 0;
-    padding-top: 330px;
     font-size: 40px;
   }
 }
 
-footer h2 span {
+footer .grid h2 span {
   background-color: #eae9db;
   padding: 0 10px;
   margin: 0 30px;
 }
 
 @media screen and (min-width: 1024px) {
-  footer .green-ballf {
+  footer .grid .green-ball-2 {
     position: absolute;
-    bottom: 96px;
+    bottom: 100px;
     left: 400px;
     display: block;
     width: 66px;
@@ -837,13 +1570,13 @@ footer h2 span {
   }
 }
 
-footer .contact-flexbox {
+footer .grid .contact-flexbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-footer .contact-flexbox .phone-email-flexbox {
+footer .grid .contact-flexbox .phone-email-flexbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -854,54 +1587,54 @@ footer .contact-flexbox .phone-email-flexbox {
 }
 
 @media screen and (min-width: 1024px) {
-  footer .contact-flexbox .phone-email-flexbox {
+  footer .grid .contact-flexbox .phone-email-flexbox {
     margin-top: 50px;
   }
 }
 
-footer .contact-flexbox .phone-email-flexbox img {
+footer .grid .contact-flexbox .phone-email-flexbox img {
   margin-left: 10px;
   width: 16px;
   height: 16px;
 }
 
 @media screen and (min-width: 1024px) {
-  footer .contact-flexbox .phone-email-flexbox img {
+  footer .grid .contact-flexbox .phone-email-flexbox img {
     margin-left: 30px;
   }
 }
 
-footer .contact-flexbox .phone-email-flexbox .email {
+footer .grid .contact-flexbox .phone-email-flexbox .email {
   width: 21px;
   height: 15px;
 }
 
-footer .contact-flexbox .phone-email-flexbox p {
+footer .grid .contact-flexbox .phone-email-flexbox p {
   padding-left: 5px;
   font-size: 15px;
   color: #343f56;
 }
 
-footer .contact-flexbox .phone-email-flexbox p span {
+footer .grid .contact-flexbox .phone-email-flexbox p span {
   font-size: 16px;
   font-weight: 600;
 }
 
 @media screen and (min-width: 1024px) {
-  footer .contact-flexbox .phone-email-flexbox p span {
+  footer .grid .contact-flexbox .phone-email-flexbox p span {
     font-size: 20px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  footer .contact-flexbox .phone-email-flexbox p {
+  footer .grid .contact-flexbox .phone-email-flexbox p {
     font-size: 18px;
     padding-left: 10px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  footer .v-l {
+  footer .grid .v-l {
     float: right;
     margin-top: -95px;
     height: 100px;

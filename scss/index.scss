@@ -23,7 +23,6 @@ header {
         @include responsive(pc-screens) {
             height: 800px;
         }
-
         .mobile-menu {
             a {
                 float: right;
@@ -42,7 +41,6 @@ header {
                 display: none;
             }
         }
-        
         .orange-stroke {
             display: none;
             position: relative;
@@ -76,6 +74,7 @@ header {
                         left: 50%;
                         transform: translate(-50%, -50%);
                         .title {
+                            line-height: 60px;
                             a {
                                 font-size: 40px;
                                 &:hover {
@@ -85,8 +84,7 @@ header {
                             }
                         }
                         .plus {
-                            padding-left: 50px;
-                            line-height: 52px;
+                            line-height: 40px;
                             a {
                                 &:hover {
                                     text-decoration: underline;
@@ -106,18 +104,17 @@ header {
                 display: none;
             }
         }
-
         .illustration {
             .flower {
                 text-align: center;
                 img {
                     position: absolute;
                     transform: translate(-50%);
-                    width: 650px;
-                    margin-top: -20px;
+                    width: 660px;
+                    margin-top: -10px;
                     @include responsive(pc-screens) {
                         position: absolute;
-                        top: 80px;
+                        top: -70px;
                         right: 50%;
                         transform: translate(50%);
                         z-index: 1;
@@ -156,8 +153,8 @@ header {
                         }
                     }
                 }
-            }
-        }
+            }//illustration-me
+        }//illustration
     } // back-ground-color
     .background-green {
         margin-top: 40px;
@@ -177,6 +174,7 @@ header {
                 @include responsive(pc-screens) {
                     display: block;
                     margin-top: -10px;
+                    margin-left: -2px;
                 }
             }
         }
@@ -206,8 +204,8 @@ main {
         .grid {
             @include responsive(pc-screens) {
                 position: absolute;
-                bottom: 568px;
-                left: 375px;
+                top: -242px;
+                left: 370px;
                 overflow: hidden;
             }
             h2 {
@@ -228,9 +226,8 @@ main {
                     margin: 0 30px;
                 }
             }
-            
-            @include responsive(pc-screens) {
-                .green-ball{
+            .green-ball{
+                @include responsive(pc-screens) {
                     position: absolute;
                     top: 336px;
                     left: 310px;
@@ -247,458 +244,972 @@ main {
         .my-skills-flex-box {
             display: flex;
             justify-content: space-around;
+            margin-top: 60px;
             @include responsive(pc-screens) {
+                margin: 0;
                 display: block;
-                margin-top: 285px;
+                padding-top: 555px;
             }
-
             .web {
+                svg {
+                    width: 114px;
+                    height: 114px;
+                    .green {
+                        fill: none;
+                        stroke-width: 10px;
+                        stroke: $green;
+                    }
+                    [class^="orange-"] {
+                        fill: none;
+                        stroke-width: 10px;
+                        transform: rotate(-90deg);
+                        transform-origin: 50% 50%;
+                    }
+                    .orange-1 {
+                        stroke-dasharray: 360;
+                        stroke-dashoffset: 80;
+                        stroke: $orange;
+                        animation: progress-1 7s ease-out;
+                    }
+                    .orange-2 {
+                        stroke: $orange;
+                        stroke-dasharray: 360;
+                        stroke-dashoffset: 90;
+                        animation: progress-2 7s ease-out;
+                    }
+                    .orange-3 {
+                        stroke: $orange;
+                        stroke-dasharray: 360;
+                        stroke-dashoffset: 90;
+                        animation: progress-3 7s ease-out;
+                    }
+                    .orange-4 {
+                        stroke: $orange;
+                        stroke-dasharray: 360;
+                        stroke-dashoffset: 170;
+                        animation: progress-4 7s ease-out;
+                    }
+                    .orange-5 {
+                        stroke: $orange;
+                        stroke-dasharray: 360;
+                        stroke-dashoffset: 170;
+                        animation: progress-5 7s ease-out;
+                    }
+                    @keyframes progress-1 {
+                        from {
+                            stroke-dashoffset: 360;
+                        }
+                        to {
+                            stroke-dashoffset: 80;
+                        }
+                    }
+                    @keyframes progress-2 {
+                        from {
+                          stroke-dashoffset: 360;
+                        }
+                        to {
+                          stroke-dashoffset: 90;
+                        }
+                    }
+                    @keyframes progress-3 {
+                        from {
+                          stroke-dashoffset: 360;
+                        }
+                        to {
+                          stroke-dashoffset: 90;
+                        }
+                    }
+                    @keyframes progress-4 {
+                        from {
+                          stroke-dashoffset: 360;
+                        }
+                        to {
+                          stroke-dashoffset: 170;
+                        }
+                    }
+                    @keyframes progress-5 {
+                        from {
+                          stroke-dashoffset: 360;
+                        }
+                        to {
+                          stroke-dashoffset: 170;
+                        }
+                    }
+                }//svg-pc
+                #web-box {
+                    border: none;
+                    padding: 0;
+                    background: none;
+                }
+
+                .modal {
+                    display: none; /* Hidden by default */
+                    position: fixed; /* Stay in place */
+                    z-index: 1; /* Sit on top */
+                    padding-top: 100px; /* Location of the box */
+                    left: 0;
+                    top: 0;
+                    width: 100%; /* Full width */
+                    height: 100%; /* Full height */
+                    overflow: auto; /* Enable scroll if needed */
+                    background-color: rgb(0,0,0); /* Fallback color */
+                    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+                }
+                /* Modal Content */
+                .modal-content {
+                    position: relative;
+                    background-color: #fefefe;
+                    margin: auto;
+                    padding: 0;
+                    border: 1px solid #888;
+                    width: 80%;
+                    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+                    -webkit-animation-name: animatetop;
+                    -webkit-animation-duration: 0.4s;
+                    animation-name: animatetop;
+                    animation-duration: 0.4s
+                }
+                /* The Close Button */
+                .close {
+                    color: white;
+                    float: right;
+                    font-size: 28px;
+                    font-weight: bold;
+                }
+                
+                .close:hover,
+                .close:focus {
+                    color: #000;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+                
+                .modal-header {
+                    padding: 2px 16px;
+                    background-color: #5cb85c;
+                    color: white;
+                }
+                
+                .modal-body {padding: 2px 16px;}
+                
+                .modal-footer {
+                    padding: 2px 16px;
+                    background-color: #5cb85c;
+                    color: white;
+                }
+
+
                 @include responsive(pc-screens) {
                     display: flex;
-                    justify-content: space-around;
+                    margin-top: -300px;
                     width: 100%;
+                    justify-content: space-around;
+                    svg {
+                        width: 114px;
+                        height: 114px;
+                        .green {
+                            fill: none;
+                            stroke-width: 10px;
+                            stroke: $green;
+                        }
+                        [class^="orange-"] {
+                            fill: none;
+                            stroke-width: 10px;
+                            transform: rotate(-90deg);
+                            transform-origin: 50% 50%;
+                        }
+                        .orange-1 {
+                            stroke-dasharray: 360;
+                            stroke-dashoffset: 80;
+                            stroke: $orange;
+                            animation: progress-1 7s ease-out;
+                        }
+                        .orange-2 {
+                            stroke: $orange;
+                            stroke-dasharray: 360;
+                            stroke-dashoffset: 90;
+                            animation: progress-2 7s ease-out;
+                        }
+                        .orange-3 {
+                            stroke: $orange;
+                            stroke-dasharray: 360;
+                            stroke-dashoffset: 90;
+                            animation: progress-3 7s ease-out;
+                        }
+                        .orange-4 {
+                            stroke: $orange;
+                            stroke-dasharray: 360;
+                            stroke-dashoffset: 170;
+                            animation: progress-4 7s ease-out;
+                        }
+                        .orange-5 {
+                            stroke: $orange;
+                            stroke-dasharray: 360;
+                            stroke-dashoffset: 170;
+                            animation: progress-5 7s ease-out;
+                        }
+                        @keyframes progress-1 {
+                            from {
+                                stroke-dashoffset: 360;
+                            }
+                            to {
+                                stroke-dashoffset: 80;
+                            }
+                        }
+                        @keyframes progress-2 {
+                            from {
+                              stroke-dashoffset: 360;
+                            }
+                            to {
+                              stroke-dashoffset: 90;
+                            }
+                        }
+                        @keyframes progress-3 {
+                            from {
+                              stroke-dashoffset: 360;
+                            }
+                            to {
+                              stroke-dashoffset: 90;
+                            }
+                        }
+                        @keyframes progress-4 {
+                            from {
+                              stroke-dashoffset: 360;
+                            }
+                            to {
+                              stroke-dashoffset: 170;
+                            }
+                        }
+                        @keyframes progress-5 {
+                            from {
+                              stroke-dashoffset: 360;
+                            }
+                            to {
+                              stroke-dashoffset: 170;
+                            }
+                        }
+                    }//svg
+                    .name-flexbox {
+                        display: flex; 
+                        p {
+                            padding-right: 10px;
+                        }
+                    }
                 }
-            }
+            }//web
 
             .video {
+                svg {
+                    width: 114px;
+                    height: 114px;
+                    .green {
+                        fill: none;
+                        stroke-width: 10px;
+                        stroke: $green;
+                    }
+                    [class^="orange-"] {
+                        fill: none;
+                        stroke-width: 10px;
+                        transform: rotate(-90deg);
+                        transform-origin: 50% 50%;
+                    }
+                    .orange-6 {
+                        stroke: $orange;
+                        stroke-dasharray: 360;
+                        stroke-dashoffset: 80;
+                        animation: progress-6 7s ease-out;
+                    }
+                    .orange-7 {
+                        stroke: $orange;
+                        stroke-dasharray: 360;
+                        stroke-dashoffset: 80;
+                        animation: progress-7 7s ease-out;
+                    }
+                    .orange-8 {
+                        stroke: $orange;
+                        stroke-dasharray: 360;
+                        stroke-dashoffset: 100;
+                        animation: progress-8 7s ease-out;
+                    }
+                    .orange-9 {
+                        stroke: $orange;
+                        stroke-dasharray: 360;
+                        stroke-dashoffset: 100;
+                        animation: progress-9 7s ease-out;
+                    }
+                    @keyframes progress-6 {
+                        from {
+                          stroke-dashoffset: 360;
+                        }
+                        to {
+                          stroke-dashoffset: 80;
+                        }
+                    }
+                    @keyframes progress-7 {
+                        from {
+                          stroke-dashoffset: 360;
+                        }
+                        to {
+                          stroke-dashoffset: 80;
+                        }
+                    }
+                    @keyframes progress-8 {
+                        from {
+                          stroke-dashoffset: 360;
+                        }
+                        to {
+                          stroke-dashoffset: 100;
+                        }
+                    }
+                    @keyframes progress-9 {
+                        from {
+                          stroke-dashoffset: 360;
+                        }
+                        to {
+                          stroke-dashoffset: 100;
+                        }
+                    }
+                }//svg
                 @include responsive(pc-screens) {
                     margin: 0 auto;
                     display: flex;
                     justify-content: space-between;
                     width: 75%;
-                    margin-top: 5px;
-                    
-                }
-            }
-            .green {
-                position: relative;
-                text-align: center;
-                border-radius: 50%;
-                border: 3px solid $green;
-                width: 170px;
-                height: 170px;
-                margin: 10px;
-                @include responsive(pc-screens) {
-                    width: 210px;
-                    height: 210px;
-                }
-
-                .orange {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    // border-radius: 50%;
-                    // border: 11px solid 
-                    // $orange;
-                    width: 159px;
-                    height: 159px;
-                    @include responsive(pc-screens) {
-                        width: 191px;
-                        height: 191px;
+                    margin-top: 50px;
+                    svg {
+                        width: 114px;
+                        height: 114px;
+                        .green {
+                            fill: none;
+                            stroke-width: 10px;
+                            stroke: $green;
+                        }
+                        [class^="orange-"] {
+                            fill: none;
+                            stroke-width: 10px;
+                            transform: rotate(-90deg);
+                            transform-origin: 50% 50%;
+                        }
+                        .orange-6 {
+                            stroke: $orange;
+                            stroke-dasharray: 360;
+                            stroke-dashoffset: 80;
+                            animation: progress-6 7s ease-out;
+                        }
+                        .orange-7 {
+                            stroke: $orange;
+                            stroke-dasharray: 360;
+                            stroke-dashoffset: 80;
+                            animation: progress-7 7s ease-out;
+                        }
+                        .orange-8 {
+                            stroke: $orange;
+                            stroke-dasharray: 360;
+                            stroke-dashoffset: 100;
+                            animation: progress-8 7s ease-out;
+                        }
+                        .orange-9 {
+                            stroke: $orange;
+                            stroke-dasharray: 360;
+                            stroke-dashoffset: 100;
+                            animation: progress-9 7s ease-out;
+                        }
+                        @keyframes progress-6 {
+                            from {
+                              stroke-dashoffset: 360;
+                            }
+                            to {
+                              stroke-dashoffset: 80;
+                            }
+                        }
+                        @keyframes progress-7 {
+                            from {
+                              stroke-dashoffset: 360;
+                            }
+                            to {
+                              stroke-dashoffset: 80;
+                            }
+                        }
+                        @keyframes progress-8 {
+                            from {
+                              stroke-dashoffset: 360;
+                            }
+                            to {
+                              stroke-dashoffset: 100;
+                            }
+                        }
+                        @keyframes progress-9 {
+                            from {
+                              stroke-dashoffset: 360;
+                            }
+                            to {
+                              stroke-dashoffset: 100;
+                            }
+                        }
+                    }//svg
+                    .name-flexbox {
+                        display: flex; 
+                        p {
+                            padding-right: 10px;
+                        }
                     }
-                } 
-                img {
-                    margin-top: 30px;
-                    width: 35px;
-                    height: 40px;
                 }
-                hr {
-                    width: 80%;
-                    border: 1px solid $green;
-                    margin: 8px auto;
-                }
-                p {
-                    text-align: center;
-                    margin: -5px auto;
-                    font-size: 18px;
-                    line-height: 20px;
-                }
-                strong {
-                    position: absolute;
-                    top: 70px;
-                    left: 0;
-                    width: 100%;
-                    text-align: center;
-                    line-height: 45px;
-                    font-size: 43px;
-                    background-color: pink;
-                }
-            }
+            }//video
         } //my-skills-flex-box
     } //my-skill
 
     // portfolio //
-    #portfolio {
-        position: relative;
-        margin-top: 54px;
+    .grid {
         @include responsive(pc-screens) {
-            margin-top: 150px;
+            width: 1170px;
+            overflow: hidden;
         }
-        .title-flexbox {
-            display: flex;
-            align-items: center;
-            margin: 0 10px;
-            @include responsive(pc-screens) {
-                margin: 0;
-                .orange-ball {
-                    position: absolute;
-                    top: -42px;
-                    left: 400px;
-                    border: 5px solid $orange;
-                    border-radius: 50%;
-                    width: 66px;
-                    height: 66px;
-                }
-            }
-            .left {
-                width: 50%;
-                display: block;
-                border-bottom: 2px dashed $blue;
-            }
-            h2 {
-                font-size: 25px;
-                text-align: center; 
-                margin: 0 10px;
-                @include responsive(pc-screens) {
-                    font-size: 40px;
-                }
-            } 
-            .right {
-                width: 50%;
-                display: block;
-                border-bottom: 2px solid $blue;
-            }
-        }
-        .button {
-            display: flex;
-            @include responsive(pc-screens) {
-                flex-direction: column;
-                position: absolute;
-                top: 30px;
-                right: 10px;
-            }
-            .btn {
-                position: relative;
-                width: 100%;
-                height: 57px;
-                text-align: center;
-                margin: 20px 10px;
-                @include responsive(pc-screens) {
-                    margin-bottom: 5px;
-                    border-radius: 0 20px 20px 0;
-                    width: 182px;
-                    height: 57px;
-                }
-                a {
-                    width: 100%;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    font-size: 19px;
-                }
-            }
-            .guide {
-                border: 1px solid $orange;
-                background-color: $orange;
-            }
-            .pc-m {
-                border: 1px solid $blue;
-                background-color: $blue;
-            }
-            .plan {
-                border: 1px solid $green;
-                background-color: $green;
-                a {
-                    font-family: 'BMHANNAAir';
-                }
-            }
-        } //button
-        .work {
-            margin-top: 70px;
-            @include responsive(pc-screens) {
-                margin-top: 33px;
-                position: relative;
-                margin-left: 15px;
-            }
-
-            h3 {
-                margin-top: -40px;
-                font-size: 20px;
-                padding: 0 10px 10px;
-                @include responsive(pc-screens) {
-                    font-size: 30px;
-                }
-            }
-            .background-blue {
-                position: relative;
-                height: 390px;
-                margin: 0 10px;
-                background-color: $blue;
-                @include responsive(pc-screens) {
-                    width: 933px;
-                    height: 635px;
-                    margin-bottom: 54px;
-                }
-                a {
-                    img {
-                        position: absolute;
-                        top: 50%;
-                        right: 0;
-                        transform: translate(-50%);
-                        @include responsive(pc-screens) {
-                            height: 20px;
-                        }
-                    }
-                }
-                .membership {
-                    display: flex;
-                    @include responsive(pc-screens) {
-                        .membership-pc{
-                            width: 385px;
-                            padding: 10px;
-                        }
-                        .membership-m {
-                            height: 630px;
-                            padding: 10px;
-                        }
-                        .white-bg {
-                            text-align: left;
-                            h4 {
-                                padding-top: 20px;
-                                color: $font-color;
-                                font-size: 20px;
-                            }
-                            p {
-                                padding-top: 10px;
-                                font-family: 'BMHANNAAir';
-                                color: $font-color;
-                                font-size: 18px;
-                                width: 340px;
-                            }
-                            img {
-                                padding-top: 20px;
-                                width: 340px;
-                            }
-                        }
-                    }
-                }
-            }
-            .pc-m-cl {
-                margin: 20px auto;
-                height: 57px;
-                width: 170px;
-                border: 1px solid $blue;
-                background-color: $blue;
-                @include responsive(pc-screens) {
-                    margin: 30px 20px;
-                }
-            }
-            @include responsive(pc-screens) {
-                .h-l {
-                    border-bottom: 2px dashed $blue;
-                    margin-bottom: 18px;
-                    margin-left: -15px;
-                    width: 1.5%;
-                }
-            }
-        }
-        
-        .personal-work {
-            margin-top: 50px;
-            h3 {
-                text-align: right;
-                font-size: 20px;
-                padding: 0 10px 10px;
-                @include responsive(pc-screens) {
-                    font-size: 30px;
-                    margin: 0 10px;
-                }
-            }
-            .background-blue {
-                position: relative;
-                background-color: $blue;
-                height: 390px;
-                margin: 0 10px;
-                @include responsive(pc-screens) {
-                    position: relative;
-                    width: 933px;
-                    height: 635px;
-                    margin: 0 220px;
-                    margin-bottom: 52px;
-                }
-                a {
-                    img {
-                        // float: right;
-                        position: absolute;
-                        top: 50%;
-                        right: 5px;
-                        @include responsive(pc-screens) {
-                            left: 5px;
-                            height: 20px;
-                            transform: rotate(180deg);
-                        }
-                    }
-                }
-            }
-            @include responsive(pc-screens) {
-                .h-l {
-                    border-bottom: 2px dashed $blue;
-                    margin-bottom: -22px;
-                    width: 77%;
-                }
-                .button {
-                    position: absolute;
-                    top: 840px;
-                    left: 18px;
-                    .btn {
-                        border-radius: 20px 0 0 20px;
-                    }
-                }
-            }
-        }
-        
-        .video {
-            margin-top: 50px;
+        #portfolio {
             position: relative;
-            h3 {
-                text-align: center;
-                font-size: 20px;
-                padding: 0 10px 10px;
-                @include responsive(pc-screens) {
-                    font-size: 30px;
-                    margin: 0 10px;
-                }
+            margin-top: 54px;
+            @include responsive(pc-screens) {
+                margin-top: 150px;
             }
-            .background-blue {
-                background-color: $blue;
-                height: 390px;
+            .title-flexbox {
+                display: flex;
+                align-items: center;
                 margin: 0 10px;
                 @include responsive(pc-screens) {
-                    width: 567px;
-                    height: 360px;
-                    margin: 0 auto;
+                    margin: 0;
+                    .orange-ball {
+                        position: absolute;
+                        top: -42px;
+                        left: 400px;
+                        border: 5px solid $orange;
+                        border-radius: 50%;
+                        width: 66px;
+                        height: 66px;
+                    }
                 }
-                a {
-                    img {
-                        float: right;
-                        margin: 185px 10px;
+                .left {
+                    width: 50%;
+                    display: block;
+                    border-bottom: 2px dashed $blue;
+                }
+                h2 {
+                    font-size: 25px;
+                    text-align: center; 
+                    margin: 0 10px;
+                    @include responsive(pc-screens) {
+                        font-size: 40px;
+                    }
+                } 
+                .right {
+                    width: 50%;
+                    display: block;
+                    border-bottom: 2px solid $blue;
+                }
+            }
+            .button {
+                display: flex;
+                @include responsive(pc-screens) {
+                   flex-direction: column;
+                    position: absolute;
+                    top: 30px;
+                    right: 10px;
+                }
+                .btn {
+                    position: relative;
+                    width: 100%;
+                    height: 57px;
+                    text-align: center;
+                    margin: 20px 10px;
+                    @include responsive(pc-screens) {
+                        margin-bottom: 5px;
+                        width: 182px;
+                        height: 57px;
+                    }
+                    a {
+                        width: 100%;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        font-size: 19px;
+                    }
+                }
+                .guide {
+                    border: 1px solid $orange;
+                    background-color: $orange;
+                }
+                .pc-m {
+                    border: 1px solid $blue;
+                    background-color: $blue;
+                }
+                .plan {
+                    border: 1px solid $green;
+                    background-color: $green;
+                    a {
+                        font-family: 'BMHANNAAir';
+                    }
+                }
+            } //button
+            .work {
+                margin-top: 70px;
+                @include responsive(pc-screens) {
+                    margin-top: 33px;
+                    position: relative;
+                    margin-left: 15px;
+                }
+    
+                h3 {
+                    margin-top: -40px;
+                    font-size: 20px;
+                    text-align: center;
+                    @include responsive(pc-screens) {
+                        text-align: left;
+                        padding: 0 10px 10px;
+                        font-size: 30px;
+                    }
+                }
+                .background-blue {
+                    @include responsive(pc-screens) {
+                        background-color: $blue;
+                        margin: 0 10px;
+                        width: 933px;
+                        height: 635px;
+                        margin-bottom: 54px;
+                    }
+                    #gallery {
+                        @include responsive(pc-screens) {
+                            overflow: hidden;
+                            width: 936px;
+                        }
+                        #slider {
+                            @include responsive(pc-screens) {
+                                width: 2808px;
+                                display: flex;
+                            }
+                            .mem-1 {
+                                display: none;
+                                @include responsive(pc-screens) {
+                                    display: block;
+                                    width: 936px;
+                                    padding: 20px;
+                                    p {
+                                        padding-top: 20px;
+                                        padding-bottom: 5px;
+                                        font-family: 'BMHANNAAir';
+                                        color: $font-color;
+                                        font-size: 18px;
+                                    }
+                                    .white-bg {
+                                        h4 {
+                                            color: $font-color;
+                                            font-size: 18px;
+                                        }
+                                    }
+                                    .membership-pc{
+                                        height: 200px;
+                                    }
+                                    .membership-pc2 {
+                                        height: 200px;
+                                    }
+                                    .m-flexbox {
+                                        display: flex;
+                                        .m-version {
+                                            padding-right: 20px;
+                                            .membership-m {
+                                                height: 200px;
+                                            }
+                                        }
+                                        .source {
+                                            height: 200px;
+                                        }
+                                    }
+                                }
+                            }//mem-1
+                            .mem-2 {
+                                display: none;
+                                @include responsive(pc-screens) {
+                                    display: block;
+                                    width: 936px;
+                                    padding: 20px;
+                                    p {
+                                        padding-bottom: 5px;
+                                        padding-top: 20px;
+                                        font-family: 'BMHANNAAir';
+                                        color: $font-color;
+                                        font-size: 18px;
+                                    }
+                                    .white-bg {
+                                        h4 {
+                                            color: $font-color;
+                                            font-size: 18px;
+                                        }
+                                    }
+                                    .source {
+                                        width: 200px;
+                                    }
+                                    .intro-1{
+                                        height: 200px;
+                                    }
+                                }
+                            }
+                            .mem-3 {
+                                display: none;
+                                @include responsive(pc-screens) {
+                                    display: block;
+                                    width: 936px;
+                                    padding: 20px;
+                                    p {
+                                        padding-bottom: 5px;
+                                        padding-top: 20px;
+                                        font-family: 'BMHANNAAir';
+                                        color: $font-color;
+                                        font-size: 18px;
+                                    }
+                                    .white-bg {
+                                        h4 {
+                                            color: $font-color;
+                                            font-size: 18px;
+                                        }
+                                    }
+                                    .source {
+                                        width: 200px;
+                                    }
+                                    .audio-1{
+                                        height: 200px;
+                                    }
+                                }
+                            }//mem-3
+                        }//#slider
+                    }//#gallery
+                    #arrow {
+                        img {
+                            display: none;
+                            @include responsive(pc-screens) {
+                                display: block;
+                                position: absolute;
+                                top: 50%;
+                                right: 210px;
+                                transform: translate(-50%);
+                                cursor: pointer;
+                                height: 20px;
+                            }
+                        }
+                    }
+                }//background-blue
+                .pc-m-cl {
+                    margin: 20px auto;
+                    height: 57px;
+                    width: 170px;
+                    border: 1px solid $blue;
+                    background-color: $blue;
+                    @include responsive(pc-screens) {
+                        margin: 30px 20px;
+                    }
+                }
+                @include responsive(pc-screens) {
+                    .h-l {
+                        border-bottom: 2px dashed $blue;
+                        margin-bottom: 18px;
+                        margin-left: -15px;
+                        width: 1.5%;
                     }
                 }
             }
-            .v-plan {
-                margin: 20px auto;
-                height: 57px;
-                width: 170px;
-                border: 1px solid $orange;
-                background-color: $orange;
+            
+            .personal-work {
+                margin-top: 50px;
+                h3 {
+                    text-align: center;
+                    font-size: 20px;
+                    @include responsive(pc-screens) {
+                        padding: 0 10px 10px;
+                        font-size: 30px;
+                        margin: 0 10px;
+                        text-align: right;
+                    }
+                }
+                .background-blue {
+                    @include responsive(pc-screens) {
+                        margin: 0 10px;
+                        background-color: $blue;
+                        position: relative;
+                        width: 933px;
+                        height: 635px;
+                        margin: 0 220px;
+                        margin-bottom: 52px;
+                    }
+                    #gallery-1 {
+                        @include responsive(pc-screens) {
+                            overflow: hidden;
+                            width: 936px;
+                        }
+                        #slider-1 {
+                            @include responsive(pc-screens) {
+                                position: relative;
+                                width: 1872px;
+                                display: flex;
+                                padding-left: 20px;
+                            }
+                            #personal-slide {
+                                display: none;
+                                @include responsive(pc-screens) {
+                                    display: block;
+                                    width: 936px;
+                                    padding: 30px;
+                                    p {
+                                        font-size: 25px;
+                                        color: $font-color;
+                                        padding: 10px;
+                                    }
+                                    .personal-img {
+                                        display: flex;
+                                        .personal {
+                                            padding-right: 10px;
+                                            height: 480px;
+                                        }
+                                    }
+                                    .personal-img-2 {
+                                        .personal {
+                                            padding-right: 10px;
+                                            height: 500px;
+                                        }
+                                    }
+                                }    
+                            }
+                        }//slider-1
+                    }//gallery-1
+                    #arrow-1 {
+                        img {
+                            display: none;
+                            @include responsive(pc-screens) {
+                                display: block;
+                                cursor: pointer;
+                                float: right;
+                                position: absolute;
+                                top: 50%;
+                                left: 5px;
+                                height: 20px;
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+                }
+                @include responsive(pc-screens) {
+                    .h-l {
+                        border-bottom: 2px dashed $blue;
+                        margin-bottom: -22px;
+                        width: 77%;
+                    }
+                    .button {
+                        position: absolute;
+                        top: 840px;
+                        left: 18px;
+                    }
+                }
+            }
+            
+            #clone-coding {
+                .background-blue {
+                    @include responsive(pc-screens) {
+                        width: 933px;
+                        height: 635px;
+                        padding: 20px;
+                        padding-top: 30px;
+                    }
+                    #gallery-2 {
+                        @include responsive(pc-screens) {
+                            overflow: hidden;
+                            width: 936px;
+                        }
+                        #slider-2 {
+                            @include responsive(pc-screens) {
+                                position: relative;
+                                width: 1872px;
+                                display: flex;
+                            }
+                            .clone-slide {
+                                display: none;
+                                @include responsive(pc-screens) {
+                                    display: block;
+                                    width: 936px;
+                                    .txt {
+                                        font-family: 'BMHANNAAir';
+                                    }
+                                    p {
+                                        padding-top: 20px;
+                                        font-size: 21px;
+                                        color: $font-color;
+                                    }
+                                    .clone-flexbox {
+                                        .clone-pc {
+                                            padding-bottom: 20px;
+                                            padding-right: 20px;
+                                            height: 230px;
+                                        }
+                                        .clone-m {
+                                            padding-top: 5px;
+                                            padding-right: 15px;
+                                            height: 400px;
+                                        }
+                                    }
+                                }
+                            }//clone-slide 
+                        }//slider-2
+                    }//gallery-2
+                    #arrow-2 {
+                        img {
+                            display: none;
+                            @include responsive(pc-screens) {
+                                display: block;
+                                position: absolute;
+                                top: 50%;
+                                right: 210px;
+                                transform: translate(-50%);
+                                cursor: pointer;
+                                height: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+            #video1 {
+                margin-top: 50px;
+                position: relative;
+                text-align: center;
+                h3 {
+                    text-align: center;
+                    font-size: 20px;
+                    padding: 0 10px 10px;
+                    @include responsive(pc-screens) {
+                        font-size: 30px;
+                        margin: 0 10px;
+                    }
+                }
+               video {
+                width: 460px;
+                @include responsive(pc-screens) {
+                    width: 700px;
+                }
+
+               }
+                // .v-plan {
+                //     margin: 20px auto;
+                //     height: 57px;
+                //     width: 170px;
+                //     border: 1px solid $orange;
+                //     background-color: $orange;
+                //     @include responsive(pc-screens) {
+                //         position: absolute;
+                //         bottom: -105px;
+                //         right: 110px;
+                //     }
+                // }
+                @include responsive(pc-screens) {
+                    .h-l {
+                        border-bottom: 2px dashed $blue;
+                        margin-bottom: -22px;
+                        width: 40%;
+                    }
+                }
+            }
+            .v-l {
                 @include responsive(pc-screens) {
                     position: absolute;
-                    bottom: -105px;
-                    right: 110px;
+                    top: 0;
+                    border-left: 2px dashed $blue;
+                    height: 5000px;
+                    margin-top: 24px;
+                    padding-bottom: 1000px;
+                    // background-color: aqua;
                 }
             }
-            @include responsive(pc-screens) {
-                .h-l {
-                    border-bottom: 2px dashed $blue;
-                    margin-bottom: -22px;
-                    width: 45%;
-                }
-            }
-        }
-        .v-l {
-            @include responsive(pc-screens) {
-                position: absolute;
-                top: 0;
-                border-left: 2px dashed $blue;
-                height: 2930px;
-                margin-top: 24px;
-            }
-        }
-    } //portfolio
+        } //portfolio
+    }//grid
 } //main
 
 //===== footer =====//
 footer {
     position: relative;
-    h2 {
-        text-align: right;
-        font-size: 25px;
-        border-bottom: 2px solid $blue;
-        line-height: 1.6px;
-        margin: 60px 10px 40px 10px;
-        @include responsive(pc-screens) {
-            margin: 0;
-            padding-top: 330px;
-            font-size: 40px;
-        }
-        span {
-            background-color: $body-bg;
-            padding: 0 10px;
-            margin: 0 30px;
-        }
-    }
-    @include responsive(pc-screens) {
-        .green-ballf{
-            position: absolute;
-            bottom: 96px;
-            left: 400px;
-            display: block;
-            width: 66px;
-            height: 66px;
-            border-radius: 50%;
-            background-color: $green;
-            overflow: hidden;
-            
-        }
-    }
-    .contact-flexbox {
-        display: flex;
-        .phone-email-flexbox {
-            display: flex;
-            align-items: center;
-            margin: 0 auto 20px;
+    margin-top: 50px;
+    .grid {
+        // overflow: hidden;
+        h2 {
+            text-align: right;
+            font-size: 25px;
+            border-bottom: 2px solid $blue;
+            line-height: 1.6px;
+            margin: 60px 10px 40px 10px;
             @include responsive(pc-screens) {
-                margin-top: 50px;
+                margin: 0;
+                font-size: 40px;
+                // background-color: pink;
             }
-
-            img {
-                margin-left: 10px;
-                width: 16px;
-                height: 16px;
+            span {
+                background-color: $body-bg;
+                padding: 0 10px;
+                margin: 0 30px;
+            }
+        }
+        @include responsive(pc-screens) {
+            .green-ball-2{
+                position: absolute;
+                bottom: 100px;
+                left: 400px;
+                display: block;
+                width: 66px;
+                height: 66px;
+                border-radius: 50%;
+                background-color: $green;
+                overflow: hidden;
+                
+            }
+        }
+        .contact-flexbox {
+            display: flex;
+            .phone-email-flexbox {
+                display: flex;
+                align-items: center;
+                margin: 0 auto 20px;
                 @include responsive(pc-screens) {
-                    margin-left: 30px;
+                    margin-top: 50px;
                 }
-            }
-            .email {
-                width: 21px;
-                height: 15px;
-            }
-            p {
-                padding-left: 5px;
-                font-size: 15px;
-                color: $blue;
-                span {
-                    font-size: 16px;
-                    font-weight: 600;
+    
+                img {
+                    margin-left: 10px;
+                    width: 16px;
+                    height: 16px;
                     @include responsive(pc-screens) {
-                        font-size: 20px;
+                        margin-left: 30px;
                     }
                 }
-                @include responsive(pc-screens) {
-                    font-size: 18px;
-                    padding-left: 10px;
+                .email {
+                    width: 21px;
+                    height: 15px;
+                }
+                p {
+                    padding-left: 5px;
+                    font-size: 15px;
+                    color: $blue;
+                    span {
+                        font-size: 16px;
+                        font-weight: 600;
+                        @include responsive(pc-screens) {
+                            font-size: 20px;
+                        }
+                    }
+                    @include responsive(pc-screens) {
+                        font-size: 18px;
+                        padding-left: 10px;
+                    }
                 }
             }
-        }
-    } //contact-flexbox
-    .v-l {
-        @include responsive(pc-screens) {
-            float: right;
-            margin-top: -95px;
-            height: 100px;
-            border-left: 2px solid $blue;
+        } //contact-flexbox
+        .v-l {
+            @include responsive(pc-screens) {
+                float: right;
+                margin-top: -95px;
+                height: 100px;
+                border-left: 2px solid $blue;
+            }
         }
     }
 }//footer
