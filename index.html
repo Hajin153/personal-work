@@ -4,13 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index.css">
+    <meta name="title" property="og:title" content="이하진 포트폴리오">
+    <meta name="images" property="og:image" content="./image/og.jpg">
+    <meta name="description" property="og:description" content="안녕하세요! 이하진의 프로필 포트폴리오 입니다.">
+    <meta name="type" property="og:type" content="article">
+    <meta name="이하진" content="포트폴리오">
+    <meta name="description" content="프로필 포트폴리오입니다. 스킬과 포트폴리오 작업물을 볼 수 있습니다.">
+    <title>Hajin portfolio</title>
+    <link rel="stylesheet" href="./scss/index.css">
+    <link rel="shortcut icon" href="./image/favicon.ico">
     <script src="./js/jquery.js"></script>
     <script src="./js/index.js"></script>
-    <title>Document</title>
 </head>
 <body>
     <header>
+        <div id="top-bt">TOP</div>
         <div class="back-ground-color">
             <div class="mobile-menu">
                 <a href="#">
@@ -29,7 +37,7 @@
                             <li class="plus"><a href="#personal">+ PERSONAL</a></li>
                             <li class="plus"><a href="#clone-coding">+ CLONE CODING</a></li>
                             <li class="plus"><a href="#video1">+ VIDEO</a></li>
-                            <li class="plus"><a href="#">+ JAVASCRIPT</a></li>
+                            <!-- <li class="plus"><a href="#">+ JAVASCRIPT</a></li> -->
                         </ul> <!-- gnb -->
                     </nav>
                 </div> <!-- green-cir --> 
@@ -85,7 +93,7 @@
             </div>
             <div class="my-skills-flex-box">
                 <div class="web">
-                    <button id="web-box" >
+                    <div class="web-box">
                         <svg>
                             <circle class="green" cx="57" cy="57" r="52"/>
                             <circle class="orange-1" cx="57" cy="57" r="52"/>
@@ -93,29 +101,20 @@
                         <img src="./image/logo_html.png" alt="html">
                         <hr>
                         <div class="name-flexbox">
-                            <p>HTML</p>
+                            <p>HTML5</p>
                             <p class="count">85</p>
                         </div>
-                    </button>
-                    <div id="myModal" class="modal">
-
-                        <!-- Modal content -->
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <span class="close">&times;</span>
-                            <h2>Modal Header</h2>
-                          </div>
-                          <div class="modal-body">
-                            <p>Some text in the Modal Body</p>
-                            <p>Some other text...</p>
-                          </div>
-                          <div class="modal-footer">
-                            <h3>Modal Footer</h3>
-                          </div>
-                        </div>
-                      
                     </div>
-                    <button id="web-box">
+                    <div class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h2 class="upTitle">HTML5</h2>
+                            <p>
+                                시맨틱 태그를 애니메이션과 스타일에 맞춰서 적절한 구조로 사용할 수 있습니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="web-box">
                         <svg>
                             <circle class="green" cx="57" cy="57" r="52"/>
                             <circle class="orange-2" cx="57" cy="57" r="52"/>
@@ -123,29 +122,20 @@
                         <img src="./image/logo_css.png" alt="css">
                         <hr>
                         <div class="name-flexbox">
-                            <p>CSS</p>
+                            <p>CSS3</p>
                             <p class="count">80</p>
                         </div>
-                    </button>
-                    <div id="myModal" class="modal">
-
-                        <!-- Modal content -->
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <span class="close">&times;</span>
-                            <h2>Modal Header</h2>
-                          </div>
-                          <div class="modal-body">
-                            <p>Some text in the Modal Body</p>
-                            <p>Some other text...</p>
-                          </div>
-                          <div class="modal-footer">
-                            <h3>Modal Footer</h3>
-                          </div>
-                        </div>
-                      
                     </div>
-                    <button id="web-box">
+                    <div class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h2 class="upTitle">CSS3</h2>
+                            <p>
+                                각종 스타일, transition을 사용한 다양한 에니매이션, 미디어 쿼리를 이용하여 반응형웹을 구현할 수 있습니다.   
+                            </p>
+                        </div><!-- modalUp -->
+                    </div><!-- modal -->
+                    <div class="web-box">
                         <svg>
                             <circle class="green" cx="57" cy="57" r="52"/>
                             <circle class="orange-3" cx="57" cy="57" r="52"/>
@@ -156,26 +146,17 @@
                             <p>SASS</p>
                             <p class="count">80</p>
                         </div>
-                    </button>
-                    <div id="myModal" class="modal">
-
-                        <!-- Modal content -->
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <span class="close">&times;</span>
-                            <h2>Modal Header</h2>
-                          </div>
-                          <div class="modal-body">
-                            <p>Some text in the Modal Body</p>
-                            <p>Some other text...</p>
-                          </div>
-                          <div class="modal-footer">
-                            <h3>Modal Footer</h3>
-                          </div>
-                        </div>
-                      
                     </div>
-                    <button id="web-box">
+                    <div class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h2 class="upTitle">SASS</h2>
+                            <p>
+                                코드중복을 최소화하기 위해 변수로 만들거나 @mixin, @include를 적절히 사용하여 코드를 간결하게 작성할 수 있습니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="web-box">
                         <svg>
                             <circle class="green" cx="57" cy="57" r="52"/>
                             <circle class="orange-4" cx="57" cy="57" r="52"/>
@@ -186,26 +167,15 @@
                             <p>JQUERY</p>
                             <p class="count">60</p>
                         </div>
-                    </button>
-                    <div id="myModal" class="modal">
-
-                        <!-- Modal content -->
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <span class="close">&times;</span>
-                            <h2>Modal Header</h2>
-                          </div>
-                          <div class="modal-body">
-                            <p>Some text in the Modal Body</p>
-                            <p>Some other text...</p>
-                          </div>
-                          <div class="modal-footer">
-                            <h3>Modal Footer</h3>
-                          </div>
-                        </div>
-                      
                     </div>
-                    <button id="web-box">
+                    <div class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h2 class="upTitle">JQUERY</h2>
+                            <p>다양한 이벤트들을 사용하여 필요한 애니메이션과 기능을 구현할 수 있습니다.</p>
+                        </div>
+                    </div>
+                    <div class="web-box">
                         <svg>
                             <circle class="green" cx="57" cy="57" r="52"/>
                             <circle class="orange-5" cx="57" cy="57" r="52"/>
@@ -216,10 +186,18 @@
                             <p>JAVASCRIPT</p>
                             <p class="count">60</p>
                         </div>
-                    </button>
+                    </div>
+                    <div class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h2 class="upTitle">JAVASCRIPT</h2>
+                            <p>if, for, while문 등을 사용하여 필요한 에니매이션을 구현 할 수 있습니다.</p>
+                        </div>
+                    </div>
                 </div> <!-- web -->
+
                 <div class="video">
-                    <button id="video-box">
+                    <div class="web-box">
                         <svg>
                             <circle class="green" cx="57" cy="57" r="52"/>
                             <circle class="orange-6" cx="57" cy="57" r="52"/>
@@ -227,29 +205,18 @@
                         <img src="./image/logo_ai.png" alt="illustration">
                         <hr>
                         <div class="name-flexbox">
-                            <p>ILLUSTRATION</p>
+                            <p>ILLUSTRATOR</p>
                             <p class="count">80</p>
                         </div>
-                    </button>
-                    <div id="myModal" class="modal">
-
-                        <!-- Modal content -->
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <span class="close">&times;</span>
-                            <h2>Modal Header</h2>
-                          </div>
-                          <div class="modal-body">
-                            <p>Some text in the Modal Body</p>
-                            <p>Some other text...</p>
-                          </div>
-                          <div class="modal-footer">
-                            <h3>Modal Footer</h3>
-                          </div>
-                        </div>
-                      
                     </div>
-                    <button id="video-box">
+                    <div class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h2 class="upTitle">ILLUSTRATOR</h2>
+                            <p>웹 페이지를 만들기 위해 시안 제작이 가능하며 로고 와 사진 보정 등을 할 수 있습니다.</p>
+                        </div>
+                    </div>
+                    <div class="web-box">
                         <svg>
                             <circle class="green" cx="57" cy="57" r="52"/>
                             <circle class="orange-7" cx="57" cy="57" r="52"/>
@@ -260,26 +227,15 @@
                             <p>PHOTOSHOP</p>
                             <p class="count">80</p>
                         </div>
-                    </button>
-                    <div id="myModal" class="modal">
-
-                        <!-- Modal content -->
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <span class="close">&times;</span>
-                            <h2>Modal Header</h2>
-                          </div>
-                          <div class="modal-body">
-                            <p>Some text in the Modal Body</p>
-                            <p>Some other text...</p>
-                          </div>
-                          <div class="modal-footer">
-                            <h3>Modal Footer</h3>
-                          </div>
-                        </div>
-                      
                     </div>
-                    <button id="video-box">
+                    <div class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h2 class="upTitle">PHOTOSHOP</h2>
+                            <p>사진의 색 보정이 가능하며, 이미지를 움직이게 하여 gif파일로 만들 수 있습니다.</p>
+                        </div>
+                    </div>
+                    <div class="web-box">
                         <svg>
                             <circle class="green" cx="57" cy="57" r="52"/>
                             <circle class="orange-8" cx="57" cy="57" r="52"/>
@@ -290,26 +246,15 @@
                             <p>AFTER EFFECTS</p>
                             <p class="count">70</p>
                         </div>
-                    </button>
-                    <div id="myModal" class="modal">
-
-                        <!-- Modal content -->
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <span class="close">&times;</span>
-                            <h2>Modal Header</h2>
-                          </div>
-                          <div class="modal-body">
-                            <p>Some text in the Modal Body</p>
-                            <p>Some other text...</p>
-                          </div>
-                          <div class="modal-footer">
-                            <h3>Modal Footer</h3>
-                          </div>
-                        </div>
-                      
                     </div>
-                    <button id="video-box">
+                    <div class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h2 class="upTitle">AFTER EFFECTS</h2>
+                            <p>도형을 만들어 움직이게 하고, 트랙매트를 이용하여 안보이게 만들 수 있습니다.</p>
+                        </div>
+                    </div>
+                    <div class="web-box">
                         <svg>
                             <circle class="green" cx="57" cy="57" r="52"/>
                             <circle class="orange-9" cx="57" cy="57" r="52"/>
@@ -320,24 +265,13 @@
                             <p>PREMIERE</p>
                             <p class="count">70</p>
                         </div>
-                    </button>
-                    <div id="myModal" class="modal">
-
-                        <!-- Modal content -->
+                    </div>
+                    <div class="modal">
                         <div class="modal-content">
-                          <div class="modal-header">
                             <span class="close">&times;</span>
-                            <h2>Modal Header</h2>
-                          </div>
-                          <div class="modal-body">
-                            <p>Some text in the Modal Body</p>
-                            <p>Some other text...</p>
-                          </div>
-                          <div class="modal-footer">
-                            <h3>Modal Footer</h3>
-                          </div>
+                            <h2 class="upTitle">PREMIERE</h2>
+                            <p>영상 색 보정, 자르기, 트랙매트기등을 이용하여 다양한 편집을 할 수 있습니다.</p>
                         </div>
-                      
                     </div>
                 </div> <!-- video -->
             </div> <!-- my-skills-flex-box -->
@@ -418,13 +352,13 @@
                     </div> <!-- background-blue -->
                     <div class="button">
                         <div class="btn guide">
-                            <a href="#">DESIGN GUIDE</a>
+                            <a href="./sub/group/group.html" target="-blank">DESIGN GUIDE</a>
                         </div>
                         <div class="btn pc-m">
-                            <a href="#">PC/MOBILE</a>
+                            <a href="#">WEBSITE</a>
                         </div>
                         <div class="btn plan">
-                            <a href="#">디자인 기획 </a>
+                            <a href="./pdf/조별포폴 2022 SPREAD.pdf" target="_blank">디자인 기획 </a>
                         </div>
                     </div>
                 </div> <!-- group-work -->
@@ -458,10 +392,10 @@
                     </div> <!-- background-blue -->
                     <div class="button">
                         <div class="btn guide">
-                            <a href="#">DESIGN GUIDE</a>
+                            <a href="./sub/personal/personal.html" target="_blank">DESIGN GUIDE</a>
                         </div>
                         <div class="btn pc-m">
-                            <a href="#">PC/MOBILE</a>
+                            <a href="http://hihihi98.dothome.co.kr/">WEBSITE</a>
                         </div>
                     </div>
                 </div> <!-- personal-work -->
@@ -473,7 +407,7 @@
                         <div id="gallery-2">
                             <div id="slider-2">
                                 <div class="clone-slide">
-                                    <p class="txt">스타벅스 웹사이트의 모바일과 피시버전을 클론코딩 했습니다.</p>
+                                    <p class="txt">스타벅스 웹사이트의 모바일과 피시버전을 클론코딩을 HTML과 SCSS를 사용하여 코딩했습니다. </p>
                                     <p>PC version</p>
                                     <div class="clone-flexbox">
                                         <img src="./image/clone-pc.jpg" alt="clone-pc" class="clone-pc">
@@ -499,7 +433,7 @@
                     </div> <!-- background-blue -->
                     <div class="button">
                         <div class="btn pc-m-cl">
-                            <a href="#">PC/MOBILE</a>
+                            <a href="./coding/index.html" target="-blank">WEBSITE</a>
                         </div>
                     </div>
                 </div> <!-- clone-coding -->
@@ -507,10 +441,14 @@
                 <div class="video" id="video1">
                     <div class="h-l"></div>
                     <h3>Video</h3>
-                    <video controls width="700px">
-                        <source src="./media/video.mp4" type="video/mp4">
-                    </video>
-                    <p>fgkjlkgj;dlskfj;dlsdfsssssdfsdfdfsdfdsfdfsdfsdfdsfdsfsdfsddsfkfj</p>
+                    <div class="bg">
+                        <video controls width="700px">
+                            <source src="./media/video.mp4" type="video/mp4">
+                        </video>
+                        <p>
+                            이 영상은 프리미어 프로를 사용하여 편집한 영상입니다. 트랙매트 키를 사용하여 도형안에 색이 바뀌는 작업을 하였고, crop툴로 영상에 선을 만들어 더 다양한 디자인을 표현할 수 있었습니다.
+                        </p>
+                    </div>
                 </div> <!-- video -->
 
                 <div class="v-l"></div>
@@ -519,6 +457,7 @@
     </main>
     <footer>
         <div class="grid">
+            <div class="line"></div>
             <h2><span>CONTACT</span></h2>
             <span class="green-ball-2"></span>
             <div class="contact-flexbox">
@@ -531,6 +470,7 @@
             </div>
             <div class="v-l"></div>
         </div> <!-- grid -->
+        <a href="https://github.com/Hajin153/personal-work" target="_blank"><img src="./image/gitHub_logo.png" alt="github" class="github"></a>
     </footer>
 </body>
 </html>

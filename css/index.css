@@ -2,8 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .grid {
@@ -22,75 +21,83 @@ a {
   text-decoration: none;
   color: #f8f5f1;
   font-size: 25px;
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
 }
 
 p {
   font-size: 23px;
   color: #387c6d;
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
   font-weight: light;
 }
 
 h2 {
   color: #343f56;
   font-size: 40px;
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
 }
 
 h3 {
   color: #343f56;
   font-size: 30px;
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
 }
 
 @font-face {
-  font-family: 'BMHANNAAir';
+  font-family: "BMHANNAAir";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.0/BMHANNAAir.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
-
 body {
   width: 100%;
   background-color: #eae9db;
 }
 
+header #top-bt {
+  display: none;
+  position: fixed;
+  right: 0;
+  bottom: 10%;
+  width: 30px;
+  height: 30px;
+  font-size: 12px;
+  background: red;
+  color: white;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  z-index: 100;
+}
 header .back-ground-color {
   position: relative;
   background-color: #f8f5f1;
   border-bottom-right-radius: 100px;
   height: 760px;
 }
-
 @media screen and (min-width: 1024px) {
   header .back-ground-color {
     height: 800px;
   }
 }
-
 header .back-ground-color .mobile-menu a {
   float: right;
   margin: 30px 15px;
 }
-
 header .back-ground-color .mobile-menu a span {
   display: block;
   width: 40px;
   height: 5px;
   background-color: #e9896a;
 }
-
 header .back-ground-color .mobile-menu a span:nth-child(2) {
   margin: 5px 0;
 }
-
 @media screen and (min-width: 1024px) {
   header .back-ground-color .mobile-menu {
     display: none;
   }
 }
-
 header .back-ground-color .orange-stroke {
   display: none;
   position: relative;
@@ -100,7 +107,6 @@ header .back-ground-color .orange-stroke {
   width: 567px;
   height: 567px;
 }
-
 @media screen and (min-width: 1024px) {
   header .back-ground-color .orange-stroke {
     display: block;
@@ -109,133 +115,106 @@ header .back-ground-color .orange-stroke {
     left: 111px;
   }
 }
-
 header .back-ground-color .orange-stroke .green-cir {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   border-radius: 50%;
   background-color: #387c6d;
   width: 531px;
   height: 531px;
 }
-
 header .back-ground-color .orange-stroke .green-cir nav .gnb {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-
 header .back-ground-color .orange-stroke .green-cir nav .gnb .title {
   line-height: 60px;
 }
-
 header .back-ground-color .orange-stroke .green-cir nav .gnb .title a {
   font-size: 40px;
 }
-
 header .back-ground-color .orange-stroke .green-cir nav .gnb .title a:hover {
   color: #e5bdb3;
   font-size: 39px;
 }
-
 header .back-ground-color .orange-stroke .green-cir nav .gnb .plus {
   line-height: 40px;
 }
-
 header .back-ground-color .orange-stroke .green-cir nav .gnb .plus a:hover {
   text-decoration: underline;
   color: #e5bdb3;
   font-size: 24px;
 }
-
 header .back-ground-color .hello {
   text-align: center;
   padding: 112px 0 100px;
 }
-
 @media screen and (min-width: 1024px) {
   header .back-ground-color .hello {
     display: none;
   }
 }
-
 header .back-ground-color .illustration .flower {
   text-align: center;
 }
-
 header .back-ground-color .illustration .flower img {
   position: absolute;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
+  bottom: -100px;
+  transform: translate(-50%);
   width: 660px;
-  margin-top: -10px;
 }
-
 @media screen and (min-width: 1024px) {
   header .back-ground-color .illustration .flower img {
-    position: absolute;
     top: -70px;
     right: 50%;
-    -webkit-transform: translate(50%);
-            transform: translate(50%);
+    transform: translate(50%);
     z-index: 1;
     width: 1000px;
   }
 }
-
 header .back-ground-color .illustration .illustration-me .me {
   position: absolute;
   bottom: -4px;
   right: 50%;
-  -webkit-transform: translate(50%);
-          transform: translate(50%);
+  transform: translate(50%);
   z-index: 1;
 }
-
 header .back-ground-color .illustration .illustration-me .me img {
   width: 319px;
   height: 449px;
 }
-
 @media screen and (min-width: 1024px) {
   header .back-ground-color .illustration .illustration-me .me img {
     width: 499px;
     height: 702px;
   }
 }
-
 header .back-ground-color .illustration .illustration-me .me-hover {
   position: absolute;
   bottom: -4px;
   right: 50%;
-  -webkit-transform: translate(50%);
-          transform: translate(50%);
+  transform: translate(50%);
   z-index: 1;
 }
-
 header .back-ground-color .illustration .illustration-me .me-hover img {
   width: 319px;
   height: 449px;
 }
-
 @media screen and (min-width: 1024px) {
   header .back-ground-color .illustration .illustration-me .me-hover img {
     width: 499px;
     height: 702px;
   }
 }
-
 header .background-green {
   margin-top: 40px;
   background-color: #387c6d;
   height: 580px;
 }
-
 @media screen and (min-width: 1024px) {
   header .background-green {
     position: absolute;
@@ -246,11 +225,9 @@ header .background-green {
     border-radius: 100px;
   }
 }
-
 header .background-green .hello-1 img {
   display: none;
 }
-
 @media screen and (min-width: 1024px) {
   header .background-green .hello-1 img {
     display: block;
@@ -258,15 +235,13 @@ header .background-green .hello-1 img {
     margin-left: -2px;
   }
 }
-
 header .background-green p {
   text-align: center;
   padding-top: 82px;
   color: #e5bdb3;
-  font-family: 'BMHANNAAir';
+  font-family: "BMHANNAAir";
   line-height: 40px;
 }
-
 @media screen and (min-width: 1024px) {
   header .background-green p {
     text-align: right;
@@ -278,7 +253,6 @@ header .background-green p {
 main #my-skill {
   position: relative;
 }
-
 @media screen and (min-width: 1024px) {
   main #my-skill .grid {
     position: absolute;
@@ -287,7 +261,6 @@ main #my-skill {
     overflow: hidden;
   }
 }
-
 main #my-skill .grid h2 {
   text-align: left;
   font-size: 25px;
@@ -295,7 +268,6 @@ main #my-skill .grid h2 {
   border-bottom: 2px solid #343f56;
   margin: 54px 10px 20px 10px;
 }
-
 @media screen and (min-width: 1024px) {
   main #my-skill .grid h2 {
     font-size: 40px;
@@ -304,13 +276,11 @@ main #my-skill .grid h2 {
     border-left: 2px solid #343f56;
   }
 }
-
 main #my-skill .grid h2 span {
   background-color: #eae9db;
   padding: 0 15px;
   margin: 0 30px;
 }
-
 @media screen and (min-width: 1024px) {
   main #my-skill .grid .green-ball {
     position: absolute;
@@ -324,16 +294,11 @@ main #my-skill .grid h2 span {
     z-index: -1;
   }
 }
-
 main #my-skill .my-skills-flex-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   margin-top: 60px;
 }
-
 @media screen and (min-width: 1024px) {
   main #my-skill .my-skills-flex-box {
     margin: 0;
@@ -341,32 +306,21 @@ main #my-skill .my-skills-flex-box {
     padding-top: 555px;
   }
 }
-
-main #my-skill .my-skills-flex-box .web {
-  /* Modal Content */
-  /* The Close Button */
-}
-
 main #my-skill .my-skills-flex-box .web svg {
   width: 114px;
   height: 114px;
 }
-
 main #my-skill .my-skills-flex-box .web svg .green {
   fill: none;
   stroke-width: 10px;
   stroke: #387c6d;
 }
-
-main #my-skill .my-skills-flex-box .web svg [class^="orange-"] {
+main #my-skill .my-skills-flex-box .web svg [class^=orange-] {
   fill: none;
   stroke-width: 10px;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
 }
-
 main #my-skill .my-skills-flex-box .web svg .orange-1 {
   stroke-dasharray: 360;
   stroke-dashoffset: 80;
@@ -374,7 +328,6 @@ main #my-skill .my-skills-flex-box .web svg .orange-1 {
   -webkit-animation: progress-1 7s ease-out;
           animation: progress-1 7s ease-out;
 }
-
 main #my-skill .my-skills-flex-box .web svg .orange-2 {
   stroke: #e9896a;
   stroke-dasharray: 360;
@@ -382,7 +335,6 @@ main #my-skill .my-skills-flex-box .web svg .orange-2 {
   -webkit-animation: progress-2 7s ease-out;
           animation: progress-2 7s ease-out;
 }
-
 main #my-skill .my-skills-flex-box .web svg .orange-3 {
   stroke: #e9896a;
   stroke-dasharray: 360;
@@ -390,7 +342,6 @@ main #my-skill .my-skills-flex-box .web svg .orange-3 {
   -webkit-animation: progress-3 7s ease-out;
           animation: progress-3 7s ease-out;
 }
-
 main #my-skill .my-skills-flex-box .web svg .orange-4 {
   stroke: #e9896a;
   stroke-dasharray: 360;
@@ -398,7 +349,6 @@ main #my-skill .my-skills-flex-box .web svg .orange-4 {
   -webkit-animation: progress-4 7s ease-out;
           animation: progress-4 7s ease-out;
 }
-
 main #my-skill .my-skills-flex-box .web svg .orange-5 {
   stroke: #e9896a;
   stroke-dasharray: 360;
@@ -406,7 +356,6 @@ main #my-skill .my-skills-flex-box .web svg .orange-5 {
   -webkit-animation: progress-5 7s ease-out;
           animation: progress-5 7s ease-out;
 }
-
 @-webkit-keyframes progress-1 {
   from {
     stroke-dashoffset: 360;
@@ -415,7 +364,6 @@ main #my-skill .my-skills-flex-box .web svg .orange-5 {
     stroke-dashoffset: 80;
   }
 }
-
 @keyframes progress-1 {
   from {
     stroke-dashoffset: 360;
@@ -424,7 +372,6 @@ main #my-skill .my-skills-flex-box .web svg .orange-5 {
     stroke-dashoffset: 80;
   }
 }
-
 @-webkit-keyframes progress-2 {
   from {
     stroke-dashoffset: 360;
@@ -433,7 +380,6 @@ main #my-skill .my-skills-flex-box .web svg .orange-5 {
     stroke-dashoffset: 90;
   }
 }
-
 @keyframes progress-2 {
   from {
     stroke-dashoffset: 360;
@@ -442,7 +388,6 @@ main #my-skill .my-skills-flex-box .web svg .orange-5 {
     stroke-dashoffset: 90;
   }
 }
-
 @-webkit-keyframes progress-3 {
   from {
     stroke-dashoffset: 360;
@@ -451,7 +396,6 @@ main #my-skill .my-skills-flex-box .web svg .orange-5 {
     stroke-dashoffset: 90;
   }
 }
-
 @keyframes progress-3 {
   from {
     stroke-dashoffset: 360;
@@ -460,7 +404,6 @@ main #my-skill .my-skills-flex-box .web svg .orange-5 {
     stroke-dashoffset: 90;
   }
 }
-
 @-webkit-keyframes progress-4 {
   from {
     stroke-dashoffset: 360;
@@ -469,7 +412,6 @@ main #my-skill .my-skills-flex-box .web svg .orange-5 {
     stroke-dashoffset: 170;
   }
 }
-
 @keyframes progress-4 {
   from {
     stroke-dashoffset: 360;
@@ -478,7 +420,6 @@ main #my-skill .my-skills-flex-box .web svg .orange-5 {
     stroke-dashoffset: 170;
   }
 }
-
 @-webkit-keyframes progress-5 {
   from {
     stroke-dashoffset: 360;
@@ -487,7 +428,6 @@ main #my-skill .my-skills-flex-box .web svg .orange-5 {
     stroke-dashoffset: 170;
   }
 }
-
 @keyframes progress-5 {
   from {
     stroke-dashoffset: 360;
@@ -496,90 +436,12 @@ main #my-skill .my-skills-flex-box .web svg .orange-5 {
     stroke-dashoffset: 170;
   }
 }
-
-main #my-skill .my-skills-flex-box .web #web-box {
-  border: none;
-  padding: 0;
-  background: none;
-}
-
-main #my-skill .my-skills-flex-box .web .modal {
-  display: none;
-  /* Hidden by default */
-  position: fixed;
-  /* Stay in place */
-  z-index: 1;
-  /* Sit on top */
-  padding-top: 100px;
-  /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%;
-  /* Full width */
-  height: 100%;
-  /* Full height */
-  overflow: auto;
-  /* Enable scroll if needed */
-  background-color: black;
-  /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */
-}
-
-main #my-skill .my-skills-flex-box .web .modal-content {
-  position: relative;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 0;
-  border: 1px solid #888;
-  width: 80%;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  -webkit-animation-name: animatetop;
-  -webkit-animation-duration: 0.4s;
-  animation-name: animatetop;
-  animation-duration: 0.4s;
-}
-
-main #my-skill .my-skills-flex-box .web .close {
-  color: white;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-main #my-skill .my-skills-flex-box .web .close:hover,
-main #my-skill .my-skills-flex-box .web .close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-main #my-skill .my-skills-flex-box .web .modal-header {
-  padding: 2px 16px;
-  background-color: #5cb85c;
-  color: white;
-}
-
-main #my-skill .my-skills-flex-box .web .modal-body {
-  padding: 2px 16px;
-}
-
-main #my-skill .my-skills-flex-box .web .modal-footer {
-  padding: 2px 16px;
-  background-color: #5cb85c;
-  color: white;
-}
-
 @media screen and (min-width: 1024px) {
   main #my-skill .my-skills-flex-box .web {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     margin-top: -300px;
     width: 100%;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
   }
   main #my-skill .my-skills-flex-box .web svg {
     width: 114px;
@@ -590,13 +452,11 @@ main #my-skill .my-skills-flex-box .web .modal-footer {
     stroke-width: 10px;
     stroke: #387c6d;
   }
-  main #my-skill .my-skills-flex-box .web svg [class^="orange-"] {
+  main #my-skill .my-skills-flex-box .web svg [class^=orange-] {
     fill: none;
     stroke-width: 10px;
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
   }
   main #my-skill .my-skills-flex-box .web svg .orange-1 {
     stroke-dasharray: 360;
@@ -714,35 +574,71 @@ main #my-skill .my-skills-flex-box .web .modal-footer {
     }
   }
   main #my-skill .my-skills-flex-box .web .name-flexbox {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
   main #my-skill .my-skills-flex-box .web .name-flexbox p {
     padding-right: 10px;
   }
 }
-
+main #my-skill .my-skills-flex-box .web .modal {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  display: none;
+}
+main #my-skill .my-skills-flex-box .web .modal .modal-content {
+  width: 400px;
+  height: 300px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+}
+main #my-skill .my-skills-flex-box .web .modal .modal-content .upTitle {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 30px;
+}
+main #my-skill .my-skills-flex-box .web .modal .modal-content p {
+  padding: 30px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 40px;
+}
+main #my-skill .my-skills-flex-box .web .modal .modal-content .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  padding-right: 10px;
+}
+main #my-skill .my-skills-flex-box .web .modal .modal-content .close:hover, main #my-skill .my-skills-flex-box .web .modal .modal-content .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
 main #my-skill .my-skills-flex-box .video svg {
   width: 114px;
   height: 114px;
 }
-
 main #my-skill .my-skills-flex-box .video svg .green {
   fill: none;
   stroke-width: 10px;
   stroke: #387c6d;
 }
-
-main #my-skill .my-skills-flex-box .video svg [class^="orange-"] {
+main #my-skill .my-skills-flex-box .video svg [class^=orange-] {
   fill: none;
   stroke-width: 10px;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
 }
-
 main #my-skill .my-skills-flex-box .video svg .orange-6 {
   stroke: #e9896a;
   stroke-dasharray: 360;
@@ -750,7 +646,6 @@ main #my-skill .my-skills-flex-box .video svg .orange-6 {
   -webkit-animation: progress-6 7s ease-out;
           animation: progress-6 7s ease-out;
 }
-
 main #my-skill .my-skills-flex-box .video svg .orange-7 {
   stroke: #e9896a;
   stroke-dasharray: 360;
@@ -758,7 +653,6 @@ main #my-skill .my-skills-flex-box .video svg .orange-7 {
   -webkit-animation: progress-7 7s ease-out;
           animation: progress-7 7s ease-out;
 }
-
 main #my-skill .my-skills-flex-box .video svg .orange-8 {
   stroke: #e9896a;
   stroke-dasharray: 360;
@@ -766,7 +660,6 @@ main #my-skill .my-skills-flex-box .video svg .orange-8 {
   -webkit-animation: progress-8 7s ease-out;
           animation: progress-8 7s ease-out;
 }
-
 main #my-skill .my-skills-flex-box .video svg .orange-9 {
   stroke: #e9896a;
   stroke-dasharray: 360;
@@ -774,7 +667,6 @@ main #my-skill .my-skills-flex-box .video svg .orange-9 {
   -webkit-animation: progress-9 7s ease-out;
           animation: progress-9 7s ease-out;
 }
-
 @-webkit-keyframes progress-6 {
   from {
     stroke-dashoffset: 360;
@@ -783,7 +675,6 @@ main #my-skill .my-skills-flex-box .video svg .orange-9 {
     stroke-dashoffset: 80;
   }
 }
-
 @keyframes progress-6 {
   from {
     stroke-dashoffset: 360;
@@ -792,7 +683,6 @@ main #my-skill .my-skills-flex-box .video svg .orange-9 {
     stroke-dashoffset: 80;
   }
 }
-
 @-webkit-keyframes progress-7 {
   from {
     stroke-dashoffset: 360;
@@ -801,7 +691,6 @@ main #my-skill .my-skills-flex-box .video svg .orange-9 {
     stroke-dashoffset: 80;
   }
 }
-
 @keyframes progress-7 {
   from {
     stroke-dashoffset: 360;
@@ -810,7 +699,6 @@ main #my-skill .my-skills-flex-box .video svg .orange-9 {
     stroke-dashoffset: 80;
   }
 }
-
 @-webkit-keyframes progress-8 {
   from {
     stroke-dashoffset: 360;
@@ -819,7 +707,6 @@ main #my-skill .my-skills-flex-box .video svg .orange-9 {
     stroke-dashoffset: 100;
   }
 }
-
 @keyframes progress-8 {
   from {
     stroke-dashoffset: 360;
@@ -828,7 +715,6 @@ main #my-skill .my-skills-flex-box .video svg .orange-9 {
     stroke-dashoffset: 100;
   }
 }
-
 @-webkit-keyframes progress-9 {
   from {
     stroke-dashoffset: 360;
@@ -837,7 +723,6 @@ main #my-skill .my-skills-flex-box .video svg .orange-9 {
     stroke-dashoffset: 100;
   }
 }
-
 @keyframes progress-9 {
   from {
     stroke-dashoffset: 360;
@@ -846,16 +731,11 @@ main #my-skill .my-skills-flex-box .video svg .orange-9 {
     stroke-dashoffset: 100;
   }
 }
-
 @media screen and (min-width: 1024px) {
   main #my-skill .my-skills-flex-box .video {
     margin: 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
     width: 75%;
     margin-top: 50px;
   }
@@ -868,13 +748,11 @@ main #my-skill .my-skills-flex-box .video svg .orange-9 {
     stroke-width: 10px;
     stroke: #387c6d;
   }
-  main #my-skill .my-skills-flex-box .video svg [class^="orange-"] {
+  main #my-skill .my-skills-flex-box .video svg [class^=orange-] {
     fill: none;
     stroke-width: 10px;
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
   }
   main #my-skill .my-skills-flex-box .video svg .orange-6 {
     stroke: #e9896a;
@@ -969,43 +847,76 @@ main #my-skill .my-skills-flex-box .video svg .orange-9 {
     }
   }
   main #my-skill .my-skills-flex-box .video .name-flexbox {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
   main #my-skill .my-skills-flex-box .video .name-flexbox p {
     padding-right: 10px;
   }
 }
-
+main #my-skill .my-skills-flex-box .video .modal {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  display: none;
+}
+main #my-skill .my-skills-flex-box .video .modal .modal-content {
+  width: 400px;
+  height: 300px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+}
+main #my-skill .my-skills-flex-box .video .modal .modal-content .upTitle {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 30px;
+}
+main #my-skill .my-skills-flex-box .video .modal .modal-content p {
+  padding: 30px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 40px;
+}
+main #my-skill .my-skills-flex-box .video .modal .modal-content .close {
+  color: #aaa;
+  float: right;
+  padding-right: 10px;
+  font-size: 28px;
+  font-weight: bold;
+}
+main #my-skill .my-skills-flex-box .video .modal .modal-content .close:hover, main #my-skill .my-skills-flex-box .video .modal .modal-content .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
 @media screen and (min-width: 1024px) {
   main .grid {
     width: 1170px;
     overflow: hidden;
   }
 }
-
 main .grid #portfolio {
   position: relative;
   margin-top: 54px;
 }
-
 @media screen and (min-width: 1024px) {
   main .grid #portfolio {
     margin-top: 150px;
   }
 }
-
 main .grid #portfolio .title-flexbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin: 0 10px;
 }
-
 @media screen and (min-width: 1024px) {
   main .grid #portfolio .title-flexbox {
     margin: 0;
@@ -1020,49 +931,37 @@ main .grid #portfolio .title-flexbox {
     height: 66px;
   }
 }
-
 main .grid #portfolio .title-flexbox .left {
   width: 50%;
   display: block;
   border-bottom: 2px dashed #343f56;
 }
-
 main .grid #portfolio .title-flexbox h2 {
   font-size: 25px;
   text-align: center;
   margin: 0 10px;
 }
-
 @media screen and (min-width: 1024px) {
   main .grid #portfolio .title-flexbox h2 {
     font-size: 40px;
   }
 }
-
 main .grid #portfolio .title-flexbox .right {
   width: 50%;
   display: block;
   border-bottom: 2px solid #343f56;
 }
-
 main .grid #portfolio .button {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 @media screen and (min-width: 1024px) {
   main .grid #portfolio .button {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     position: absolute;
     top: 30px;
     right: 10px;
   }
 }
-
 main .grid #portfolio .button .btn {
   position: relative;
   width: 100%;
@@ -1070,7 +969,6 @@ main .grid #portfolio .button .btn {
   text-align: center;
   margin: 20px 10px;
 }
-
 @media screen and (min-width: 1024px) {
   main .grid #portfolio .button .btn {
     margin-bottom: 5px;
@@ -1078,40 +976,35 @@ main .grid #portfolio .button .btn {
     height: 57px;
   }
 }
-
 main .grid #portfolio .button .btn a {
   width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   font-size: 19px;
 }
-
 main .grid #portfolio .button .guide {
   border: 1px solid #e9896a;
   background-color: #e9896a;
 }
-
+main .grid #portfolio .button .guide img {
+  width: 1170px;
+}
 main .grid #portfolio .button .pc-m {
   border: 1px solid #343f56;
   background-color: #343f56;
 }
-
 main .grid #portfolio .button .plan {
   border: 1px solid #387c6d;
   background-color: #387c6d;
 }
-
 main .grid #portfolio .button .plan a {
-  font-family: 'BMHANNAAir';
+  font-family: "BMHANNAAir";
 }
-
 main .grid #portfolio .work {
   margin-top: 70px;
 }
-
 @media screen and (min-width: 1024px) {
   main .grid #portfolio .work {
     margin-top: 33px;
@@ -1119,13 +1012,11 @@ main .grid #portfolio .work {
     margin-left: 15px;
   }
 }
-
 main .grid #portfolio .work h3 {
   margin-top: -40px;
   font-size: 20px;
   text-align: center;
 }
-
 @media screen and (min-width: 1024px) {
   main .grid #portfolio .work h3 {
     text-align: left;
@@ -1133,7 +1024,6 @@ main .grid #portfolio .work h3 {
     font-size: 30px;
   }
 }
-
 @media screen and (min-width: 1024px) {
   main .grid #portfolio .work .background-blue {
     background-color: #343f56;
@@ -1143,27 +1033,21 @@ main .grid #portfolio .work h3 {
     margin-bottom: 54px;
   }
 }
-
 @media screen and (min-width: 1024px) {
   main .grid #portfolio .work .background-blue #gallery {
     overflow: hidden;
     width: 936px;
   }
 }
-
 @media screen and (min-width: 1024px) {
   main .grid #portfolio .work .background-blue #gallery #slider {
     width: 2808px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 }
-
 main .grid #portfolio .work .background-blue #gallery #slider .mem-1 {
   display: none;
 }
-
 @media screen and (min-width: 1024px) {
   main .grid #portfolio .work .background-blue #gallery #slider .mem-1 {
     display: block;
@@ -1173,7 +1057,7 @@ main .grid #portfolio .work .background-blue #gallery #slider .mem-1 {
   main .grid #portfolio .work .background-blue #gallery #slider .mem-1 p {
     padding-top: 20px;
     padding-bottom: 5px;
-    font-family: 'BMHANNAAir';
+    font-family: "BMHANNAAir";
     color: #f8f5f1;
     font-size: 18px;
   }
@@ -1188,8 +1072,6 @@ main .grid #portfolio .work .background-blue #gallery #slider .mem-1 {
     height: 200px;
   }
   main .grid #portfolio .work .background-blue #gallery #slider .mem-1 .m-flexbox {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
   main .grid #portfolio .work .background-blue #gallery #slider .mem-1 .m-flexbox .m-version {
@@ -1202,11 +1084,9 @@ main .grid #portfolio .work .background-blue #gallery #slider .mem-1 {
     height: 200px;
   }
 }
-
 main .grid #portfolio .work .background-blue #gallery #slider .mem-2 {
   display: none;
 }
-
 @media screen and (min-width: 1024px) {
   main .grid #portfolio .work .background-blue #gallery #slider .mem-2 {
     display: block;
@@ -1216,7 +1096,7 @@ main .grid #portfolio .work .background-blue #gallery #slider .mem-2 {
   main .grid #portfolio .work .background-blue #gallery #slider .mem-2 p {
     padding-bottom: 5px;
     padding-top: 20px;
-    font-family: 'BMHANNAAir';
+    font-family: "BMHANNAAir";
     color: #f8f5f1;
     font-size: 18px;
   }
@@ -1231,11 +1111,9 @@ main .grid #portfolio .work .background-blue #gallery #slider .mem-2 {
     height: 200px;
   }
 }
-
 main .grid #portfolio .work .background-blue #gallery #slider .mem-3 {
   display: none;
 }
-
 @media screen and (min-width: 1024px) {
   main .grid #portfolio .work .background-blue #gallery #slider .mem-3 {
     display: block;
@@ -1245,7 +1123,7 @@ main .grid #portfolio .work .background-blue #gallery #slider .mem-3 {
   main .grid #portfolio .work .background-blue #gallery #slider .mem-3 p {
     padding-bottom: 5px;
     padding-top: 20px;
-    font-family: 'BMHANNAAir';
+    font-family: "BMHANNAAir";
     color: #f8f5f1;
     font-size: 18px;
   }
@@ -1260,24 +1138,20 @@ main .grid #portfolio .work .background-blue #gallery #slider .mem-3 {
     height: 200px;
   }
 }
-
 main .grid #portfolio .work .background-blue #arrow img {
   display: none;
 }
-
 @media screen and (min-width: 1024px) {
   main .grid #portfolio .work .background-blue #arrow img {
     display: block;
     position: absolute;
     top: 50%;
     right: 210px;
-    -webkit-transform: translate(-50%);
-            transform: translate(-50%);
+    transform: translate(-50%);
     cursor: pointer;
     height: 20px;
   }
 }
-
 main .grid #portfolio .work .pc-m-cl {
   margin: 20px auto;
   height: 57px;
@@ -1285,13 +1159,11 @@ main .grid #portfolio .work .pc-m-cl {
   border: 1px solid #343f56;
   background-color: #343f56;
 }
-
 @media screen and (min-width: 1024px) {
   main .grid #portfolio .work .pc-m-cl {
     margin: 30px 20px;
   }
 }
-
 @media screen and (min-width: 1024px) {
   main .grid #portfolio .work .h-l {
     border-bottom: 2px dashed #343f56;
@@ -1300,16 +1172,13 @@ main .grid #portfolio .work .pc-m-cl {
     width: 1.5%;
   }
 }
-
 main .grid #portfolio .personal-work {
   margin-top: 50px;
 }
-
 main .grid #portfolio .personal-work h3 {
   text-align: center;
   font-size: 20px;
 }
-
 @media screen and (min-width: 1024px) {
   main .grid #portfolio .personal-work h3 {
     padding: 0 10px 10px;
@@ -1318,7 +1187,6 @@ main .grid #portfolio .personal-work h3 {
     text-align: right;
   }
 }
-
 @media screen and (min-width: 1024px) {
   main .grid #portfolio .personal-work .background-blue {
     margin: 0 10px;
@@ -1330,29 +1198,23 @@ main .grid #portfolio .personal-work h3 {
     margin-bottom: 52px;
   }
 }
-
 @media screen and (min-width: 1024px) {
   main .grid #portfolio .personal-work .background-blue #gallery-1 {
     overflow: hidden;
     width: 936px;
   }
 }
-
 @media screen and (min-width: 1024px) {
   main .grid #portfolio .personal-work .background-blue #gallery-1 #slider-1 {
     position: relative;
     width: 1872px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     padding-left: 20px;
   }
 }
-
 main .grid #portfolio .personal-work .background-blue #gallery-1 #slider-1 #personal-slide {
   display: none;
 }
-
 @media screen and (min-width: 1024px) {
   main .grid #portfolio .personal-work .background-blue #gallery-1 #slider-1 #personal-slide {
     display: block;
@@ -1365,8 +1227,6 @@ main .grid #portfolio .personal-work .background-blue #gallery-1 #slider-1 #pers
     padding: 10px;
   }
   main .grid #portfolio .personal-work .background-blue #gallery-1 #slider-1 #personal-slide .personal-img {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
   main .grid #portfolio .personal-work .background-blue #gallery-1 #slider-1 #personal-slide .personal-img .personal {
@@ -1378,11 +1238,9 @@ main .grid #portfolio .personal-work .background-blue #gallery-1 #slider-1 #pers
     height: 500px;
   }
 }
-
 main .grid #portfolio .personal-work .background-blue #arrow-1 img {
   display: none;
 }
-
 @media screen and (min-width: 1024px) {
   main .grid #portfolio .personal-work .background-blue #arrow-1 img {
     display: block;
@@ -1392,11 +1250,9 @@ main .grid #portfolio .personal-work .background-blue #arrow-1 img {
     top: 50%;
     left: 5px;
     height: 20px;
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+    transform: rotate(180deg);
   }
 }
-
 @media screen and (min-width: 1024px) {
   main .grid #portfolio .personal-work .h-l {
     border-bottom: 2px dashed #343f56;
@@ -1409,7 +1265,6 @@ main .grid #portfolio .personal-work .background-blue #arrow-1 img {
     left: 18px;
   }
 }
-
 @media screen and (min-width: 1024px) {
   main .grid #portfolio #clone-coding .background-blue {
     width: 933px;
@@ -1418,35 +1273,29 @@ main .grid #portfolio .personal-work .background-blue #arrow-1 img {
     padding-top: 30px;
   }
 }
-
 @media screen and (min-width: 1024px) {
   main .grid #portfolio #clone-coding .background-blue #gallery-2 {
     overflow: hidden;
-    width: 936px;
+    width: 877px;
   }
 }
-
 @media screen and (min-width: 1024px) {
   main .grid #portfolio #clone-coding .background-blue #gallery-2 #slider-2 {
     position: relative;
     width: 1872px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 }
-
 main .grid #portfolio #clone-coding .background-blue #gallery-2 #slider-2 .clone-slide {
   display: none;
 }
-
 @media screen and (min-width: 1024px) {
   main .grid #portfolio #clone-coding .background-blue #gallery-2 #slider-2 .clone-slide {
     display: block;
     width: 936px;
   }
   main .grid #portfolio #clone-coding .background-blue #gallery-2 #slider-2 .clone-slide .txt {
-    font-family: 'BMHANNAAir';
+    font-family: "BMHANNAAir";
   }
   main .grid #portfolio #clone-coding .background-blue #gallery-2 #slider-2 .clone-slide p {
     padding-top: 20px;
@@ -1464,53 +1313,74 @@ main .grid #portfolio #clone-coding .background-blue #gallery-2 #slider-2 .clone
     height: 400px;
   }
 }
-
 main .grid #portfolio #clone-coding .background-blue #arrow-2 img {
   display: none;
 }
-
 @media screen and (min-width: 1024px) {
   main .grid #portfolio #clone-coding .background-blue #arrow-2 img {
     display: block;
     position: absolute;
     top: 50%;
     right: 210px;
-    -webkit-transform: translate(-50%);
-            transform: translate(-50%);
+    transform: translate(-50%);
     cursor: pointer;
     height: 20px;
   }
 }
-
 main .grid #portfolio #video1 {
+  margin: 0 auto;
   margin-top: 50px;
-  position: relative;
-  text-align: center;
 }
-
+@media screen and (min-width: 1024px) {
+  main .grid #portfolio #video1 {
+    position: relative;
+    text-align: center;
+  }
+}
 main .grid #portfolio #video1 h3 {
   text-align: center;
   font-size: 20px;
   padding: 0 10px 10px;
 }
-
 @media screen and (min-width: 1024px) {
   main .grid #portfolio #video1 h3 {
     font-size: 30px;
     margin: 0 10px;
   }
 }
-
-main .grid #portfolio #video1 video {
-  width: 460px;
+main .grid #portfolio #video1 .bg {
+  margin: 0 auto;
+  padding: 10px;
 }
-
 @media screen and (min-width: 1024px) {
-  main .grid #portfolio #video1 video {
-    width: 700px;
+  main .grid #portfolio #video1 .bg {
+    background-color: #343f56;
+    padding: 20px;
+    width: 900px;
   }
 }
-
+main .grid #portfolio #video1 .bg video {
+  width: 460px;
+}
+@media screen and (min-width: 1024px) {
+  main .grid #portfolio #video1 .bg video {
+    width: 800px;
+  }
+}
+main .grid #portfolio #video1 .bg p {
+  font-family: "BMHANNAAir";
+  color: #343f56;
+  padding: 0 25px;
+  padding-top: 30px;
+  font-size: 21px;
+  line-height: 25px;
+  text-align: justify;
+}
+@media screen and (min-width: 1024px) {
+  main .grid #portfolio #video1 .bg p {
+    color: white;
+  }
+}
 @media screen and (min-width: 1024px) {
   main .grid #portfolio #video1 .h-l {
     border-bottom: 2px dashed #343f56;
@@ -1518,44 +1388,47 @@ main .grid #portfolio #video1 video {
     width: 40%;
   }
 }
-
 @media screen and (min-width: 1024px) {
   main .grid #portfolio .v-l {
     position: absolute;
     top: 0;
     border-left: 2px dashed #343f56;
-    height: 5000px;
+    height: 3000px;
     margin-top: 24px;
-    padding-bottom: 1000px;
   }
 }
 
-footer {
-  position: relative;
-  margin-top: 50px;
+@media screen and (min-width: 1024px) {
+  footer .grid {
+    position: relative;
+    overflow: hidden;
+    width: 1170px;
+  }
 }
-
+@media screen and (min-width: 1024px) {
+  footer .grid .line {
+    height: 70px;
+    border-left: 2px dashed #343f56;
+  }
+}
 footer .grid h2 {
   text-align: right;
   font-size: 25px;
   border-bottom: 2px solid #343f56;
   line-height: 1.6px;
-  margin: 60px 10px 40px 10px;
+  margin: 100px 10px 40px 10px;
 }
-
 @media screen and (min-width: 1024px) {
   footer .grid h2 {
     margin: 0;
     font-size: 40px;
   }
 }
-
 footer .grid h2 span {
   background-color: #eae9db;
   padding: 0 10px;
   margin: 0 30px;
 }
-
 @media screen and (min-width: 1024px) {
   footer .grid .green-ball-2 {
     position: absolute;
@@ -1566,73 +1439,55 @@ footer .grid h2 span {
     height: 66px;
     border-radius: 50%;
     background-color: #387c6d;
-    overflow: hidden;
   }
 }
-
 footer .grid .contact-flexbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 footer .grid .contact-flexbox .phone-email-flexbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin: 0 auto 20px;
 }
-
 @media screen and (min-width: 1024px) {
   footer .grid .contact-flexbox .phone-email-flexbox {
     margin-top: 50px;
   }
 }
-
 footer .grid .contact-flexbox .phone-email-flexbox img {
   margin-left: 10px;
   width: 16px;
   height: 16px;
 }
-
 @media screen and (min-width: 1024px) {
   footer .grid .contact-flexbox .phone-email-flexbox img {
     margin-left: 30px;
   }
 }
-
 footer .grid .contact-flexbox .phone-email-flexbox .email {
   width: 21px;
   height: 15px;
 }
-
 footer .grid .contact-flexbox .phone-email-flexbox p {
   padding-left: 5px;
   font-size: 15px;
   color: #343f56;
 }
-
 footer .grid .contact-flexbox .phone-email-flexbox p span {
   font-size: 16px;
   font-weight: 600;
 }
-
 @media screen and (min-width: 1024px) {
   footer .grid .contact-flexbox .phone-email-flexbox p span {
     font-size: 20px;
   }
 }
-
 @media screen and (min-width: 1024px) {
   footer .grid .contact-flexbox .phone-email-flexbox p {
     font-size: 18px;
     padding-left: 10px;
   }
 }
-
 @media screen and (min-width: 1024px) {
   footer .grid .v-l {
     float: right;
@@ -1641,4 +1496,14 @@ footer .grid .contact-flexbox .phone-email-flexbox p span {
     border-left: 2px solid #343f56;
   }
 }
-/*# sourceMappingURL=index.css.map */
+footer .github {
+  width: 20px;
+}
+@media screen and (min-width: 1024px) {
+  footer .github {
+    width: 35px;
+    position: fixed;
+    bottom: 0;
+    right: 300px;
+  }
+}/*# sourceMappingURL=index.css.map */

@@ -15,6 +15,19 @@ body {
 
 //===== header =====//
 header {
+    #top-bt { 
+        display: none; 
+        position: fixed; 
+        right: 0; bottom: 10%;
+        width: 30px; height: 30px; 
+        font-size: 12px;
+		background: $orange; 
+        color: white; 
+        text-align: center; 
+        line-height: 30px; 
+        cursor: pointer; 
+        z-index: 100; 
+    }
     .back-ground-color {
         position: relative;
         background-color: $font-color;
@@ -44,17 +57,17 @@ header {
         .orange-stroke {
             display: none;
             position: relative;
-            margin: 0 auto;
             border: 8px solid $orange;
             border-radius: 50%;
-            width: 567px;
-            height: 567px;
-            
+            width: 350px;
+            height: 350px;
             @include responsive(pc-screens) {
                 display: block;
                 position: absolute;
                 top: 46px;
                 left: 111px;
+                width: 567px;
+                height: 567px;
             }
             
             .green-cir {
@@ -64,8 +77,13 @@ header {
                 transform: translate(-50%, -50%);
                 border-radius: 50%;
                 background-color: $green;
-                width: 531px;
-                height: 531px;
+                width: 500px;
+                height: 500px;
+                @include responsive(pc-screens) {
+                    width: 531px;
+                    height: 531px;
+
+                }
                 
                 nav {
                     .gnb {
@@ -109,11 +127,10 @@ header {
                 text-align: center;
                 img {
                     position: absolute;
+                    bottom: -100px;
                     transform: translate(-50%);
-                    width: 660px;
-                    margin-top: -10px;
+                    width: 650px;
                     @include responsive(pc-screens) {
-                        position: absolute;
                         top: -70px;
                         right: 50%;
                         transform: translate(50%);
@@ -184,10 +201,6 @@ header {
             color: $font-color2;
             font-family: 'BMHANNAAir';
             line-height: 40px;
-            // &:hover {
-            //     font-size: 28px;
-            //     color: $body-bg;
-            // }
             @include responsive(pc-screens) {
                 text-align: right;
                 margin-right: 75px;
@@ -245,13 +258,14 @@ main {
             display: flex;
             justify-content: space-around;
             margin-top: 60px;
+            
             @include responsive(pc-screens) {
                 margin: 0;
                 display: block;
                 padding-top: 555px;
             }
             .web {
-                svg {
+                svg {//svg-m
                     width: 114px;
                     height: 114px;
                     .green {
@@ -305,101 +319,39 @@ main {
                     }
                     @keyframes progress-2 {
                         from {
-                          stroke-dashoffset: 360;
+                            stroke-dashoffset: 360;
                         }
                         to {
-                          stroke-dashoffset: 90;
+                            stroke-dashoffset: 90;
                         }
                     }
                     @keyframes progress-3 {
                         from {
-                          stroke-dashoffset: 360;
+                            stroke-dashoffset: 360;
                         }
                         to {
-                          stroke-dashoffset: 90;
+                            stroke-dashoffset: 90;
                         }
                     }
                     @keyframes progress-4 {
                         from {
-                          stroke-dashoffset: 360;
+                            stroke-dashoffset: 360;
                         }
                         to {
-                          stroke-dashoffset: 170;
+                            stroke-dashoffset: 170;
                         }
                     }
                     @keyframes progress-5 {
                         from {
-                          stroke-dashoffset: 360;
+                            stroke-dashoffset: 360;
                         }
                         to {
-                          stroke-dashoffset: 170;
+                            stroke-dashoffset: 170;
                         }
                     }
-                }//svg-pc
-                #web-box {
-                    border: none;
-                    padding: 0;
-                    background: none;
-                }
+                }//svg-m
 
-                .modal {
-                    display: none; /* Hidden by default */
-                    position: fixed; /* Stay in place */
-                    z-index: 1; /* Sit on top */
-                    padding-top: 100px; /* Location of the box */
-                    left: 0;
-                    top: 0;
-                    width: 100%; /* Full width */
-                    height: 100%; /* Full height */
-                    overflow: auto; /* Enable scroll if needed */
-                    background-color: rgb(0,0,0); /* Fallback color */
-                    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-                }
-                /* Modal Content */
-                .modal-content {
-                    position: relative;
-                    background-color: #fefefe;
-                    margin: auto;
-                    padding: 0;
-                    border: 1px solid #888;
-                    width: 80%;
-                    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-                    -webkit-animation-name: animatetop;
-                    -webkit-animation-duration: 0.4s;
-                    animation-name: animatetop;
-                    animation-duration: 0.4s
-                }
-                /* The Close Button */
-                .close {
-                    color: white;
-                    float: right;
-                    font-size: 28px;
-                    font-weight: bold;
-                }
-                
-                .close:hover,
-                .close:focus {
-                    color: #000;
-                    text-decoration: none;
-                    cursor: pointer;
-                }
-                
-                .modal-header {
-                    padding: 2px 16px;
-                    background-color: #5cb85c;
-                    color: white;
-                }
-                
-                .modal-body {padding: 2px 16px;}
-                
-                .modal-footer {
-                    padding: 2px 16px;
-                    background-color: #5cb85c;
-                    color: white;
-                }
-
-
-                @include responsive(pc-screens) {
+                @include responsive(pc-screens) { // svg-pc
                     display: flex;
                     margin-top: -300px;
                     width: 100%;
@@ -458,34 +410,34 @@ main {
                         }
                         @keyframes progress-2 {
                             from {
-                              stroke-dashoffset: 360;
+                                stroke-dashoffset: 360;
                             }
                             to {
-                              stroke-dashoffset: 90;
+                                stroke-dashoffset: 90;
                             }
                         }
                         @keyframes progress-3 {
                             from {
-                              stroke-dashoffset: 360;
+                                stroke-dashoffset: 360;
                             }
                             to {
-                              stroke-dashoffset: 90;
+                                stroke-dashoffset: 90;
                             }
                         }
                         @keyframes progress-4 {
                             from {
-                              stroke-dashoffset: 360;
+                                stroke-dashoffset: 360;
                             }
                             to {
-                              stroke-dashoffset: 170;
+                                stroke-dashoffset: 170;
                             }
                         }
                         @keyframes progress-5 {
                             from {
-                              stroke-dashoffset: 360;
+                                stroke-dashoffset: 360;
                             }
                             to {
-                              stroke-dashoffset: 170;
+                                stroke-dashoffset: 170;
                             }
                         }
                     }//svg
@@ -495,11 +447,57 @@ main {
                             padding-right: 10px;
                         }
                     }
+                } //pc
+
+                .modal{
+                    width:100%;
+                    height:100%;
+                    position:absolute;
+                    left:0;
+                    top:0;
+                    background:rgba(0, 0, 0, 0.1);
+                    z-index:100;
+                    display:none;
+                    .modal-content{
+                        width:400px;
+                        height:300px;
+                        position:fixed;
+                        left:50%;
+                        top:50%;
+                        transform:translate(-50%,-50%);
+                        background:#fff;
+                        .upTitle{
+                            margin-top:20px;
+                            text-align:center;
+                            font-size:20px;
+                            font-weight:bold;
+                            line-height:30px;
+                        }
+                        p{
+                            padding:30px;
+                            text-align:center;
+                            font-size:15px;
+                            line-height:40px;
+                        }
+                        .close {
+                            color: #aaa;
+                            float: right;
+                            font-size: 28px;
+                            font-weight: bold;
+                            padding-right: 10px;
+                            &:hover,
+                            &:focus {
+                                color: black;
+                                text-decoration: none;
+                                cursor: pointer;
+                            }
+                        }
+                    }
                 }
             }//web
 
             .video {
-                svg {
+                svg { //m
                     width: 114px;
                     height: 114px;
                     .green {
@@ -569,8 +567,9 @@ main {
                           stroke-dashoffset: 100;
                         }
                     }
-                }//svg
-                @include responsive(pc-screens) {
+                }//svg-m
+
+                @include responsive(pc-screens) { //pc
                     margin: 0 auto;
                     display: flex;
                     justify-content: space-between;
@@ -651,6 +650,51 @@ main {
                         display: flex; 
                         p {
                             padding-right: 10px;
+                        }
+                    }
+                }//pc
+                .modal{
+                    width:100%;
+                    height:100%;
+                    position:absolute;
+                    left:0;
+                    top:0;
+                    background:rgba(0, 0, 0, 0.1);
+                    z-index:100;
+                    display:none;
+                    .modal-content{
+                        width:400px;
+                        height:300px;
+                        position:fixed;
+                        left:50%;
+                        top:50%;
+                        transform:translate(-50%,-50%);
+                        background:#fff;
+                        .upTitle{
+                            margin-top:20px;
+                            text-align:center;
+                            font-size:20px;
+                            font-weight:bold;
+                            line-height:30px;
+                        }
+                        p{
+                            padding:30px;
+                            text-align:center;
+                            font-size:15px;
+                            line-height:40px;
+                        }
+                        .close {
+                            color: #aaa;
+                            float: right;
+                            padding-right: 10px;
+                            font-size: 28px;
+                            font-weight: bold;
+                            &:hover,
+                            &:focus {
+                                color: black;
+                                text-decoration: none;
+                                cursor: pointer;
+                            }
                         }
                     }
                 }
@@ -736,6 +780,9 @@ main {
                 .guide {
                     border: 1px solid $orange;
                     background-color: $orange;
+                    img {
+                        width: 1170px;
+                    }
                 }
                 .pc-m {
                     border: 1px solid $blue;
@@ -1018,7 +1065,7 @@ main {
                     #gallery-2 {
                         @include responsive(pc-screens) {
                             overflow: hidden;
-                            width: 936px;
+                            width: 877px;
                         }
                         #slider-2 {
                             @include responsive(pc-screens) {
@@ -1072,9 +1119,12 @@ main {
                 }
             }
             #video1 {
+                margin: 0 auto;
                 margin-top: 50px;
-                position: relative;
-                text-align: center;
+                @include responsive(pc-screens) {
+                    position: relative;
+                    text-align: center;
+                }
                 h3 {
                     text-align: center;
                     font-size: 20px;
@@ -1084,25 +1134,34 @@ main {
                         margin: 0 10px;
                     }
                 }
-               video {
-                width: 460px;
-                @include responsive(pc-screens) {
-                    width: 700px;
-                }
+                .bg {
+                    margin: 0 auto;
+                    padding: 10px;
+                    @include responsive(pc-screens) {
+                        background-color: $blue;
+                        padding: 20px;
+                        width: 900px;
+                    }
 
-               }
-                // .v-plan {
-                //     margin: 20px auto;
-                //     height: 57px;
-                //     width: 170px;
-                //     border: 1px solid $orange;
-                //     background-color: $orange;
-                //     @include responsive(pc-screens) {
-                //         position: absolute;
-                //         bottom: -105px;
-                //         right: 110px;
-                //     }
-                // }
+                    video {
+                        width: 460px;
+                        @include responsive(pc-screens) {
+                            width: 800px;
+                        }
+                    }
+                    p {
+                        font-family: 'BMHANNAAir';
+                        color: $blue;
+                        padding: 0 25px;
+                        padding-top: 30px;
+                        font-size: 21px;
+                        line-height: 25px;
+                        text-align: justify;
+                        @include responsive(pc-screens) {
+                            color: white;
+                        }
+                    }
+                }
                 @include responsive(pc-screens) {
                     .h-l {
                         border-bottom: 2px dashed $blue;
@@ -1116,10 +1175,8 @@ main {
                     position: absolute;
                     top: 0;
                     border-left: 2px dashed $blue;
-                    height: 5000px;
+                    height: 3000px;
                     margin-top: 24px;
-                    padding-bottom: 1000px;
-                    // background-color: aqua;
                 }
             }
         } //portfolio
@@ -1128,20 +1185,31 @@ main {
 
 //===== footer =====//
 footer {
-    position: relative;
-    margin-top: 50px;
     .grid {
-        // overflow: hidden;
+        @include responsive(pc-screens) {
+            position: relative;
+            overflow: hidden;
+            width: 1170px;
+        }
+
+        .line {
+            @include responsive(pc-screens) {
+                height: 70px;
+                border-left: 2px dashed $blue;
+            }
+        }
+
         h2 {
             text-align: right;
             font-size: 25px;
             border-bottom: 2px solid $blue;
             line-height: 1.6px;
-            margin: 60px 10px 40px 10px;
+            margin: 100px 10px 40px 10px;
             @include responsive(pc-screens) {
                 margin: 0;
                 font-size: 40px;
-                // background-color: pink;
+                // margin-top: 70px;
+                // background-color: aqua;
             }
             span {
                 background-color: $body-bg;
@@ -1159,8 +1227,6 @@ footer {
                 height: 66px;
                 border-radius: 50%;
                 background-color: $green;
-                overflow: hidden;
-                
             }
         }
         .contact-flexbox {
@@ -1211,5 +1277,15 @@ footer {
                 border-left: 2px solid $blue;
             }
         }
+    }
+    .github {
+        width: 20px;
+        @include responsive(pc-screens) {
+            width: 35px;
+            position: fixed;
+            bottom: 0;
+            right: 300px;
+        }
+
     }
 }//footer
