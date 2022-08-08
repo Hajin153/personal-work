@@ -751,6 +751,7 @@ main {
             }
             .button {
                 display: flex;
+                cursor: pointer;
                 @include responsive(pc-screens) {
                    flex-direction: column;
                     position: absolute;
@@ -928,6 +929,7 @@ main {
                         }//#slider
                     }//#gallery
                     #arrow {
+                        cursor: pointer;
                         img {
                             display: none;
                             @include responsive(pc-screens) {
@@ -936,7 +938,6 @@ main {
                                 top: 50%;
                                 right: 210px;
                                 transform: translate(-50%);
-                                cursor: pointer;
                                 height: 20px;
                             }
                         }

@@ -960,6 +960,7 @@ main .grid #portfolio .title-flexbox .right {
 }
 main .grid #portfolio .button {
   display: flex;
+  cursor: pointer;
 }
 @media screen and (min-width: 1024px) {
   main .grid #portfolio .button {
@@ -1145,6 +1146,9 @@ main .grid #portfolio .work .background-blue #gallery #slider .mem-3 {
     height: 200px;
   }
 }
+main .grid #portfolio .work .background-blue #arrow {
+  cursor: pointer;
+}
 main .grid #portfolio .work .background-blue #arrow img {
   display: none;
 }
@@ -1155,7 +1159,6 @@ main .grid #portfolio .work .background-blue #arrow img {
     top: 50%;
     right: 210px;
     transform: translate(-50%);
-    cursor: pointer;
     height: 20px;
   }
 }
